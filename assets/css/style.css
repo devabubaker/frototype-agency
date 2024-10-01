@@ -143,6 +143,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .full-nav .top-content {
@@ -597,6 +599,10 @@ img {
   padding: 80px 0px;
 }
 
+.services-sec .container {
+  max-width: 1263px;
+}
+
 .services-sec .services-container {
   display: flex;
   gap: 24px;
@@ -608,7 +614,7 @@ img {
 }
 
 .services-sec .services-container .services-frame:nth-child(2) {
-  width: 660px;
+  width: 626px;
 }
 
 .services-sec
@@ -742,7 +748,6 @@ img {
 
 .services-sec .services-container .services-frame .swiper {
   width: 100%;
-  pointer-events: none;
 }
 
 .services-sec .services-container .services-frame .card {
@@ -753,8 +758,6 @@ img {
 }
 
 .services-sec .services-container .services-frame .card .card-image {
-  max-width: 613px;
-  width: 100%;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -772,11 +775,14 @@ img {
   height: 45px;
   border-radius: 40px;
   border: 1px solid var(--border-color-4);
-  padding: 12px 15px;
+  padding: 15px 12px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
   color: var(--pure-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* === Project Scroller Sec === */

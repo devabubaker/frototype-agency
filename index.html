@@ -1369,6 +1369,22 @@
       </div>
     </footer>
 
+    <!--~~~~~~~~~~~~~~~ Gsap Scrolltrigger Js ~~~~~~~~~~~~~~~-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!--~~~~~~~~~~~~~~~ Gsap Js ~~~~~~~~~~~~~~~-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!--~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1407,10 +1423,15 @@
         },
       });
 
-      var swiper = new Swiper(".services-sec .swiper", {});
+      var swiper = new Swiper(".services-sec .swiper", {
+        allowTouchMove: false, // Disable touch/swipe interactions
+        noSwiping: true, // Disable swiping
+        noSwipingClass: "swiper-no-swiping", // Class to disable swiping
+      });
     </script>
 
     <!--~~~~~~~~~~~~~~~ Custom Js ~~~~~~~~~~~~~~~-->
+    <script type="module" src="./assets/js/animation.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
