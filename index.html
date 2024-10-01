@@ -3,7 +3,1414 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!--~~~~~~~~~~~~~~~ Fonts ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      as="font"
+      href="./assets/fonts/ClashDisplay-Variable.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      as="font"
+      href="./assets/fonts/circular-std-medium-500.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/css/fonts.css" />
+
+    <!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~-->
+    <title>Frototype Agency</title>
+
+    <!--~~~~~~~~~~~~~~~ Css ~~~~~~~~~~~~~~~-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!--~~~~~~~~~~~~~~~ Swiper Css ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- Full Nav  -->
+    <div class="full-nav">
+      <div class="top-content">
+        <h5>Menu</h5>
+
+        <div class="close-btn">
+          <h6>Close</h6>
+
+          <button>
+            <img src="./assets/images/icons/close-x.svg" alt="Icon" />
+          </button>
+        </div>
+      </div>
+
+      <div class="middle-content">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">About</a></li>
+
+          <li class="nav-item"><a href="#">Projects</a></li>
+
+          <li class="nav-item"><a href="#">Contact</a></li>
+
+          <li class="nav-item"><a href="#">Services</a></li>
+
+          <li class="nav-item"><a href="#">Careers</a></li>
+
+          <li class="nav-item"><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <div class="left-content">
+          <a href="#" class="contact-link email-link">@infofrototype</a>
+
+          <a href="#" class="contact-link phone-link">+31 222 433 112</a>
+        </div>
+
+        <div class="right-content">
+          <ul class="social-list">
+            <li class="social-item"><a href="#">Behance</a></li>
+
+            <li class="social-item"><a href="#">Dribbble</a></li>
+
+            <li class="social-item"><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--~~~~~~~~~~~~~~~ Navbar ~~~~~~~~~~~~~~~-->
+    <header class="header">
+      <div class="header-left">
+        <span>© 2024.</span>
+      </div>
+
+      <div class="header-center">
+        <a href="index.html" class="logo">
+          <img src="./assets/images/brand-logo.png" alt="Brand Logo" />
+        </a>
+      </div>
+
+      <div class="header-right">
+        <div class="hamburger">
+          <span></span>
+
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!--~~~~~~~~~~~~~~~ Hero Sec ~~~~~~~~~~~~~~~-->
+      <section class="hero-sec">
+        <div class="main-heading">
+          <div class="container">
+            <div class="sub-title">
+              <h5>design and branding agency</h5>
+            </div>
+
+            <div class="title-1">
+              <div class="inner-title">
+                <h1>We are a</h1>
+              </div>
+
+              <div class="common-cta">
+                <a href="#">
+                  <span>Let’s Talk</span>
+
+                  <div class="arrow-icon">
+                    <img
+                      src="./assets/images/icons/tilt-arrow.svg"
+                      alt="Icon"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="title-2">
+              <h1>leading IT service</h1>
+            </div>
+
+            <div class="title-3">
+              <div class="tagline">
+                <p>A Trusted IT Service Provider with Global Reach</p>
+              </div>
+
+              <div class="shape">
+                <div class="inner-shape"></div>
+
+                <div class="inner-shape"></div>
+
+                <div class="inner-shape"></div>
+
+                <div class="inner-shape"></div>
+              </div>
+
+              <div class="inner-title">
+                <h1>provider</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-content-left">
+              <h4>Design Visually. Create Efficiently.</h4>
+            </div>
+
+            <div class="hero-content-right">
+              <p>
+                At our IT service agency, we blend creativity and technology to
+                design visually stunning solutions, while ensuring efficient
+                development processes that drive business growth and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Project Sec ~~~~~~~~~~~~~~~-->
+      <section class="project-sec">
+        <div class="container">
+          <div class="common-title">
+            <div class="inner-title">
+              <h2>Projects</h2>
+            </div>
+
+            <div class="common-cta">
+              <a
+                target="_blank"
+                href="https://cal.com/abubakarsh/free-discovery-strategy-session"
+              >
+                <span>Book a 15-Min Call</span>
+
+                <div class="arrow-icon">
+                  <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-container">
+            <!-- <div class="project-frame">
+              <a href="#">
+                <div class="image">
+                  <img
+                    src="./assets/images/project-img-1.jpg"
+                    alt="Project Image"
+                  />
+                </div>
+
+                <div class="content">
+                  <h3>Restaurant dashboard</h3>
+
+                  <hr />
+
+                  <h5>Logo and branding</h5>
+                </div>
+              </a>
+            </div> -->
+          </div>
+
+          <div class="view-more-btn common-cta">
+            <a href="#">
+              <span>View more</span>
+
+              <div class="arrow-icon">
+                <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Work Sec ~~~~~~~~~~~~~~~-->
+      <section class="work-sec">
+        <div class="container">
+          <div class="work-container">
+            <div class="work-frame">
+              <hr />
+
+              <p class="msg-1">
+                We're a skilled and innovative team of IT professionals.
+              </p>
+
+              <div class="rating-star">
+                <img src="./assets/images/rating-star.png" alt="Vector" />
+              </div>
+
+              <div class="client-avatar">
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-1.png"
+                    alt="Client Image"
+                  />
+                </div>
+
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-2.png"
+                    alt="Client Image"
+                  />
+                </div>
+
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-3.png"
+                    alt="Client Image"
+                  />
+                </div>
+
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-4.png"
+                    alt="Client Image"
+                  />
+                </div>
+
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-5.png"
+                    alt="Client Image"
+                  />
+                </div>
+
+                <div class="frame">
+                  <img
+                    src="./assets/images/client-avatar-6.png"
+                    alt="Client Image"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="work-frame">
+              <p class="msg-2">
+                Our team consists of experienced IT professionals who are
+                passionate about delivering cutting-edge solutions. We
+                specialize in creating innovative technology strategies that
+                help businesses enhance performance, streamline operations, and
+                achieve success.
+              </p>
+
+              <div class="highlight-text">
+                <div class="frame">
+                  <h2>500+</h2>
+
+                  <span>Completed Projects</span>
+                </div>
+
+                <div class="frame">
+                  <h2>150</h2>
+
+                  <span>Business trust us</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Services Sec ~~~~~~~~~~~~~~~-->
+      <section class="services-sec">
+        <div class="container">
+          <div class="services-container">
+            <div class="services-frame">
+              <div class="common-title">
+                <div class="inner-title">
+                  <h2>Services</h2>
+                </div>
+
+                <div class="para">
+                  <p>
+                    Our IT services include software development, cloud
+                    solutions, cybersecurity, and IT consulting. We deliver
+                    customized solutions to optimize business operations and
+                    drive innovation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cus-tabs">
+                <button class="active" onclick="swiper.slideTo(0)">
+                  <div class="text">
+                    <span>01</span>
+
+                    <h4>Website Design</h4>
+                  </div>
+
+                  <div class="arrow-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.2416 1.75939C13.2416 1.2071 12.7939 0.759388 12.2416 0.759388L3.24159 0.759388C2.6893 0.759388 2.24159 1.2071 2.24159 1.75939C2.24159 2.31167 2.6893 2.75939 3.24159 2.75939L11.2416 2.75939L11.2416 10.7594C11.2416 11.3117 11.6893 11.7594 12.2416 11.7594C12.7939 11.7594 13.2416 11.3117 13.2416 10.7594L13.2416 1.75939ZM2.0616 13.3536L12.9487 2.46649L11.5345 1.05228L0.647385 11.9394L2.0616 13.3536Z"
+                        fill="#191A19"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <button onclick="swiper.slideTo(1)">
+                  <div class="text">
+                    <span>02</span>
+
+                    <h4>Shopify Customization</h4>
+                  </div>
+
+                  <div class="arrow-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.2416 1.75939C13.2416 1.2071 12.7939 0.759388 12.2416 0.759388L3.24159 0.759388C2.6893 0.759388 2.24159 1.2071 2.24159 1.75939C2.24159 2.31167 2.6893 2.75939 3.24159 2.75939L11.2416 2.75939L11.2416 10.7594C11.2416 11.3117 11.6893 11.7594 12.2416 11.7594C12.7939 11.7594 13.2416 11.3117 13.2416 10.7594L13.2416 1.75939ZM2.0616 13.3536L12.9487 2.46649L11.5345 1.05228L0.647385 11.9394L2.0616 13.3536Z"
+                        fill="#191A19"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <button onclick="swiper.slideTo(2)">
+                  <div class="text">
+                    <span>03</span>
+
+                    <h4>Ui UX Design</h4>
+                  </div>
+
+                  <div class="arrow-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.2416 1.75939C13.2416 1.2071 12.7939 0.759388 12.2416 0.759388L3.24159 0.759388C2.6893 0.759388 2.24159 1.2071 2.24159 1.75939C2.24159 2.31167 2.6893 2.75939 3.24159 2.75939L11.2416 2.75939L11.2416 10.7594C11.2416 11.3117 11.6893 11.7594 12.2416 11.7594C12.7939 11.7594 13.2416 11.3117 13.2416 10.7594L13.2416 1.75939ZM2.0616 13.3536L12.9487 2.46649L11.5345 1.05228L0.647385 11.9394L2.0616 13.3536Z"
+                        fill="#191A19"
+                      />
+                    </svg>
+                  </div>
+                </button>
+
+                <button onclick="swiper.slideTo(3)">
+                  <div class="text">
+                    <span>04</span>
+
+                    <h4>Web Development</h4>
+                  </div>
+
+                  <div class="arrow-icon">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.2416 1.75939C13.2416 1.2071 12.7939 0.759388 12.2416 0.759388L3.24159 0.759388C2.6893 0.759388 2.24159 1.2071 2.24159 1.75939C2.24159 2.31167 2.6893 2.75939 3.24159 2.75939L11.2416 2.75939L11.2416 10.7594C11.2416 11.3117 11.6893 11.7594 12.2416 11.7594C12.7939 11.7594 13.2416 11.3117 13.2416 10.7594L13.2416 1.75939ZM2.0616 13.3536L12.9487 2.46649L11.5345 1.05228L0.647385 11.9394L2.0616 13.3536Z"
+                        fill="#191A19"
+                      />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div class="services-frame">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="card swiper-slide">
+                    <div class="card-image">
+                      <img
+                        src="./assets/images/services-img-1.jpg"
+                        alt="Image"
+                      />
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Website Design</li>
+
+                        <li>Shopify Customization</li>
+
+                        <li>UI/UX Design</li>
+
+                        <li>Web Development</li>
+
+                        <li>Branding</li>
+
+                        <li>Prototyping</li>
+
+                        <li>Visual Design</li>
+
+                        <li>Webflow Development</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card swiper-slide">
+                    <div class="card-image">
+                      <img
+                        src="./assets/images/services-img-1.jpg"
+                        alt="Image"
+                      />
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>UI/UX Design</li>
+
+                        <li>Web Development</li>
+
+                        <li>Website Design</li>
+
+                        <li>Shopify Customization</li>
+
+                        <li>Webflow Development</li>
+
+                        <li>Branding</li>
+
+                        <li>Prototyping</li>
+
+                        <li>Visual Design</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card swiper-slide">
+                    <div class="card-image">
+                      <img
+                        src="./assets/images/services-img-1.jpg"
+                        alt="Image"
+                      />
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Website Design</li>
+
+                        <li>Shopify Customization</li>
+
+                        <li>UI/UX Design</li>
+
+                        <li>Web Development</li>
+
+                        <li>Branding</li>
+
+                        <li>Prototyping</li>
+
+                        <li>Visual Design</li>
+
+                        <li>Webflow Development</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="card swiper-slide">
+                    <div class="card-image">
+                      <img
+                        src="./assets/images/services-img-1.jpg"
+                        alt="Image"
+                      />
+                    </div>
+                    <div class="card-content">
+                      <ul>
+                        <li>Website Design</li>
+
+                        <li>Shopify Customization</li>
+
+                        <li>UI/UX Design</li>
+
+                        <li>Web Development</li>
+
+                        <li>Branding</li>
+
+                        <li>Prototyping</li>
+
+                        <li>Visual Design</li>
+
+                        <li>Webflow Development</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Project Scroller Sec ~~~~~~~~~~~~~~~-->
+      <section class="project-scroller-sec">
+        <div class="project-scroller-container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-1.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-2.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-3.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-1.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-2.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-3.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-2.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-1.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-3.jpg"
+                  alt="Image"
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="./assets/images/project-scroller-img-2.jpg"
+                  alt="Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Client Sec ~~~~~~~~~~~~~~~-->
+      <section class="client-sec">
+        <div class="container">
+          <div class="common-title">
+            <div class="inner-title">
+              <h2>What our client says<span>!</span></h2>
+            </div>
+
+            <div class="para">
+              <p>
+                Our clients’ feedback speaks volumes about the quality and
+                impact of our services. We are proud to have built strong,
+                lasting relationships based on trust, results, and exceptional
+                support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper scroller marquee-1">
+          <div class="swiper-wrapper scroller-in">
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper scroller marquee-2">
+          <div class="swiper-wrapper scroller-in">
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+
+            <div class="frame swiper-slide">
+              <div class="top-content">
+                <div class="image">
+                  <img
+                    src="./assets/images/testimonial-avatar-1.png"
+                    alt="Image"
+                  />
+                </div>
+
+                <div class="dets">
+                  <h5>John Doe,</h5>
+
+                  <h6>CEO, Tech Innovators Inc.</h6>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <p>
+                  “Working with the team was a fantastic experience. They
+                  understood our needs perfectly and delivered a solution that
+                  exceeded our expectations.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Plan Sec ~~~~~~~~~~~~~~~-->
+      <section class="plan-sec">
+        <div class="container">
+          <div class="common-title">
+            <div class="inner-title">
+              <h2>Choose Your Plan<span>.</span></h2>
+            </div>
+
+            <div class="para">
+              <p>
+                Select the best plan that suits your business needs. From basic
+                to advanced options, we offer flexible pricing for every stage
+                of growth
+              </p>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card-frame">
+              <div class="vector">
+                <img src="./assets/images/plan-vector-dark.svg" alt="Vector" />
+              </div>
+
+              <h4>Basic</h4>
+
+              <p>Best for personal use.</p>
+
+              <div class="price">
+                <h3>$20<span>/ Per month</span></h3>
+              </div>
+
+              <a href="#" class="start-btn">Get Started</a>
+
+              <div class="features">
+                <h5>Features</h5>
+
+                <ul>
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>IT Support & Maintenance</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Basic Network Setup</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Software Installation</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>4/7 Remote Assistance</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Communication tools</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Reporting and analytics</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-frame highlight-frame">
+              <div class="vector">
+                <img src="./assets/images/plan-vector-light.svg" alt="Vector" />
+              </div>
+
+              <h4>Professional Plan</h4>
+
+              <p>For large teams & corporations.</p>
+
+              <div class="price">
+                <h3>$120<span>/ Per month</span></h3>
+              </div>
+
+              <a href="#" class="start-btn">Get Started</a>
+
+              <div class="features">
+                <h5>Features</h5>
+
+                <ul>
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>All Basic Plan features</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>Advanced Network Management</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>Cloud Storage Solutions</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>Data Backup & Recovery</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>Communication tools</span>
+                  </li>
+
+                  <li>
+                    <img
+                      src="./assets/images/icons/tick-light.svg"
+                      alt="Icon"
+                    />
+
+                    <span>On-Site Support Visits</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card-frame">
+              <div class="vector">
+                <img src="./assets/images/plan-vector-dark.svg" alt="Vector" />
+              </div>
+
+              <h4>Enterprise Plan</h4>
+
+              <p>Large enterprises comprehensive IT needs</p>
+
+              <div class="price">
+                <h3>$240<span>/ Per month</span></h3>
+              </div>
+
+              <a href="#" class="start-btn">Get Started</a>
+
+              <div class="features">
+                <h5>Features</h5>
+
+                <ul>
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>All Professional Plan features</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Custom IT Solutions</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Security & Compliance Management</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Dedicated IT Consultant</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Priority Support</span>
+                  </li>
+
+                  <li>
+                    <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                    <span>Reporting and analytics</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Message Sec ~~~~~~~~~~~~~~~-->
+      <section class="message-sec">
+        <div class="container">
+          <img
+            src="./assets/images/quote-vector.svg"
+            alt="Vector"
+            class="quote-vector"
+          />
+
+          <div class="message-container">
+            <div class="top-content">
+              <h2>
+                DESIGN ALWAYS DELIVERED ON TIME. DELIVER ALWAYS THE BEST QUALITY
+                WITH ENDLESS ITERATIONS. GOOD JOB!
+              </h2>
+            </div>
+
+            <div class="bottom-content">
+              <div class="left">
+                <h5>ABUBAKAR SHERAZI</h5>
+              </div>
+
+              <div class="right">
+                <p>CEO & Founder of Frototype</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer class="footer">
+      <div class="container">
+        <div class="top-footer">
+          <div class="left-content">
+            <h3>Let<span>’</span>s chat<span>.</span></h3>
+
+            <p>
+              Unleashing brand potential through creative design and innovation.
+            </p>
+          </div>
+
+          <div class="right-content">
+            <div class="common-cta">
+              <a href="#">
+                <span>Let’s Talk</span>
+
+                <div class="arrow-icon">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.2416 1.75841C13.2416 1.20613 12.7939 0.758412 12.2416 0.758411L3.24159 0.758412C2.6893 0.758411 2.24159 1.20613 2.24159 1.75841C2.24159 2.3107 2.6893 2.75841 3.24159 2.75841L11.2416 2.75841L11.2416 10.7584C11.2416 11.3107 11.6893 11.7584 12.2416 11.7584C12.7939 11.7584 13.2416 11.3107 13.2416 10.7584L13.2416 1.75841ZM2.0616 13.3526L12.9487 2.46552L11.5345 1.0513L0.647385 11.9384L2.0616 13.3526Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="bottom-footer">
+          <div class="left-content">
+            <ul class="footer-list">
+              <li class="footer-item"><a href="#">About</a></li>
+
+              <li class="footer-item"><a href="#">Projects</a></li>
+
+              <li class="footer-item"><a href="#">Services</a></li>
+            </ul>
+
+            <ul class="footer-list">
+              <li class="footer-item"><a href="#">Contact</a></li>
+
+              <li class="footer-item"><a href="#">Pricing</a></li>
+
+              <li class="footer-item"><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="right-content">
+            <ul class="social-list">
+              <li class="social-item"><a href="#">Behance</a></li>
+
+              <li class="social-item"><a href="#">Dribbble</a></li>
+
+              <li class="social-item"><a href="#">LinkedIn</a></li>
+            </ul>
+
+            <a href="#" class="contact-link email-link">@infofrototype</a>
+
+            <a href="#" class="contact-link phone-link">+31 222 433 112</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".client-sec .marquee-1", {
+        spaceBetween: 30,
+        loop: true,
+        speed: 6500,
+        slidesPerView: "auto",
+        freeMode: true,
+        autoplay: {
+          delay: 0,
+        },
+      });
+
+      var swiper = new Swiper(".client-sec .marquee-2", {
+        spaceBetween: 30,
+        loop: true,
+        speed: 6500,
+        slidesPerView: "auto",
+        freeMode: true,
+        autoplay: {
+          delay: 0,
+          reverseDirection: true,
+        },
+      });
+
+      var swiper = new Swiper(".project-scroller-sec .swiper", {
+        spaceBetween: 30,
+        loop: true,
+        speed: 6500,
+        slidesPerView: "auto",
+        freeMode: true,
+        autoplay: {
+          delay: 0,
+        },
+      });
+
+      var swiper = new Swiper(".services-sec .swiper", {});
+    </script>
+
+    <!--~~~~~~~~~~~~~~~ Custom Js ~~~~~~~~~~~~~~~-->
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
 </html>
