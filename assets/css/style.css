@@ -372,11 +372,18 @@ html.lenis body {
   align-items: center;
 }
 
+.hero-sec .main-heading .title-3 .inner-content {
+  display: inline-flex;
+  align-items: center;
+}
+
 .hero-sec .main-heading .title-3 .tagline {
-  width: 450px;
+  max-width: 450px;
   height: 101px;
   padding: 17px 45px 16px 53px;
   background-color: var(--primary-black);
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-sec .main-heading .title-3 .tagline p {
