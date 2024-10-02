@@ -1,3 +1,21 @@
+// Smooth Scrolling
+
+const smoothScrolling = () => {
+  const lenis = new Lenis({
+    duration: 2,
+    smooth: true,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+};
+
+smoothScrolling();
+
 // Full Nav Menu
 
 const fullNavMenu = () => {
