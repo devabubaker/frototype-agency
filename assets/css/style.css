@@ -73,7 +73,6 @@ img {
   height: 62px;
   border-radius: 31px;
   background-color: var(--main-pink);
-  font-family: Poppins;
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
@@ -462,11 +461,20 @@ html.lenis body {
   opacity: 60%;
 }
 
+.hero-sec .main-heading .mobile-cta {
+  display: none;
+  margin-top: 70px;
+}
+
 /* === Project Sec === */
 
 .project-sec .common-title .inner-title h2::before {
   top: -5px;
   left: 212px;
+}
+
+.project-sec .common-title .para {
+  display: none;
 }
 
 .project-sec .project-container {
@@ -526,6 +534,21 @@ html.lenis body {
   border-bottom: 1px solid var(--border-color-1);
 }
 
+.project-sec .see-price-btn {
+  text-align: center;
+  display: none;
+  margin-top: 12px;
+}
+
+.project-sec .see-price-btn a {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--main-pink);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 /* === Work Sec === */
 
 .work-sec .container {
@@ -569,6 +592,7 @@ html.lenis body {
   display: flex;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .work-sec .work-container .work-frame .client-avatar .frame {
