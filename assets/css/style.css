@@ -714,7 +714,8 @@ html.lenis body {
   cursor: pointer;
   border: 1px solid var(--border-color-6);
   border-radius: 100px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -875,6 +876,10 @@ html.lenis body {
   max-width: 466px;
 }
 
+.client-sec .common-title .para .common-cta {
+  margin-top: 30px;
+}
+
 .client-sec .common-title .inner-title h2 {
   line-height: 75px;
 }
@@ -948,6 +953,10 @@ html.lenis body {
   max-width: 357px;
 }
 
+.client-sec .common-cta-mobile {
+  display: none;
+}
+
 /* === Plan Sec === */
 
 .plan-sec .common-title .inner-title {
@@ -977,8 +986,13 @@ html.lenis body {
   margin-top: 50px;
 }
 
+.plan-sec .card-container:nth-child(3) {
+  display: none;
+}
+
 .plan-sec .card-container .card-frame {
-  width: 402px;
+  max-width: 402px;
+  width: 100%;
   border-radius: 32px;
   padding: 40px;
   display: flex;
@@ -1034,7 +1048,8 @@ html.lenis body {
 }
 
 .plan-sec .card-container .card-frame .start-btn {
-  width: 322px;
+  max-width: 322px;
+  width: 100%;
   height: 44px;
   border-radius: 32px;
   border: 1px solid var(--border-color-4);
@@ -1114,65 +1129,82 @@ html.lenis body {
   color: var(--text-color-3);
 }
 
+.plan-sec .swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.plan-sec .swiper-pagination-bullet {
+  background-color: var(--main-pink);
+}
+
+.plan-sec .queries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  margin-top: 120px;
+}
+
+.plan-sec .queries h4 {
+  font-family: var(--clash-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 49.2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 /* === Message Sec === */
 
-.message-sec {
+.message-sec .container {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.message-sec .container {
+.message-sec .msg-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.message-sec .msg-container .msg-frame {
   background-color: var(--primary-black);
   border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0px;
+  padding: 40px 53px;
+}
+
+.message-sec .msg-container .msg-frame img {
   position: relative;
+  left: -30px;
 }
 
-.message-sec .container .quote-vector {
-  position: absolute;
-  top: 40px;
-  left: 50px;
-}
-
-.message-sec .message-container {
-  max-width: 908px;
-  width: 100%;
-}
-
-.message-sec .message-container .top-content h2 {
-  font-size: 50px;
+.message-sec .msg-container .msg-frame h4 {
+  font-family: var(--clash-display);
+  font-size: 30px;
   font-weight: 600;
-  line-height: 61.5px;
+  line-height: 36.9px;
   letter-spacing: 0.01em;
   color: var(--pure-white);
+  margin-top: 22px;
+  margin-bottom: 50px;
 }
 
-.message-sec .message-container .bottom-content {
+.message-sec .msg-container .msg-frame ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 60px;
-  padding-top: 15px;
   border-top: 1px solid var(--pure-white);
+  padding-top: 11px;
 }
 
-.message-sec .message-container .bottom-content h5 {
-  font-size: 20px;
+.message-sec .msg-container .msg-frame ul li {
+  font-size: 16px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 24px;
   letter-spacing: 0.01em;
-  color: var(--pure-white);
   text-transform: uppercase;
-}
-
-.message-sec .message-container .bottom-content p {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  letter-spacing: 0.01em;
   color: var(--pure-white);
 }
 
@@ -1277,6 +1309,13 @@ html.lenis body {
   color: var(--pure-white);
 }
 
+.footer .bottom-footer .right-content .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
 .footer .bottom-footer .right-content .contact-link {
   font-size: 24px;
   font-weight: 400;
@@ -1284,8 +1323,4 @@ html.lenis body {
   letter-spacing: -0.01em;
   color: var(--pure-white);
   text-decoration: underline;
-}
-
-.footer .bottom-footer .right-content .contact-link:not(:last-child) {
-  margin-bottom: 16px;
 }
