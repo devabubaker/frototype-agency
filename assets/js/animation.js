@@ -83,3 +83,46 @@ const fullNavMenu = () => {
 };
 
 fullNavMenu();
+
+// Fade Animation
+
+function loadAnimations() {
+  let visibleElements = [];
+
+  const revealOnScroll = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!visibleElements.includes(entry.target)) {
+          visibleElements.push(entry.target);
+        }
+      }
+    });
+
+    if (visibleElements.length > 1) {
+      visibleElements.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add("reveal");
+          observer.unobserve(element);
+
+          visibleElements = visibleElements.filter((el) => el !== element);
+        }, index * 200);
+      });
+    } else if (visibleElements.length === 1) {
+      const element = visibleElements[0];
+      element.classList.add("reveal");
+      observer.unobserve(element);
+      visibleElements = [];
+    }
+  };
+
+  const observer = new IntersectionObserver(revealOnScroll, {
+    root: null,
+    threshold: 0.2,
+  });
+
+  document.querySelectorAll(".masker").forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+loadAnimations();

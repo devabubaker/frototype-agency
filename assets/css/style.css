@@ -1324,3 +1324,22 @@ html.lenis body {
   color: var(--pure-white);
   text-decoration: underline;
 }
+
+/* === Fade Animtion Css === */
+
+.masker {
+  -webkit-mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+  mask-image: linear-gradient(90deg, #fff 33.33%, transparent 66.66%);
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  -webkit-mask-size: 300% 100%;
+  mask-size: 300% 100%;
+  transition: mask-position var(--duration, 2s) ease var(--delay, 0s),
+    -webkit-mask-position var(--duration, 2s) ease var(--delay, 0s);
+}
+
+/* Reveal animation - moves the mask to show the content */
+.reveal {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+}
