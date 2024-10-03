@@ -79,6 +79,8 @@ img {
   color: var(--pure-white);
   text-transform: uppercase;
   padding: 6px 6px 6px 32px;
+  overflow: hidden;
+  position: relative;
 }
 
 .common-cta .arrow-icon {
@@ -89,6 +91,12 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease;
+}
+
+.common-cta button:hover .arrow-icon,
+.common-cta a:hover .arrow-icon {
+  rotate: 45deg;
 }
 
 .common-title {
@@ -892,8 +900,8 @@ html.lenis body {
   color: var(--main-pink);
 }
 
-.client-sec .scroller:not(:last-child) {
-  margin-top: 50px;
+.client-sec .scroller:nth-child(2) {
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
