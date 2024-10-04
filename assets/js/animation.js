@@ -126,3 +126,47 @@ function loadAnimations() {
 }
 
 loadAnimations();
+
+// Magnetic Hover Button Animation
+
+const btn = document.querySelectorAll(".magnetic-btn");
+
+btn.forEach((button) => {
+  // Define the magnetic area (in pixels)
+  const magneticArea = 100;
+
+  window.addEventListener("mousemove", (e) => {
+    const { top, left, width, height } = button.getBoundingClientRect();
+    const x = e.clientX - left - width / 2;
+    const y = e.clientY - top - height / 2;
+    const distance = Math.sqrt(x * x + y * y);
+
+    // Check if the mouse is within the magnetic range
+    if (distance < magneticArea) {
+      gsap.to(button, {
+        x: x * 0.3, // Control intensity of the movement
+        y: y * 0.3,
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    } else {
+      // Reset position when out of magnetic range
+      gsap.to(button, {
+        x: 0,
+        y: 0,
+        duration: 0.3,
+        ease: "power3.out",
+      });
+    }
+  });
+
+  // Reset button position on mouseleave
+  document.body.addEventListener("mouseleave", () => {
+    gsap.to(button, {
+      x: 0,
+      y: 0,
+      duration: 0.3,
+      ease: "power3.out",
+    });
+  });
+});

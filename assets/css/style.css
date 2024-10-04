@@ -116,15 +116,11 @@ img {
   position: relative;
 }
 
-.common-title .inner-title h2::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.common-title .inner-title h2 span {
   width: 15px;
   height: 15px;
   background-color: var(--main-pink);
-  rotate: -135deg;
+  display: inline-block;
 }
 
 .common-title .para p {
@@ -352,23 +348,25 @@ html.lenis body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 3.5px;
+  margin-bottom: 5px;
 }
 
-.hero-sec .main-heading .title-1 .inner-title h1 {
+.hero-sec .main-heading .title-1 .inner-title span {
   font-family: var(--clash-display);
-  font-size: 150px;
+  font-size: 90px;
   font-weight: 700;
-  line-height: 140px;
+  line-height: 80px;
   letter-spacing: 1px;
   color: var(--primary-black);
   text-transform: uppercase;
 }
 
-.hero-sec .main-heading .title-2 h1 {
+.hero-sec .main-heading .title-2 span {
   font-family: var(--clash-display);
-  font-size: 120px;
+  font-size: 90px;
   font-weight: 300;
-  line-height: 140px;
+  line-height: 100px;
   letter-spacing: 1px;
   color: var(--primary-black);
   text-transform: uppercase;
@@ -377,6 +375,7 @@ html.lenis body {
 .hero-sec .main-heading .title-3 {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 
 .hero-sec .main-heading .title-3 .inner-content {
@@ -386,6 +385,7 @@ html.lenis body {
 
 .hero-sec .main-heading .title-3 .tagline {
   max-width: 450px;
+  width: 100%;
   height: 101px;
   padding: 17px 45px 16px 53px;
   background-color: var(--primary-black);
@@ -433,11 +433,11 @@ html.lenis body {
   margin-left: 10px;
 }
 
-.hero-sec .main-heading .title-3 .inner-title h1 {
+.hero-sec .main-heading .title-3 .inner-title span {
   font-family: var(--clash-display);
-  font-size: 130px;
+  font-size: 90px;
   font-weight: 700;
-  line-height: 140px;
+  line-height: 100px;
   letter-spacing: 1px;
   color: var(--primary-black);
   text-transform: uppercase;
@@ -475,11 +475,6 @@ html.lenis body {
 }
 
 /* === Project Sec === */
-
-.project-sec .common-title .inner-title h2::before {
-  top: -5px;
-  left: 212px;
-}
 
 .project-sec .common-title .para {
   display: none;
@@ -667,7 +662,7 @@ html.lenis body {
 
 .services-sec .services-container {
   display: flex;
-  gap: 24px;
+  gap: 104px;
   align-items: center;
 }
 
@@ -916,6 +911,7 @@ html.lenis body {
 
 .client-sec .scroller .scroller-in .frame {
   width: 400px;
+  height: auto;
   padding: 25px 20px;
   border-radius: 30px;
   background-color: var(--pure-white);
@@ -962,7 +958,8 @@ html.lenis body {
 }
 
 .client-sec .common-cta-mobile {
-  display: none;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* === Plan Sec === */
@@ -972,7 +969,7 @@ html.lenis body {
 }
 
 .plan-sec .common-title .para {
-  max-width: 466px;
+  max-width: 556px;
 }
 
 .plan-sec .common-title .inner-title h2 {
@@ -1162,6 +1159,110 @@ html.lenis body {
   line-height: 49.2px;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+
+.plan-sec .card-frame .add-ons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color-3);
+  margin-top: 20px;
+}
+
+.plan-sec .card-frame .add-ons h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--primary-black);
+}
+
+.plan-sec .highlight-frame .add-ons h5 {
+  color: var(--pure-white);
+}
+
+.plan-sec .card-frame .add-ons .tag {
+  width: 62px;
+  height: 26px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #402b3a;
+}
+
+.plan-sec .highlight-frame .add-ons .tag {
+  background-color: #414141;
+  color: var(--pure-white);
+}
+
+.plan-sec .card-frame .add-ons .switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.plan-sec .card-frame .add-ons .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.plan-sec .card-frame .add-ons .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--pure-white);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.plan-sec .card-frame .add-ons .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: var(--main-pink);
+}
+
+.plan-sec .card-frame .add-ons input:checked + .slider {
+  background-color: var(--main-pink);
+}
+
+.plan-sec .card-frame .add-ons input:checked + .slider::before {
+  background-color: var(--pure-white);
+}
+
+.plan-sec .card-frame .add-ons input:focus + .slider {
+  box-shadow: 0 0 0 5px #d9d9d966;
+}
+
+.plan-sec .card-frame .add-ons input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.plan-sec .card-frame .add-ons .slider.round {
+  border-radius: 34px;
+  border: 1px solid var(--main-pink);
+}
+
+.plan-sec .card-frame .add-ons .slider.round:before {
+  border-radius: 50%;
 }
 
 /* === Message Sec === */
