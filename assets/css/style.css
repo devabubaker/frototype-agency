@@ -10,6 +10,7 @@
 
   /* Colors */
 
+  --pure-black: #000000;
   --primary-black: #191a19;
   --main-pink: #d63484;
   --pure-white: #ffffff;
@@ -673,21 +674,11 @@ html.lenis body {
   width: 626px;
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .common-title
-  .inner-title
-  h2 {
+.services-sec .services-container .services-frame .common-title .inner-title h2 {
   color: var(--pure-white);
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .common-title
-  .inner-title
-  h2::before {
+.services-sec .services-container .services-frame .common-title .inner-title h2::before {
   top: -5px;
   left: 232px;
 }
@@ -763,43 +754,19 @@ html.lenis body {
   background-color: var(--pure-white);
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .cus-tabs
-  button.active
-  .text
-  span {
+.services-sec .services-container .services-frame .cus-tabs button.active .text span {
   color: var(--primary-black);
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .cus-tabs
-  button.active
-  .text
-  h4 {
+.services-sec .services-container .services-frame .cus-tabs button.active .text h4 {
   color: var(--primary-black);
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .cus-tabs
-  button.active
-  .arrow-icon {
+.services-sec .services-container .services-frame .cus-tabs button.active .arrow-icon {
   background-color: var(--primary-black);
 }
 
-.services-sec
-  .services-container
-  .services-frame
-  .cus-tabs
-  button.active
-  .arrow-icon
-  svg
-  path {
+.services-sec .services-container .services-frame .cus-tabs button.active .arrow-icon svg path {
   fill: var(--pure-white);
 }
 
@@ -1235,19 +1202,19 @@ html.lenis body {
   background-color: var(--main-pink);
 }
 
-.plan-sec .card-frame .add-ons input:checked + .slider {
+.plan-sec .card-frame .add-ons input:checked+.slider {
   background-color: var(--main-pink);
 }
 
-.plan-sec .card-frame .add-ons input:checked + .slider::before {
+.plan-sec .card-frame .add-ons input:checked+.slider::before {
   background-color: var(--pure-white);
 }
 
-.plan-sec .card-frame .add-ons input:focus + .slider {
+.plan-sec .card-frame .add-ons input:focus+.slider {
   box-shadow: 0 0 0 5px #d9d9d966;
 }
 
-.plan-sec .card-frame .add-ons input:checked + .slider:before {
+.plan-sec .card-frame .add-ons input:checked+.slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
@@ -1277,12 +1244,12 @@ html.lenis body {
 }
 
 .message-sec .msg-container .msg-frame {
-  background-color: var(--primary-black);
+  background-color: var(--pure-white);
   border-radius: 30px;
   padding: 40px 53px;
 }
 
-.message-sec .msg-container .msg-frame img {
+.message-sec .msg-container .msg-frame .top-img {
   position: relative;
   left: -30px;
 }
@@ -1293,7 +1260,7 @@ html.lenis body {
   font-weight: 600;
   line-height: 36.9px;
   letter-spacing: 0.01em;
-  color: var(--pure-white);
+  color: var(--pure-black);
   margin-top: 22px;
   margin-bottom: 50px;
 }
@@ -1302,7 +1269,7 @@ html.lenis body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--pure-white);
+  border-top: 1px solid var(--pure-black);
   padding-top: 11px;
 }
 
@@ -1312,7 +1279,17 @@ html.lenis body {
   line-height: 24px;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: var(--pure-white);
+  color: var(--pure-black);
+}
+.message-sec .msg-container .msg-frame ul li:nth-child(1){
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+.message-sec .msg-container .msg-frame ul li img {
+  width: 30px;
+  height: 30px;
 }
 
 /* === Footer === */
