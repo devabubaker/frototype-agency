@@ -821,21 +821,20 @@ html.lenis body {
 
 .services-sec .services-container .services-frame .card .card-content ul {
   display: flex;
+  justify-content: center;
   align-items: center;
-  column-gap: 8px;
-  row-gap: 15px;
+  column-gap: 4px;
+  row-gap: 8px;
   flex-wrap: wrap;
 }
 
 .services-sec .services-container .services-frame .card .card-content ul li {
-  min-width: 94px;
-  height: 45px;
   border-radius: 40px;
   border: 1px solid var(--border-color-4);
-  padding: 15px 12px;
-  font-size: 14px;
+  padding: 10px 15px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 21px;
+  line-height: 18px;
   color: var(--pure-white);
   display: inline-flex;
   align-items: center;
