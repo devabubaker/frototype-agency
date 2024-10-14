@@ -602,9 +602,24 @@ html.lenis body {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid #d9d9d9;
   overflow: hidden;
   margin-right: -20px;
+}
+
+.work-sec .work-container .work-frame .client-avatar .frame.more {
+  background-color: rgba(44, 49, 63, 1);
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(241, 241, 241, 1);
+  justify-content: center;
+}
+
+.work-sec .work-container .work-frame .client-avatar .frame.more span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(255, 157, 0, 1);
 }
 
 .work-sec .work-container .work-frame .client-avatar .frame img {
@@ -825,7 +840,7 @@ html.lenis body {
 
 .project-scroller-sec .swiper-slide {
   width: 400px;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -1281,12 +1296,14 @@ html.lenis body {
   text-transform: uppercase;
   color: var(--pure-black);
 }
-.message-sec .msg-container .msg-frame ul li:nth-child(1){
+
+.message-sec .msg-container .msg-frame ul li:nth-child(1) {
   display: flex;
   align-items: center;
   gap: 5px;
-  
+
 }
+
 .message-sec .msg-container .msg-frame ul li img {
   width: 30px;
   height: 30px;
