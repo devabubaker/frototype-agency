@@ -66,6 +66,12 @@
 </head>
 
 <body>
+  <!-- Loader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <!--  -->
+
   <!-- Full Nav  -->
   <div class="full-nav" data-lenis-prevent="true">
     <div class="top-content">
@@ -1966,7 +1972,15 @@
       noSwipingClass: "swiper-no-swiping", // Class to disable swiping
     });
   </script>
+  <!-- Loader -->
+  <script>
+    var loader = document.getElementById("preloader");
 
+    window.addEventListener("load",function(){
+      loader.style.display= 'none'
+    })
+    
+  </script>
   <!--~~~~~~~~~~~~~~~ Custom Js ~~~~~~~~~~~~~~~-->
   <script type="module" src="./assets/js/animation.js"></script>
   <script type="module" src="./assets/js/main.js"></script>
