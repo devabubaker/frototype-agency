@@ -498,6 +498,7 @@ html.lenis body {
   position: absolute;
   top: -76px;
   left: -20px;
+  transition: all .9s ease;
 }
 
 .project-sec .price img {
@@ -517,10 +518,10 @@ html.lenis body {
   line-height: 16px;
   text-align: center;
   color: var(--pure-black);
-  transform: rotate(5deg);
+rotate:5deg; 
 }
 
-.project-sec .common-cta .masker:hover .price {
+.project-sec .common-cta:hover .price {
   display: block;
 }
 
