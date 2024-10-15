@@ -32,7 +32,7 @@ const projectsData = () => {
     .join(""); // join the mapped array into a string
 };
 
-projectsData();
+// projectsData();
 
 // Services Sec Tab
 

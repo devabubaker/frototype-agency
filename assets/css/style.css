@@ -481,36 +481,155 @@ html.lenis body {
 }
 
 .project-sec .project-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 30px;
-  column-gap: 24px;
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
   padding-top: 50px;
   border-top: 1px solid var(--border-color-1);
+  border-bottom: 1px solid var(--border-color-1);
+  
+}
+
+.project-sec .project-container .project-left {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.project-sec .project-container .project-right {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 86px;
+}
+
+.project-sec .project-container .project-frame {
+  max-width: 610px;
+  height: auto;
 }
 
 .project-sec .project-container .project-frame a {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .project-sec .project-container .project-frame .image {
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 
-.project-sec .project-container .project-frame .content {
+.project-sec .project-container .project-frame .hover-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all .3s ease-in;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
-.project-sec .project-container .project-frame .content hr {
-  width: 100%;
-  border: 1px solid var(--border-color-2);
+.project-sec .project-container .project-frame:hover .hover-content {
+  opacity: 1;
 }
+
+.project-sec .project-container .project-frame .hover-content .study-btn {
+  padding: 11px 32px;
+  border: 0.5px solid rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0.3);
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 30px;
+  color: var(--pure-white);
+  backdrop-filter: blur(16px);
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project-frame .hover-content .study-btn span {
+  display: block;
+  transition: transform .35s, opacity .35s, top .35s;
+  transition-timing-function: cubic-bezier(.66, 0, .34, 1);
+  pointer-events: none;
+}
+
+.project-frame .hover-content .study-btn span:nth-child(2) {
+  position: absolute;
+  top: 150%;
+  left: 12%;
+  opacity: 0;
+}
+
+.project-frame .hover-content .study-btn:hover span:nth-child(1) {
+  transform: translate(0px, -140%);
+  opacity: 0;
+}
+
+.project-frame .hover-content .study-btn:hover span:nth-child(2) {
+  opacity: 1;
+  top: 10px;
+  transition-delay: 0.1s;
+}
+
+.project-frame .hover-content .arrow-icon {
+  background-color: var(--main-pink);
+  width: 50px;
+  height: 50px;
+  white-space: nowrap;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.project-frame .hover-content .arrow-icon:hover {
+  /* rotate: 45deg; */
+}
+.arrow-btn{
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.tooltiptext {
+  padding: 5px 7px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(14px);
+  font-family: var(--poppins);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  color: var(--pure-white);
+  position: absolute;
+  z-index: 1;
+  top: 60px;
+  left: -25px;
+  visibility: hidden;
+}
+.project-frame .hover-content .arrow-icon:hover .tooltiptext{
+  visibility: visible;
+}
+.project-sec .project-container .project-frame .content {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .project-sec .project-container .project-frame .content h3 {
   font-family: var(--clash-display);
@@ -518,23 +637,22 @@ html.lenis body {
   font-weight: 600;
   line-height: 27.06px;
   letter-spacing: 1px;
-  color: var(--primary-black);
+  color: var(--pure-black);
   text-transform: uppercase;
 }
 
 .project-sec .project-container .project-frame .content h5 {
+  font-family: var(--poppins);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
-  color: var(--primary-black);
+  color: var(--pure-black);
   text-transform: uppercase;
 }
 
 .project-sec .view-more-btn {
-  text-align: center;
-  margin-top: 40px;
   padding-bottom: 60px;
-  border-bottom: 1px solid var(--border-color-1);
+  margin-top: -10px;
 }
 
 .project-sec .see-price-btn {
@@ -1264,7 +1382,8 @@ html.lenis body {
   position: relative;
   overflow: hidden;
 }
-.custom-sec .custom-inner::after{
+
+.custom-sec .custom-inner::after {
   position: absolute;
   right: -141px;
   bottom: -41px;
@@ -1276,7 +1395,7 @@ html.lenis body {
   background-size: cover;
 }
 
-.custom-sec .custom-inner::before{
+.custom-sec .custom-inner::before {
   position: absolute;
   left: -162px;
   bottom: -66px;
@@ -1287,9 +1406,11 @@ html.lenis body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .cs-left-content {
   width: 53%;
 }
+
 .cs-left-content h1 {
   color: var(--pure-white);
   font-family: var(--clash-display);
@@ -1308,11 +1429,13 @@ html.lenis body {
   line-height: 27px;
   text-align: left;
 }
-.custom-sec .common-cta a{
+
+.custom-sec .common-cta a {
   background-color: transparent;
   border: 1px solid var(--pure-white);
 }
-.custom-sec .common-cta .arrow-icon{
+
+.custom-sec .common-cta .arrow-icon {
   background-color: var(--main-pink);
 }
 
