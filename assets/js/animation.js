@@ -17,11 +17,11 @@ const smoothScrolling = () => {
 smoothScrolling();
 
 // Full Nav Menu
-
 const fullNavMenu = () => {
   const hamburger = document.querySelector(".hamburger");
   const closeBtn = document.querySelector(".close-btn button");
   const fullNav = document.querySelector(".full-nav");
+  const navLinks = document.querySelectorAll(".nav-list .nav-item a"); // Select all nav links
 
   const openNav = () => {
     gsap.to(fullNav, {
@@ -80,9 +80,15 @@ const fullNavMenu = () => {
 
   hamburger.addEventListener("click", openNav);
   closeBtn.addEventListener("click", closeNav);
+
+  // Close the nav when any link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", closeNav);
+  });
 };
 
 fullNavMenu();
+
 
 // Fade Animation
 
@@ -170,3 +176,109 @@ btn.forEach((button) => {
     });
   });
 });
+
+// loader display only when website takes loading
+
+// Once the window has fully loaded
+window.onload = function () {
+  // Get the loader and content elements
+  var loader = document.getElementById('loader');
+  var webContent = document.querySelector('.webContent');
+
+  // Simulate a fake loading delay of 3 seconds before hiding the loader
+  setTimeout(function () {
+    // Hide the loader after the fake delay
+    loader.style.display = "none";
+
+    // Show the content by changing display to block
+    webContent.style.display = "block";
+  }, 0);
+};
+
+
+// Plan Sec Animation
+function initializeFadeInAnimations() {
+  const fadeInContainer = document.querySelector(".fadeInContainer");
+  const fadeInElements = fadeInContainer.querySelectorAll(".fadeInElement");
+  let visibleElements = [];
+
+  const revealOnScroll = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!visibleElements.includes(entry.target)) {
+          visibleElements.push(entry.target);
+        }
+      }
+    });
+
+    if (visibleElements.length > 0) {
+      visibleElements.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add("reveal");
+          observer.unobserve(element);
+          visibleElements = visibleElements.filter((el) => el !== element);
+        }, index * 200); // Staggered animation by 200ms for each element
+      });
+    }
+  };
+
+  const observer = new IntersectionObserver(revealOnScroll, {
+    root: null,
+    threshold: 0.2, // Adjust as needed
+  });
+
+  observer.observe(fadeInContainer); // Observe the parent container
+
+  // Observe each fadeInElement to trigger staggered animations
+  fadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+// Call the function to load animations
+initializeFadeInAnimations();
+
+
+
+// Mess sec Animation
+
+function loadMsgAnimations() {
+  let visibleMessages = [];
+
+  const revealMessagesOnScroll = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!visibleMessages.includes(entry.target)) {
+          visibleMessages.push(entry.target);
+        }
+      }
+    });
+
+    if (visibleMessages.length > 1) {
+      visibleMessages.forEach((element, index) => {
+        setTimeout(() => {
+          element.classList.add("reveal");
+          observer.unobserve(element);
+
+          visibleMessages = visibleMessages.filter((el) => el !== element);
+        }, index * 200);
+      });
+    } else if (visibleMessages.length === 1) {
+      const element = visibleMessages[0];
+      element.classList.add("reveal");
+      observer.unobserve(element);
+      visibleMessages = [];
+    }
+  };
+
+  const observer = new IntersectionObserver(revealMessagesOnScroll, {
+    root: null,
+    threshold: 0.2, // Adjust as needed
+  });
+
+  document.querySelectorAll(".msg-frame").forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+loadMsgAnimations();
