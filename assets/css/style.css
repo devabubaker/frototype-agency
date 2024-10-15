@@ -361,7 +361,20 @@ html.lenis body {
   color: var(--primary-black);
 
 }
-
+.hero-sec .main-heading .title-1 .inner-title span p{
+  display: inline;
+  position: relative;
+}
+.hero-sec .main-heading .title-1 .inner-title span p::before{
+  content: '';
+    display: block;
+    width: 18px;
+    height: 13px;
+    position: absolute;
+    top: 18px;
+    left: 2px;
+  background-color: var(--main-pink);
+}
 .hero-sec .main-heading .title-2 span {
   font-family: var(--clash-display);
   font-size: 90px;
@@ -475,6 +488,41 @@ html.lenis body {
 }
 
 /* === Project Sec === */
+.project-sec .common-cta{
+  position: relative;
+}
+.project-sec .price {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  top: -76px;
+  left: -20px;
+}
+
+.project-sec .price img {
+  width: 50px;
+  height: 50px;
+  transform: rotate(297deg);
+}
+
+.project-sec .price span {
+  width: fit-content;
+  padding: 8px 9px;
+  border-radius: 5px;
+  background-color: rgba(219, 219, 219, 1);
+  font-family: var(--poppins);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  color: var(--pure-black);
+  transform: rotate(5deg);
+}
+
+.project-sec .common-cta .masker:hover .price {
+  display: block;
+}
 
 .project-sec .common-title .para {
   display: none;
@@ -487,7 +535,7 @@ html.lenis body {
   padding-top: 50px;
   border-top: 1px solid var(--border-color-1);
   border-bottom: 1px solid var(--border-color-1);
-  
+
 }
 
 .project-sec .project-container .project-left {
@@ -598,12 +646,14 @@ html.lenis body {
 .project-frame .hover-content .arrow-icon:hover {
   /* rotate: 45deg; */
 }
-.arrow-btn{
+
+.arrow-btn {
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
 }
+
 .tooltiptext {
   padding: 5px 7px;
   border-radius: 5px;
@@ -622,9 +672,11 @@ html.lenis body {
   left: -25px;
   visibility: hidden;
 }
-.project-frame .hover-content .arrow-icon:hover .tooltiptext{
+
+.project-frame .hover-content .arrow-icon:hover .tooltiptext {
   visibility: visible;
 }
+
 .project-sec .project-container .project-frame .content {
   display: flex;
   flex-direction: column;
