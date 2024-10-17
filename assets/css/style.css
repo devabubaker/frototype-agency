@@ -436,7 +436,7 @@ html.lenis body {
   display: inline;
   position: relative;
 }
-
+/* 
 .hero-sec .main-heading .title-1 .inner-title span p::before {
   content: '';
   display: block;
@@ -446,7 +446,7 @@ html.lenis body {
   top: 18px;
   left: 2px;
   background-color: var(--main-pink);
-}
+} */
 
 .hero-sec .main-heading .title-2 span {
   font-family: var(--clash-display);
@@ -601,7 +601,7 @@ html.lenis body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  padding-top: 50px;
+  padding: 40px 0 56px 0;
   border-top: 1px solid var(--border-color-1);
   border-bottom: 1px solid var(--border-color-1);
 }
@@ -751,19 +751,6 @@ html.lenis body {
   flex-direction: column;
 }
 
-.project-sec .view-more-btn .price {
-  display: flex;
-  flex-direction: column;
-  top: -41px;
-  left: 220px;
-  opacity: 0 !important;
-  transition: opacity .5s ease;
-}
-
-.project-sec .project-container .view-more-btn .price span {
-  rotate: 17deg;
-}
-
 .project-sec .project-container .project-frame .content h3 {
   font-family: var(--clash-display);
   font-size: 22px;
@@ -785,9 +772,26 @@ html.lenis body {
 
 .project-sec .view-more-btn {
   padding-bottom: 60px;
-  margin-top: -10px;
+  margin-top: -120px;
+  position: relative;
+  width: auto;
 }
 
+.project-sec .view-more-btn .price {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  top: -41px;
+  left: 220px;
+  transition: opacity .5s ease;
+}
+
+.project-sec .view-more-btn .price span {
+  rotate: 17deg;
+}
+.project-sec .view-more-btn:hover .price{
+  opacity: 1;
+}
 .project-sec .see-price-btn {
   text-align: center;
   display: none;
@@ -804,13 +808,6 @@ html.lenis body {
 }
 
 
-.project-sec .hide {
-  display: none;
-}
-
-.project-sec .show {
-  display: block;
-}
 
 /* === Work Sec === */
 
