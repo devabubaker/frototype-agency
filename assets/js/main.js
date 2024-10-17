@@ -1,12 +1,14 @@
 // Project Sec
 import { projectData } from "./constant.js"; // Ensure this path is correct
-// No need to import gsap if using the CDN
 
 const projectContainer = document.querySelector(".project-sec .project-container");
 
 // Function to render project cards
 const projectsData = () => {
-    projectContainer.innerHTML = projectData
+    // Limit to only 4 projects
+    const limitedProjects = projectData.slice(0, 4);
+
+    projectContainer.innerHTML = limitedProjects
         .map(
             (item) => `
         <div class="project-frame">
@@ -16,66 +18,88 @@ const projectsData = () => {
                 </div>
                 <div class="content">
                     <h3>${item.title}</h3>
-                    <hr />
                     <h5>${item.subTitle}</h5>
                 </div>
             </a>
+            <div class="button">
+              <div class="btn-div">
+              ${item.caseStudyUrl ? `<a href="${item.caseStudyUrl}" class="btn case-study">Case Study</a>` : `<span class="coming-soon">Coming Soon</span>`} 
+                <a href="${item.linkUrl}" class="btn visit-website">
+                <img src="./assets/images/visit-website-arrow.png" />
+                          <div class="tooltip">Visit Website</div>
+
+                </a>
+               
+                </div>
+            </div>
         </div>
         `
         )
         .join(""); // Join the mapped array into a string
+
+    // Add hover event listeners for showing buttons
+    document.querySelectorAll(".project-frame").forEach((frame) => {
+        frame.addEventListener("mouseenter", () => {
+            frame.querySelector(".buttons").style.display = "block";
+        });
+        frame.addEventListener("mouseleave", () => {
+            frame.querySelector(".buttons").style.display = "none";
+        });
+    });
 };
+
+
 
 // Function to load animations for project cards
 function loadAnimations() {
-  let visibleElements = []; // Array to keep track of visible elements
+    let visibleElements = []; // Array to keep track of visible elements
 
-  // Intersection observer callback function
-  const revealOnScroll = (entries, observer) => {
-      entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-              if (!visibleElements.includes(entry.target)) {
-                  visibleElements.push(entry.target);
-              }
-          }
-      });
+    // Intersection observer callback function
+    const revealOnScroll = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (!visibleElements.includes(entry.target)) {
+                    visibleElements.push(entry.target);
+                }
+            }
+        });
 
-      // If there are multiple visible elements
-      if (visibleElements.length > 1) {
-          visibleElements.forEach((element, index) => {
-              setTimeout(() => {
-                  // GSAP animation for fade-in effect only (no y-axis movement)
-                  gsap.to(element, {
-                      opacity: 1,
-                      duration: 0.5,
-                      ease: "power2.out", // Control easing effect
-                  });
-                  observer.unobserve(element); // Stop observing the element
-                  visibleElements = visibleElements.filter((el) => el !== element); // Remove element from visibleElements
-              }, index * 200); // Delay based on index
-          });
-      } else if (visibleElements.length === 1) {
-          const element = visibleElements[0];
-          gsap.to(element, {
-              opacity: 1,
-              duration: 0.5,
-              ease: "power2.out", // Control easing effect
-          });
-          observer.unobserve(element); // Stop observing the element
-          visibleElements = [];
-      }
-  };
+        // If there are multiple visible elements
+        if (visibleElements.length > 1) {
+            visibleElements.forEach((element, index) => {
+                setTimeout(() => {
+                    // GSAP animation for fade-in effect only (no y-axis movement)
+                    gsap.to(element, {
+                        opacity: 1,
+                        duration: 0.5,
+                        ease: "power2.out", // Control easing effect
+                    });
+                    observer.unobserve(element); // Stop observing the element
+                    visibleElements = visibleElements.filter((el) => el !== element); // Remove element from visibleElements
+                }, index * 200); // Delay based on index
+            });
+        } else if (visibleElements.length === 1) {
+            const element = visibleElements[0];
+            gsap.to(element, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out", // Control easing effect
+            });
+            observer.unobserve(element); // Stop observing the element
+            visibleElements = [];
+        }
+    };
 
-  // Create an intersection observer
-  const observer = new IntersectionObserver(revealOnScroll, {
-      root: null,
-      threshold: 0.2,
-  });
+    // Create an intersection observer
+    const observer = new IntersectionObserver(revealOnScroll, {
+        root: null,
+        threshold: 0.2,
+    });
 
-  // Observe each project frame element
-  document.querySelectorAll(".project-frame").forEach((element) => {
-      observer.observe(element);
-  });
+    // Observe each project frame element
+    document.querySelectorAll(".project-frame").forEach((element) => {
+        observer.observe(element);
+    });
 }
 
 // Call the function to render project cards
@@ -87,18 +111,18 @@ loadAnimations();
 // Services Sec Tab
 
 const servicesTab = () => {
-  const cusTabs = document.querySelectorAll(
-    ".services-sec .services-container .services-frame .cus-tabs button"
-  );
+    const cusTabs = document.querySelectorAll(
+        ".services-sec .services-container .services-frame .cus-tabs button"
+    );
 
-  cusTabs.forEach((tabs) => {
-    tabs.addEventListener("click", () => {
-      cusTabs.forEach((tabs2) => {
-        tabs2.classList.remove("active");
-      });
-      tabs.classList.add("active");
+    cusTabs.forEach((tabs) => {
+        tabs.addEventListener("click", () => {
+            cusTabs.forEach((tabs2) => {
+                tabs2.classList.remove("active");
+            });
+            tabs.classList.add("active");
+        });
     });
-  });
 };
 
 servicesTab();
@@ -106,11 +130,11 @@ servicesTab();
 // Sticky Nav
 
 const stickyNav = () => {
-  const header = document.querySelector(".header");
+    const header = document.querySelector(".header");
 
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("active", pageYOffset > 100);
-  });
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("active", pageYOffset > 100);
+    });
 };
 
 stickyNav();

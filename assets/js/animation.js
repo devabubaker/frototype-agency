@@ -141,6 +141,20 @@ btn.forEach((button) => {
   // Define the magnetic area (in pixels)
   const magneticArea = 100;
 
+  let isHovering = false; // Track if the button is being hovered
+
+  // Mouse enter event to set hovering state
+  button.addEventListener('mouseenter', () => {
+    isHovering = true; // Set to true when mouse enters
+    hoverImage.style.opacity = '1'; // Show hover image
+  });
+
+  // Mouse leave event to reset hovering state
+  button.addEventListener('mouseleave', () => {
+    isHovering = false; // Set to false when mouse leaves
+    hoverImage.style.opacity = '0'; // Hide hover image
+  });
+
   window.addEventListener("mousemove", (e) => {
     const { top, left, width, height } = button.getBoundingClientRect();
     const x = e.clientX - left - width / 2;
@@ -164,9 +178,14 @@ btn.forEach((button) => {
         ease: "power3.out",
       });
     }
+
+    // Maintain hover image visibility if still hovering
+    if (isHovering) {
+      hoverImage.style.opacity = '1'; // Keep it visible
+    }
   });
 
-  // Reset button position on mouseleave
+  // Reset button position on mouseleave of body
   document.body.addEventListener("mouseleave", () => {
     gsap.to(button, {
       x: 0,
@@ -176,6 +195,7 @@ btn.forEach((button) => {
     });
   });
 });
+
 
 // loader display only when website takes loading
 
@@ -282,3 +302,229 @@ function loadMsgAnimations() {
 }
 
 loadMsgAnimations();
+
+
+// Hover prcing list btn functionality
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hoverImage = document.querySelector('.hover-image');
+  const hoverButton = document.querySelector('.hover-button');
+
+  if (!hoverImage || !hoverButton) {
+      console.error('Element not found. Check your HTML structure and class names.');
+      return; // Exit if elements are not found
+  }
+
+  let intervalId;  // Stores the interval ID for toggling visibility
+  let isHovered = false;  // Keeps track of whether the button is hovered
+  let isToggling = false;  // Keeps track of whether toggling is active
+
+  // Function to toggle image visibility every 3 seconds when not hovering
+  function toggleImage() {
+      if (!isToggling) { // Only start toggling if it's not already active
+          isToggling = true; // Set toggling to true
+          intervalId = setInterval(() => {
+              if (!isHovered) {  // Only toggle if button is not hovered
+                  hoverImage.style.opacity = hoverImage.style.opacity === '1' ? '0' : '1';
+              }
+          }, 3000);
+      }
+  }
+
+  // Start toggling visibility on page load
+  toggleImage();
+
+  // Stop toggling and show image when hovered
+  hoverButton.addEventListener('mouseenter', () => {
+      console.log('Mouse entered button'); // Debugging log
+      isHovered = true;  // Set hover state to true
+      clearInterval(intervalId);  // Stop the toggle interval
+      hoverImage.style.opacity = '1';  // Show image immediately
+      isToggling = false; // Stop any toggling
+  });
+
+  // Resume toggling when hover ends
+  hoverButton.addEventListener('mouseleave', () => {
+      console.log('Mouse left button'); // Debugging log
+      isHovered = false;  // Reset hover state
+      hoverImage.style.opacity = '0';  // Ensure image is hidden before resuming
+      toggleImage();  // Restart the toggle functionality
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.hover-button');
+  const hoverImage = document.querySelector('.hover-image'); // Adjust this if needed
+
+  // Define the magnetic area (in pixels)
+  const magneticArea = 100;
+
+  buttons.forEach((button) => {
+      let isHovering = false; // Track if the button is being hovered
+
+      // Mouse enter event to set hovering state
+      button.addEventListener('mouseenter', () => {
+          isHovering = true; // Set to true when mouse enters
+          hoverImage.style.opacity = '1'; // Show hover image
+      });
+
+      // Mouse leave event to reset hovering state
+      button.addEventListener('mouseleave', () => {
+          isHovering = false; // Set to false when mouse leaves
+          hoverImage.style.opacity = '0'; // Hide hover image
+      });
+
+      // Track mouse movement over the button
+      window.addEventListener('mousemove', (e) => {
+          const { top, left, width, height } = button.getBoundingClientRect();
+          const x = e.clientX - left - width / 2;
+          const y = e.clientY - top - height / 2;
+          const distance = Math.sqrt(x * x + y * y);
+
+          // Check if the mouse is within the magnetic range
+          if (distance < magneticArea) {
+              gsap.to(button, {
+                  x: x * 0.3, // Control intensity of the movement
+                  y: y * 0.3,
+                  duration: 0.3,
+                  ease: 'power3.out',
+              });
+          } else {
+              // Reset position when out of magnetic range
+              gsap.to(button, {
+                  x: 0,
+                  y: 0,
+                  duration: 0.3,
+                  ease: 'power3.out',
+              });
+          }
+
+          // Maintain hover image visibility if still hovering
+          if (isHovering) {
+              hoverImage.style.opacity = '1'; // Keep it visible
+          }
+      });
+
+      // Reset button position on mouseleave of body
+      document.body.addEventListener('mouseleave', () => {
+          gsap.to(button, {
+              x: 0,
+              y: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+          });
+      });
+  });
+});
+
+// view more btn
+
+document.addEventListener('DOMContentLoaded', () => {
+  const viewHoverImg = document.querySelector('.view-hover-img');
+  const newMagneticBtn = document.querySelector('.new-magnetic-btn');
+
+  if (!viewHoverImg || !newMagneticBtn) {
+      console.error('Element not found. Check your HTML structure and class names.');
+      return; // Exit if elements are not found
+  }
+
+  let intervalId;  // Stores the interval ID for toggling visibility
+  let isHovered = false;  // Keeps track of whether the button is hovered
+  let isToggling = false;  // Keeps track of whether toggling is active
+
+  // Function to toggle image visibility every 3 seconds when not hovering
+  function toggleImage() {
+      if (!isToggling) { // Only start toggling if it's not already active
+          isToggling = true; // Set toggling to true
+          intervalId = setInterval(() => {
+              if (!isHovered) {  // Only toggle if button is not hovered
+                  viewHoverImg.style.opacity = viewHoverImg.style.opacity === '1' ? '0' : '1';
+              }
+          }, 3000);
+      }
+  }
+
+  // Start toggling visibility on page load
+  toggleImage();
+
+  // Show image when hovered
+  newMagneticBtn.addEventListener('mouseenter', () => {
+      isHovered = true;  // Set hover state to true
+      clearInterval(intervalId);  // Stop the toggle interval
+      viewHoverImg.style.opacity = '1';  // Show image immediately
+      isToggling = false; // Stop any toggling
+  });
+
+  // Resume toggling when hover ends
+  newMagneticBtn.addEventListener('mouseleave', () => {
+      isHovered = false;  // Reset hover state
+      toggleImage();  // Restart the toggle functionality
+      // Optional: Ensure the image is hidden when mouse leaves the button
+      viewHoverImg.style.opacity = '0'; // Hide image if not hovered
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.new-magnetic-btn');
+  const hoverImage = document.querySelector('.view-hover-img'); // Adjust this if needed
+
+  // Define the magnetic area (in pixels)
+  const magneticArea = 100;
+
+  buttons.forEach((button) => {
+      let isHovering = false; // Track if the button is being hovered
+
+      // Mouse enter event to set hovering state
+      button.addEventListener('mouseenter', () => {
+          isHovering = true; // Set to true when mouse enters
+          hoverImage.style.opacity = '1'; // Show hover image
+      });
+
+      // Mouse leave event to reset hovering state
+      button.addEventListener('mouseleave', () => {
+          isHovering = false; // Set to false when mouse leaves
+          hoverImage.style.opacity = '0'; // Hide hover image
+      });
+
+      // Track mouse movement over the button
+      window.addEventListener('mousemove', (e) => {
+          const { top, left, width, height } = button.getBoundingClientRect();
+          const x = e.clientX - left - width / 2;
+          const y = e.clientY - top - height / 2;
+          const distance = Math.sqrt(x * x + y * y);
+
+          // Check if the mouse is within the magnetic range
+          if (distance < magneticArea) {
+              gsap.to(button, {
+                  x: x * 0.3, // Control intensity of the movement
+                  y: y * 0.3,
+                  duration: 0.3,
+                  ease: 'power3.out',
+              });
+          } else {
+              // Reset position when out of magnetic range
+              gsap.to(button, {
+                  x: 0,
+                  y: 0,
+                  duration: 0.3,
+                  ease: 'power3.out',
+              });
+          }
+
+          // Maintain hover image visibility if still hovering
+          if (isHovering) {
+              hoverImage.style.opacity = '1'; // Keep it visible
+          }
+      });
+
+      // Reset button position on mouseleave of body
+      document.body.addEventListener('mouseleave', () => {
+          gsap.to(button, {
+              x: 0,
+              y: 0,
+              duration: 0.3,
+              ease: 'power3.out',
+          });
+      });
+  });
+});
