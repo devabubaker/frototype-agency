@@ -183,7 +183,6 @@ img {
   line-height: 98.4px;
   letter-spacing: 1px;
   color: var(--primary-black);
-  text-transform: uppercase;
   position: relative;
 }
 
