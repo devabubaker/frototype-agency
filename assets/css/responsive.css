@@ -1,32 +1,5 @@
-@media (max-width: 1200px) {
-  .project-sec .project-container .project-frame {
-    max-width: 485px;
-  }
-}
-
-
 @media (max-width: 1024px) {
   .project-sec .container {
-    padding-inline: 20px;
-  }
-
-  .work-sec .container {
-    padding-inline: 20px;
-  }
-
-  .services-sec .container {
-    padding-inline: 20px;
-  }
-
-  .message-sec .container {
-    padding-inline: 20px;
-  }
-
-  .client-sec .container {
-    padding-inline: 20px;
-  }
-
-  .custom-sec .container {
     padding-inline: 20px;
   }
 
@@ -35,7 +8,8 @@
   }
 
   .plan-sec .common-title {
-    padding-inline: 20px;
+    display: block;
+    text-align: center;
   }
 
   .footer .container {
@@ -48,6 +22,11 @@
 
   .hero-sec {
     padding-inline: 20px;
+  }
+
+  .hero-sec .main-heading .container,
+  .hero-sec .hero-content .container {
+    max-width: 100%;
   }
 
   .hero-sec .main-heading .title-1 .inner-title span {
@@ -72,6 +51,14 @@
   .hero-sec .main-heading .title-3 .tagline p {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .project-sec .container {
+    max-width: 100%;
+  }
+
+  .hover-button {
+    display: none;
   }
 
   .services-sec .services-container {
@@ -112,84 +99,6 @@
     flex-wrap: wrap;
     max-width: 400px;
   }
-
-  .services-sec .services-container .services-frame .card .card-content ul {
-    justify-content: start;
-  }
-
-  .custom-sec .custom-inner {
-    width: 100%;
-    padding: 25px 40px;
-    border-radius: 15px;
-  }
-
-  .cs-left-content {
-    width: 45%;
-  }
-
-  .cs-left-content h1 {
-    font-size: 35px;
-    font-weight: 600;
-  }
-
-  .cs-left-content p {
-    font-size: 16px;
-    font-weight: 300;
-  }
-
-  .custom-sec .common-cta a {
-    font-size: 16px;
-  }
-
-  .custom-sec .custom-inner::after {
-    right: -124px;
-    bottom: -84px;
-    width: 200px;
-    height: 200px;
-  }
-
-  .custom-sec .custom-inner::before {
-    right: -144px;
-    bottom: -47px;
-    width: 200px;
-    height: 200px;
-  }
-
-  .project-sec .project-container .project-frame {
-    max-width: 90%;
-  }
-
-  .project-sec .project-container .project-frame .content h3 {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .project-sec .project-container .project-frame .content h5 {
-    font-size: 12px;
-  }
-
-  .message-sec .msg-container .msg-frame ul li {
-    gap: 8px;
-  }
-
-  .message-sec .msg-container .msg-frame ul li:nth-child(2) {
-    display: none;
-  }
-
-  .message-sec .msg-container .msg-frame ul li h6 {
-    line-height: 18px;
-  }
-
-  .message-sec .msg-container .msg-frame ul li span {
-    display: block;
-    font-family: var(--poppins);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    color: var(--pure-black);
-  }
 }
 
 @media (max-width: 768px) {
@@ -211,6 +120,7 @@
     font-size: 18px;
     line-height: 22px;
   }
+
 
   .hero-sec .main-heading .title-1 .inner-title span {
     font-size: 90px;
@@ -252,6 +162,10 @@
     max-width: 410px;
   }
 
+  .hover-button {
+    display: none;
+  }
+
   .project-sec .book-btn {
     display: none;
   }
@@ -266,16 +180,57 @@
     gap: 5px;
   }
 
-  /* 
   .project-sec .project-container {
     grid-template-columns: repeat(2, 1fr);
-  } */
+  }
+
+  .project-sec .project-container .project-frame .image img {
+    height: 50vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div {
+    gap: 2.5vw;
+  }
+
+  .project-sec .project-container .project-frame .button {
+    height: 78%;
+    border-radius: 3vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div .case-study,
+  .project-sec .project-container .project-frame .button .btn-div .coming-soon {
+    padding: 0.7vw 3vw;
+    border-radius: 4vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div .visit-website {
+    padding: 3vw;
+
+    img {
+      width: 2vw;
+    }
+  }
+
+  .project-sec .project-container .project-frame:nth-child(2),
+  .project-sec .project-container .project-frame:nth-child(4),
+  .project-sec .project-container .project-frame:nth-child(3) {
+    margin-top: 0vw;
+  }
 
   .work-sec .work-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 40px;
+  }
+
+  .project-sec .view-more-btn {
+    text-align: center;
+  }
+
+  .view-hover-img {
+    top: -72%;
+    left: 81%;
   }
 
   .work-sec .work-container .work-frame hr {
@@ -333,10 +288,67 @@
 
   .plan-sec .card-container .card-frame {
     height: 100%;
+    background-color: var(--pure-white);
+    border-radius: 8vw;
   }
 
-  .plan-sec .queries {
-    display: none;
+  .plan-sec .card-container .highlight-frame {
+    height: 100%;
+    border: 0.17vw solid var(--main-pink);
+    border-radius: 8vw;
+    background-color: var(--primary-black);
+
+  }
+
+  .plan-sec .queries,
+  .plan-sec .queries .query-text {
+    width: 100%;
+  }
+
+  .plan-sec .queries .query-image {
+
+    .left,
+    .right {
+
+      img {
+        width: 50vw;
+      }
+    }
+  }
+
+  .plan-sec .queries .query-image {
+
+    .left {
+      left: -125px;
+      bottom: -113px;
+    }
+
+    .right {
+      right: -102px;
+      top: -116px;
+    }
+  }
+
+
+
+  .plan-sec .queries h4 {
+    font-size: 25px;
+    line-height: 36.2px;
+  }
+
+  .plan-sec .queries p {
+    font-size: 14px;
+    padding: 0 4vw;
+  }
+
+  .query-content {
+    display: block;
+    padding: 23px 16px;
+    text-align: center;
+  }
+
+  .query-content .common-cta {
+    margin-top: 5vw !important;
   }
 
   .footer .top-footer {
@@ -351,83 +363,57 @@
     gap: 40px;
   }
 
-  .project-sec .project-container {
-    flex-direction: column;
+  #pricePopup .popup-content {
+    width: 90%;
+    max-width: 320px;
   }
 
-  .project-sec .project-container {
-    gap: 30px;
+  #pricePopup .popup-content .dynamic-content img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
   }
 
-  .project-sec .project-container .project-left {
-    gap: 30px;
+  #pricePopup .popup-content p.price {
+    font-size: 1.2em;
   }
 
-  .project-sec .project-container .project-frame {
-    max-width: 100%;
+  #pricePopup .popup-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
   }
 
-  .project-sec .project-container .project-frame .content h3 {
-    font-size: 22px;
-  }
-
-  .project-sec .project-container .project-frame .content h5 {
-    font-size: 14px;
-  }
-
-  .project-sec .project-container .project-right {
-    gap: 30px;
-    margin: 0;
-    padding-bottom: 30px;
-  }
-
-  .custom-sec .custom-inner {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .cs-left-content {
-    width: 100%;
-  }
-
-  .cs-left-content h1 {
-    text-align: center;
-  }
-
-  .cs-left-content p {
-    text-align: center;
-  }
-
-  .hero-sec .main-heading .title-1 .inner-title span p::before {
-    /* display: none; */
-  }
-
-
-  .project-sec .view-more-btn {
-    text-align: center;
-  }
-
-  .project-sec .price {
-    top: -58px;
-    left: 266px;
-  }
-
-  .project-sec .project-container {
-    padding-bottom: 0;
-  }
-
-  .project-sec .view-more-btn .price {
-    top: -53px;
-    left: 267px;
-  }
-
-  .custom-sec .custom-inner::after {
-    right: -77px;
-    bottom: 126px;
+  #pricePopup .popup-content p {
+    font-size: 0.9em;
   }
 }
 
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
 @media (max-width: 435px) {
+
+  .des-hide {
+    display: block;
+  }
+
+  .mob-hide {
+    display: none;
+  }
+
   .header-right .hamburger {
     width: 43px;
   }
@@ -449,23 +435,27 @@
     display: none;
   }
 
+  .hover-button {
+    display: none !important;
+  }
+
   .hero-sec .main-heading .sub-title h5 {
     font-size: 14px;
     line-height: 21px;
   }
 
   .hero-sec .main-heading .title-1 .inner-title span {
-    font-size: 48px;
-    line-height: 53px;
+    font-size: 50px;
+    line-height: 55px;
   }
 
   .hero-sec .main-heading .title-2 span {
-    font-size: 42px;
-    line-height: 47px;
+    font-size: 50px;
+    line-height: 55px;
   }
 
   .hero-sec .main-heading .title-3 .inner-title span {
-    font-size: 45px;
+    font-size: 50px;
     line-height: 55px;
   }
 
@@ -521,13 +511,13 @@
   }
 
   .hero-sec .hero-content .hero-content-left h4 {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
     max-width: 100%;
   }
 
   .hero-sec .hero-content .hero-content-right p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     max-width: 450px;
   }
@@ -540,7 +530,7 @@
 
   .project-sec .project-container {
     grid-template-columns: repeat(1, 1fr);
-    border-bottom: none;
+    padding-top: 30px;
   }
 
   .common-title .inner-title h2 {
@@ -567,10 +557,13 @@
     line-height: 18px;
   }
 
-  /* 
   .project-sec .project-container .project-frame .content {
     gap: 6px;
-  } */
+  }
+
+  .custom-btn .hover-image {
+    display: none;
+  }
 
   .common-cta button,
   .common-cta a {
@@ -679,8 +672,8 @@
   }
 
   .project-scroller-sec .swiper-slide {
-    width: 200px;
-    border-radius: 10px;
+    width: 220px;
+    border-radius: 2vw;
   }
 
   .project-scroller-sec {
@@ -714,7 +707,6 @@
 
   .client-sec .scroller .scroller-in .frame {
     width: 278px;
-    border-radius: 20px;
   }
 
   .client-sec {
@@ -733,6 +725,39 @@
 
   .plan-sec .common-title .inner-title h2 {
     line-height: 39px;
+  }
+
+  .plan-sec .card-container .card-frame .vector .tag {
+    font-size: 3.3vw;
+  }
+
+  .plan-sec .card-frame .add-ons {
+    display: block;
+  }
+
+  .plan-sec .card-frame .add-ons .slider:before {
+    bottom: 0.35vw;
+  }
+
+  .plan-sec .highlight-frame .add-ons .tag {
+    position: absolute;
+    right: 7vw;
+    bottom: 17vw;
+  }
+
+  .plan-sec .card-frame .add-ons .tag {
+    position: absolute;
+    right: 7vw;
+    bottom: 15vw;
+  }
+
+  .plan-sec .highlight-frame .add-ons h5 {
+    margin-top: 3vw;
+    text-align: left;
+  }
+
+  .plan-sec .card-frame .add-ons h5 {
+    margin-top: 3vw;
   }
 
   .plan-sec .card-container .card-frame h4 {
@@ -769,6 +794,10 @@
     gap: 12px;
   }
 
+  .plan-sec .card-container .card-frame .features .add-ons {
+    display: block;
+  }
+
   .plan-sec .card-container {
     margin-top: 25px;
   }
@@ -784,9 +813,8 @@
     padding: 25px;
   }
 
-  .message-sec .msg-container .msg-frame .top-img img {
-    margin-left: 28px;
-    max-width: 31px;
+  .message-sec .msg-container .msg-frame img {
+    left: 0px;
   }
 
   .message-sec .msg-container .msg-frame h4 {
@@ -798,14 +826,21 @@
 
   .message-sec .msg-container .msg-frame ul {
     padding-top: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
+    display: block;
+  }
+
+  .message-sec .msg-container .msg-frame ul .profile {
+    img {
+      margin-left: 0;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .message-sec .msg-container .msg-frame ul li {
     font-size: 12px;
     line-height: 18px;
+    margin-left: 10px;
   }
 
   .footer .bottom-footer {
@@ -818,7 +853,7 @@
   }
 
   .footer .container {
-    padding: 50px 25px;
+    padding: 50px 0;
     gap: 40px;
   }
 
@@ -848,12 +883,12 @@
   }
 
   .footer .bottom-footer .right-content .social-list .social-item a {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
   }
 
   .footer .bottom-footer .right-content .contact-link {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 19px;
   }
 
@@ -865,45 +900,5 @@
   .common-title .inner-title h2 span {
     width: 8px;
     height: 8px;
-  }
-
-  .custom-sec .custom-inner {
-    padding: 40px 20px;
-  }
-
-  .cs-left-content h1 {
-    font-size: 24px;
-  }
-
-  .cs-left-content p {
-    font-size: 14px;
-  }
-
-  .custom-sec .common-cta a {
-    font-size: 12px;
-  }
-
-  .custom-sec .custom-inner::after {
-    right: -105px;
-    bottom: 141px;
-  }
-
-  .services-sec .services-container .services-frame .card .card-content ul li {
-    padding: 10px 12px;
-  }
-
-  .project-sec .project-container .project-frame .content h3 {
-    font-size: 18px;
-  }
-
-  .project-sec .project-container .project-frame .content h5 {
-    font-size: 12px;
-  }
-
-  .hero-sec .main-heading .title-1 .inner-title span p::before {
-    width: 10px;
-    height: 6px;
-    top: 11px;
-    left: 1px;
   }
 }
