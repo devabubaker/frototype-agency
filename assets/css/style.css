@@ -1642,6 +1642,7 @@ html.lenis body {
     width: 2.5vw;
     border: 0;
     right: 3vw;
+    top: 2.5vw;
     cursor: pointer;
     transition: 0.3s all ease;
 
