@@ -54,6 +54,12 @@
     font-size: 120px;
     line-height: 110px;
   }
+  .hero-sec .main-heading .title-1 .inner-title span p::before {
+    width: 23px;
+    height: 15px;
+    top: 26px;
+    left: 3px;
+  }
 
   .hero-sec .main-heading .title-2 span {
     font-size: 80px;
@@ -142,14 +148,14 @@
   }
 
   .custom-sec .custom-inner::after {
-    right: -124px;
-    bottom: -84px;
+    right: -145px;
+    bottom: -59px;
     width: 200px;
     height: 200px;
   }
 
   .custom-sec .custom-inner::before {
-    right: -144px;
+    left: -144px;
     bottom: -47px;
     width: 200px;
     height: 200px;
@@ -353,6 +359,7 @@
 
   .project-sec .project-container {
     flex-direction: column;
+    border: none;
   }
 
   .project-sec .project-container {
@@ -399,17 +406,17 @@
   }
 
   .hero-sec .main-heading .title-1 .inner-title span p::before {
-    /* display: none; */
+    width: 18px;
+        height: 11px;
+        top: 20px;
+        left: 2px;
   }
 
 
   .project-sec .view-more-btn {
     text-align: center;
-  }
-
-  .project-sec .price {
-    top: -58px;
-    left: 266px;
+    margin: 0;
+    padding: 0;
   }
 
   .project-sec .project-container {
@@ -417,14 +424,18 @@
   }
 
   .project-sec .view-more-btn .price {
-    top: -53px;
-    left: 267px;
+    top: -48px;
+    left: 470px;
   }
 
   .custom-sec .custom-inner::after {
     right: -77px;
     bottom: 126px;
   }
+  .custom-sec .custom-inner::before {
+    left: -138px;
+    bottom: -70px;
+}
 }
 
 @media (max-width: 435px) {
@@ -905,5 +916,17 @@
     height: 6px;
     top: 11px;
     left: 1px;
+  }
+  
+  .project-sec .project-container .project-frame .hover-content .study-btn {
+    padding: 12px 31px;
+    font-size: 13px;
+    line-height: 14px;
+  }
+  .project-frame .hover-content .study-btn span:nth-child(2) {
+    left: 16%;
+  }
+  .project-frame .hover-content .study-btn:hover span:nth-child(2) {
+    top: 12px;
   }
 }

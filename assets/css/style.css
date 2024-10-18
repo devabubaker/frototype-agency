@@ -436,7 +436,7 @@ html.lenis body {
   display: inline;
   position: relative;
 }
-/* 
+ 
 .hero-sec .main-heading .title-1 .inner-title span p::before {
   content: '';
   display: block;
@@ -446,7 +446,7 @@ html.lenis body {
   top: 18px;
   left: 2px;
   background-color: var(--main-pink);
-} */
+}
 
 .hero-sec .main-heading .title-2 span {
   font-family: var(--clash-display);
