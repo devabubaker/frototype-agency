@@ -11,28 +11,29 @@ const projectsData = () => {
     projectContainer.innerHTML = limitedProjects
         .map(
             (item) => `
-        <div class="project-frame">
-            <a href="${item.linkUrl}">
-                <div class="image">
-                    <img src="${item.imgUrl}" alt="Project Image" />
-                </div>
-                <div class="content">
-                    <h3>${item.title}</h3>
-                    <h5>${item.subTitle}</h5>
-                </div>
-            </a>
-            <div class="button">
-              <div class="btn-div">
-              ${item.caseStudyUrl ? `<a href="${item.caseStudyUrl}" class="btn case-study">Case Study</a>` : `<span class="coming-soon">Coming Soon</span>`} 
-                <a href="${item.linkUrl}" class="btn visit-website">
-                <img src="./assets/images/visit-website-arrow.png" />
-                          <div class="tooltip">Visit Website</div>
+       <div class="project-frame">
+  <a href="${item.linkUrl}">
+    <div class="image">
+      <img src="${item.imgUrl}" alt="Project Image" />
+    </div>
+    <div class="content">
+      <h3>${item.title}</h3>
+      <h5>${item.subTitle}</h5>
+    </div>
+  </a>
+  <div class="button">
+    <div class="btn-div">
+      ${item.caseStudyUrl
+                    ? `<a href="${item.caseStudyUrl}" class="btn case-study">Case Study</a>`
+                    : `<span class="coming-soon">Coming Soon</span>`}
+      <a href="${item.linkUrl}" class="btn visit-website">
+        <img src="./assets/images/visit-website-arrow.png" />
+        <div class="tooltip">Visit Website</div>
+      </a>
+    </div>
+  </div>
+</div>
 
-                </a>
-               
-                </div>
-            </div>
-        </div>
         `
         )
         .join(""); // Join the mapped array into a string
@@ -40,10 +41,10 @@ const projectsData = () => {
     // Add hover event listeners for showing buttons
     document.querySelectorAll(".project-frame").forEach((frame) => {
         frame.addEventListener("mouseenter", () => {
-            frame.querySelector(".buttons").style.display = "block";
+            frame.querySelector(".button").style.display = "flex";
         });
         frame.addEventListener("mouseleave", () => {
-            frame.querySelector(".buttons").style.display = "none";
+            frame.querySelector(".button").style.display = "none";
         });
     });
 };
@@ -139,7 +140,7 @@ const stickyNav = () => {
 
 stickyNav();
 
-// Prcing toggle functionality
+// Prcing toggle functionality for Desktop
 
 const uxToggle = document.querySelector('.toggle-ux');
 const uxPriceElement = document.querySelector('.card-frame:first-of-type .price-amount');
@@ -155,7 +156,6 @@ uxToggle.addEventListener('change', function () {
     }
 });
 
-// Functionality for the Web Development card
 const webToggle = document.querySelector('.toggle-web');
 const webPriceElement = document.querySelector('.card-frame:nth-of-type(2) .price-amount');
 const webExtraInfo = document.querySelector('.card-frame:nth-of-type(2) .extra-info');
@@ -168,4 +168,86 @@ webToggle.addEventListener('change', function () {
         webPriceElement.innerHTML = '$490<span>/ per month</span>'; // Original price
         webExtraInfo.style.display = 'none'; // Hide additional info
     }
+});
+
+// Mobile Toggle functionality using Swiper
+const mobileUxToggle = document.querySelector('.swiper-slide:first-of-type .toggle-ux');
+const mobileUxPriceElement = document.querySelector('.swiper-slide:first-of-type .price-amount');
+const mobileUxExtraInfo = document.querySelector('.swiper-slide:first-of-type .extra-info');
+
+mobileUxToggle.addEventListener('change', function () {
+    if (this.checked) {
+        mobileUxPriceElement.innerHTML = '$430<span>/ per month</span>'; // Updated price
+        mobileUxExtraInfo.style.display = 'block'; // Show additional info
+    } else {
+        mobileUxPriceElement.innerHTML = '$190<span>/ per month</span>'; // Original price
+        mobileUxExtraInfo.style.display = 'none'; // Hide additional info
+    }
+});
+
+const mobileWebToggle = document.querySelector('.swiper-slide:nth-of-type(2) .toggle-web');
+const mobileWebPriceElement = document.querySelector('.swiper-slide:nth-of-type(2) .price-amount');
+const mobileWebExtraInfo = document.querySelector('.swiper-slide:nth-of-type(2) .extra-info');
+
+mobileWebToggle.addEventListener('change', function () {
+    if (this.checked) {
+        mobileWebPriceElement.innerHTML = '$990<span>/ per month</span>'; // Updated price
+        mobileWebExtraInfo.style.display = 'block'; // Show additional info
+    } else {
+        mobileWebPriceElement.innerHTML = '$490<span>/ per month</span>'; // Original price
+        mobileWebExtraInfo.style.display = 'none'; // Hide additional info
+    }
+});
+
+// Plan sec popup for both Desktop and Mobile
+
+const popupPlanImage = document.getElementById('popupPlanImage'); // Image element
+const popupPlanTitle = document.getElementById('popupPlanTitle');
+const popupPlanDescription = document.getElementById('popupPlanDescription');
+const pricePopup = document.getElementById('pricePopup');
+const popupPrice = document.getElementById('popupPrice');
+const closePopup = document.getElementById('closePopup');
+
+// Function to open the popup
+function openPopup(imageSrc, title, description, price) {
+    popupPlanImage.src = imageSrc;             // Set dynamic image
+    popupPlanTitle.innerHTML = title;          // Set plan title
+    popupPlanDescription.innerHTML = description; // Set plan description
+    popupPrice.innerHTML = price;              // Set dynamic price
+    pricePopup.style.display = 'flex';         // Show popup
+}
+
+// Close popup on button click
+closePopup.addEventListener('click', () => {
+    pricePopup.style.display = 'none';         // Hide popup
+});
+
+// Attach event listeners to "Get Started" buttons
+const getStartedButtons = document.querySelectorAll('.start-btn');
+
+// Functionality for UI/UX Design card (desktop and mobile)
+getStartedButtons[0].addEventListener('click', () => {
+    const imageSrc = './assets/images/plan-vector-dark.svg'; // UI UX Design image
+    const title = 'UI UX Design';
+    const description = 'Website, Mobile and Web App';
+    const price = uxToggle.checked || mobileUxToggle.checked ? '$430' : '$190';
+    openPopup(imageSrc, title, description, price);
+});
+
+// Functionality for Web Development card (desktop and mobile)
+getStartedButtons[1].addEventListener('click', () => {
+    const imageSrc = './assets/images/plan-vector-light.svg'; // Web Development image
+    const title = 'Web Development';
+    const description = 'For large teams & corporations.';
+    const price = webToggle.checked || mobileWebToggle.checked ? '$990' : '$490';
+    openPopup(imageSrc, title, description, price);
+});
+
+// Functionality for Shopify Customization card (desktop and mobile)
+getStartedButtons[2].addEventListener('click', () => {
+    const imageSrc = './assets/images/plan-vector-dark.svg'; // Shopify Customization image
+    const title = 'Shopify Customization';
+    const description = 'E-commerce Solutions';
+    const price = '$450'; // No toggle, fixed price
+    openPopup(imageSrc, title, description, price);
 });

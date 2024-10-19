@@ -3,28 +3,13 @@
     padding-inline: 20px;
   }
 
-  .work-sec .container {
-    padding-inline: 20px;
-  }
-
-  .services-sec .container {
-    padding-inline: 20px;
-  }
-
-  .message-sec .container {
-    padding-inline: 20px;
-  }
-
-  .client-sec .container {
-    padding-inline: 20px;
-  }
-
   .plan-sec .card-container:nth-child(2) {
     padding-inline: 20px;
   }
 
   .plan-sec .common-title {
-    padding-inline: 20px;
+    display: block;
+    text-align: center;
   }
 
   .footer .container {
@@ -37,6 +22,11 @@
 
   .hero-sec {
     padding-inline: 20px;
+  }
+
+  .hero-sec .main-heading .container,
+  .hero-sec .hero-content .container {
+    max-width: 100%;
   }
 
   .hero-sec .main-heading .title-1 .inner-title span {
@@ -61,6 +51,14 @@
   .hero-sec .main-heading .title-3 .tagline p {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .project-sec .container {
+    max-width: 100%;
+  }
+
+  .hover-button {
+    display: none;
   }
 
   .services-sec .services-container {
@@ -123,6 +121,7 @@
     line-height: 22px;
   }
 
+
   .hero-sec .main-heading .title-1 .inner-title span {
     font-size: 90px;
     line-height: 100px;
@@ -163,6 +162,10 @@
     max-width: 410px;
   }
 
+  .hover-button {
+    display: none;
+  }
+
   .project-sec .book-btn {
     display: none;
   }
@@ -181,11 +184,53 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .project-sec .project-container .project-frame .image img {
+    height: 50vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div {
+    gap: 2.5vw;
+  }
+
+  .project-sec .project-container .project-frame .button {
+    height: 78%;
+    border-radius: 3vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div .case-study,
+  .project-sec .project-container .project-frame .button .btn-div .coming-soon {
+    padding: 0.7vw 3vw;
+    border-radius: 4vw;
+  }
+
+  .project-sec .project-container .project-frame .button .btn-div .visit-website {
+    padding: 3vw;
+
+    img {
+      width: 2vw;
+    }
+  }
+
+  .project-sec .project-container .project-frame:nth-child(2),
+  .project-sec .project-container .project-frame:nth-child(4),
+  .project-sec .project-container .project-frame:nth-child(3) {
+    margin-top: 0vw;
+  }
+
   .work-sec .work-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 40px;
+  }
+
+  .project-sec .view-more-btn {
+    text-align: center;
+  }
+
+  .view-hover-img {
+    top: -72%;
+    left: 81%;
   }
 
   .work-sec .work-container .work-frame hr {
@@ -243,10 +288,67 @@
 
   .plan-sec .card-container .card-frame {
     height: 100%;
+    background-color: var(--pure-white);
+    border-radius: 8vw;
   }
 
-  .plan-sec .queries {
-    display: none;
+  .plan-sec .card-container .highlight-frame {
+    height: 100%;
+    border: 0.17vw solid var(--main-pink);
+    border-radius: 8vw;
+    background-color: var(--primary-black);
+
+  }
+
+  .plan-sec .queries,
+  .plan-sec .queries .query-text {
+    width: 100%;
+  }
+
+  .plan-sec .queries .query-image {
+
+    .left,
+    .right {
+
+      img {
+        width: 50vw;
+      }
+    }
+  }
+
+  .plan-sec .queries .query-image {
+
+    .left {
+      left: -125px;
+      bottom: -113px;
+    }
+
+    .right {
+      right: -102px;
+      top: -116px;
+    }
+  }
+
+
+
+  .plan-sec .queries h4 {
+    font-size: 25px;
+    line-height: 36.2px;
+  }
+
+  .plan-sec .queries p {
+    font-size: 14px;
+    padding: 0 4vw;
+  }
+
+  .query-content {
+    display: block;
+    padding: 23px 16px;
+    text-align: center;
+  }
+
+  .query-content .common-cta {
+    margin-top: 5vw !important;
   }
 
   .footer .top-footer {
@@ -260,9 +362,58 @@
     display: flex;
     gap: 40px;
   }
+
+  #pricePopup .popup-content {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  #pricePopup .popup-content .dynamic-content img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  #pricePopup .popup-content p.price {
+    font-size: 1.2em;
+  }
+
+  #pricePopup .popup-content h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+
+  #pricePopup .popup-content p {
+    font-size: 0.9em;
+  }
 }
 
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+
 @media (max-width: 435px) {
+
+  .des-hide {
+    display: block;
+  }
+
+  .mob-hide {
+    display: none;
+  }
+
   .header-right .hamburger {
     width: 43px;
   }
@@ -282,6 +433,10 @@
 
   .hero-sec .title-1 .common-cta {
     display: none;
+  }
+
+  .hover-button {
+    display: none !important;
   }
 
   .hero-sec .main-heading .sub-title h5 {
@@ -356,13 +511,13 @@
   }
 
   .hero-sec .hero-content .hero-content-left h4 {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
     max-width: 100%;
   }
 
   .hero-sec .hero-content .hero-content-right p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     max-width: 450px;
   }
@@ -404,6 +559,10 @@
 
   .project-sec .project-container .project-frame .content {
     gap: 6px;
+  }
+
+  .custom-btn .hover-image {
+    display: none;
   }
 
   .common-cta button,
@@ -476,13 +635,7 @@
     text-align: center;
   }
 
-  .services-sec
-    .services-container
-    .services-frame
-    .cus-tabs
-    button
-    .text
-    span {
+  .services-sec .services-container .services-frame .cus-tabs button .text span {
     font-size: 16px;
     line-height: 19px;
   }
@@ -497,23 +650,12 @@
     padding: 5px 5px 5px 20px;
   }
 
-  .services-sec
-    .services-container
-    .services-frame
-    .cus-tabs
-    button
-    .arrow-icon {
+  .services-sec .services-container .services-frame .cus-tabs button .arrow-icon {
     width: 30px;
     height: 30px;
   }
 
-  .services-sec
-    .services-container
-    .services-frame
-    .cus-tabs
-    button
-    .arrow-icon
-    svg {
+  .services-sec .services-container .services-frame .cus-tabs button .arrow-icon svg {
     max-width: 10px;
   }
 
@@ -530,7 +672,8 @@
   }
 
   .project-scroller-sec .swiper-slide {
-    width: 200px;
+    width: 220px;
+    border-radius: 2vw;
   }
 
   .project-scroller-sec {
@@ -584,6 +727,39 @@
     line-height: 39px;
   }
 
+  .plan-sec .card-container .card-frame .vector .tag {
+    font-size: 3.3vw;
+  }
+
+  .plan-sec .card-frame .add-ons {
+    display: block;
+  }
+
+  .plan-sec .card-frame .add-ons .slider:before {
+    bottom: 0.35vw;
+  }
+
+  .plan-sec .highlight-frame .add-ons .tag {
+    position: absolute;
+    right: 7vw;
+    bottom: 17vw;
+  }
+
+  .plan-sec .card-frame .add-ons .tag {
+    position: absolute;
+    right: 7vw;
+    bottom: 15vw;
+  }
+
+  .plan-sec .highlight-frame .add-ons h5 {
+    margin-top: 3vw;
+    text-align: left;
+  }
+
+  .plan-sec .card-frame .add-ons h5 {
+    margin-top: 3vw;
+  }
+
   .plan-sec .card-container .card-frame h4 {
     font-size: 18px;
     line-height: 28px;
@@ -618,6 +794,10 @@
     gap: 12px;
   }
 
+  .plan-sec .card-container .card-frame .features .add-ons {
+    display: block;
+  }
+
   .plan-sec .card-container {
     margin-top: 25px;
   }
@@ -628,14 +808,13 @@
   }
 
   .message-sec .msg-container .msg-frame {
-    background-color: var(--primary-black);
+    background-color: var(--pure-white);
     border-radius: 30px;
     padding: 25px;
   }
 
   .message-sec .msg-container .msg-frame img {
     left: 0px;
-    max-width: 31px;
   }
 
   .message-sec .msg-container .msg-frame h4 {
@@ -647,13 +826,21 @@
 
   .message-sec .msg-container .msg-frame ul {
     padding-top: 8px;
-    flex-direction: column;
-    align-items: flex-start;
+    display: block;
+  }
+
+  .message-sec .msg-container .msg-frame ul .profile {
+    img {
+      margin-left: 0;
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .message-sec .msg-container .msg-frame ul li {
     font-size: 12px;
     line-height: 18px;
+    margin-left: 10px;
   }
 
   .footer .bottom-footer {
@@ -666,7 +853,7 @@
   }
 
   .footer .container {
-    padding: 50px 25px;
+    padding: 50px 0;
     gap: 40px;
   }
 

@@ -31,20 +31,4 @@ export const projectData = [
     title: "Vulture",
     subTitle: "Shopify store - Customization",
   },
-  {
-    id: 4,
-    linkUrl: "#",
-    caseStudyUrl: "#case-study-5",
-    imgUrl: "/assets/images/project-2.png",
-    title: "Restaurant dashboard",
-    subTitle: "Logo and branding",
-  },
-  {
-    id: 5,
-    linkUrl: "#",
-    caseStudyUrl: "", // No case study for this project
-    imgUrl: "/assets/images/project-4.png",
-    title: "Restaurant dashboard",
-    subTitle: "Logo and branding",
-  },
 ];

@@ -531,7 +531,7 @@ html.lenis body {
 
   img {
     width: 100%;
-    height: 27.5vw !important;
+    height: 27.5vw;
   }
 }
 
@@ -603,8 +603,15 @@ html.lenis body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.519);
   width: 100%;
-  height: 87%;
+  height: 86%;
   border-radius: 1vw;
+  display: none;
+  opacity: 0;
+}
+
+.project-sec .project-container .project-frame:hover .button {
+  display: flex;
+  opacity: 1;
 }
 
 .project-sec .project-container .project-frame .button .btn-div {
@@ -1457,7 +1464,7 @@ html.lenis body {
   align-items: center;
   padding: 55px 100px;
 
-  
+
 }
 
 .plan-sec .queries .query-image {
@@ -1567,7 +1574,7 @@ html.lenis body {
   height: 19px;
   width: 19px;
   left: 3px;
-  bottom: 0.0745vw;
+  bottom: 0.1vw;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   background-color: var(--main-pink);
@@ -1599,6 +1606,182 @@ html.lenis body {
 
 .plan-sec .card-frame .add-ons .slider.round:before {
   border-radius: 50%;
+}
+
+/* Plan sec popup */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  padding: 2vw 3vw;
+  border-radius: 2vw;
+  width: 57%;
+}
+
+.popup-content .popup-head {
+  display: flex;
+  justify-content: space-between;
+
+  .close-btn {
+    background-color: rgb(148, 148, 148);
+    border-radius: 50%;
+    height: 2.5vw;
+    width: 2.5vw;
+    border: 0;
+    right: 3vw;
+    top: 2.5vw;
+    cursor: pointer;
+    transition: 0.3s all ease;
+
+    img {
+      width: 1.5vw;
+      margin-left: 20%;
+    }
+
+    &:hover {
+      background-color: var(--primary-black);
+
+    }
+  }
+}
+
+.popup-content .popup-head .popup-desc {
+  margin-bottom: 1vw;
+
+  .title {
+    font-size: 2.3vw;
+    font-weight: 400;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+  }
+
+  p {
+    font-family: var(--poppins);
+    font-size: 1.2vw;
+    color: var(--primary-black);
+  }
+}
+
+.popup-content .dynamic-content {
+  position: relative;
+  background-color: #F1F1F1;
+  padding: 2vw;
+  border-radius: 1vw;
+  margin-bottom: 2vw;
+
+  .price {
+    font-size: 1.3vw;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+    font-weight: 400;
+    margin-bottom: 0.5vw;
+
+    span {
+      font-size: 3vw;
+      color: var(--main-pink);
+      font-family: var(--clash-display);
+      font-weight: 600;
+    }
+  }
+
+  h3 {
+    font-size: 1.2vw;
+    font-weight: 700;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+  }
+
+  p {
+    font-size: 1.1vw;
+    font-weight: 400;
+  }
+
+  img {
+    position: absolute;
+    top: 2.5vw;
+    right: 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2vw;
+
+  .field {
+    width: 49%;
+    font-family: var(--poppins);
+    font-weight: 400;
+    margin-bottom: 1.3vw;
+
+    .label {
+      font-size: 1.2vw;
+      font-family: var(--poppins);
+      color: var(--primary-black);
+      font-weight: 500;
+      margin-bottom: 0.5vw;
+    }
+
+    input {
+      font-size: 1vw;
+      font-family: var(--poppins);
+      border: 0.1vw solid #CCCCCC;
+      color: gray;
+      font-weight: 400;
+      padding: 1vw;
+      width: 100%;
+    }
+  }
+
+}
+
+form button {
+  background-color: #DFDFDF;
+  font-size: 1.2vw;
+  font-family: var(--poppins);
+  font-weight: 600;
+  padding: 1vw 4.5vw 1vw 1.8vw;
+  border-radius: 3vw;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s all ease;
+
+  .icon {
+    position: absolute;
+    top: 0.27vw;
+    right: 0.5vw;
+    background-color: black;
+    border-radius: 50%;
+    padding: 1vw;
+
+    img {
+      width: 1.2vw;
+      transition: 0.5s all ease;
+    }
+  }
+}
+
+form button:hover .icon img {
+  transform: rotate(45deg);
 }
 
 /* === Message Sec === */
@@ -1846,4 +2029,12 @@ html.lenis body {
 
 .fade-in.is-visible {
   opacity: 1;
+}
+
+.des-hide {
+  display: none;
+}
+
+.mob-hide {
+  display: block;
 }

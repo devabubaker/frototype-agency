@@ -1100,6 +1100,7 @@
             </div>
           </div>
 
+          <!-- For Desktop -->
           <div class="card-container fadeInContainer">
 
             <div class="card-frame fadeInElement">
@@ -1164,6 +1165,7 @@
                 <h5>Include development</h5>
                 <span class="tag">+$240</span>
               </div>
+
             </div>
 
             <div class="card-frame highlight-frame fadeInElement">
@@ -1295,68 +1297,131 @@
               </div>
             </div>
 
+            <div id="pricePopup" class="popup-overlay" style="display: none;">
+              <div class="popup-content">
+
+                <div class="popup-head">
+                  <div class="popup-desc">
+                    <div class="title">Subscription Form</div>
+                    <p>We plan to hold a short call to discuss the project's scope and objectives.</p>
+                  </div>
+                  <button id="closePopup" class="close-btn">
+                    <img src="./assets/images/icons/close-x.svg" alt="">
+                  </button>
+                </div>
+
+                <!-- Dynamic Image -->
+                <div class="dynamic-content">
+                  <p class="price"><span id="popupPrice"></span>/per month</p>
+                  <h3 id="popupPlanTitle"></h3>
+                  <p id="popupPlanDescription"></p>
+                  <img id="popupPlanImage" src="" alt="Plan Image" />
+                </div>
+
+                <hr>
+
+                <form>
+
+                  <div class="form">
+                    <div class="field">
+                      <div class="label">First Name</div>
+                      <input type="text" placeholder="eg.John">
+                    </div>
+
+                    <div class="field">
+                      <div class="label">Last Name</div>
+                      <input type="text" placeholder="eg.Doe">
+                    </div>
+
+                    <div class="field">
+                      <div class="label">Email Address</div>
+                      <input type="email" placeholder="eg.Johndoe@gmail.com">
+                    </div>
+                  </div>
+
+                  <button>
+                    SUBMIT NOW
+                    <div class="icon">
+                      <img src="./assets/images/visit-website-arrow.png" alt="">
+                    </div>
+                  </button>
+
+                </form>
+
+              </div>
+            </div>
+
           </div>
 
+          <!-- For Mobile -->
           <div class="card-container masker">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
                   <div class="card-frame">
                     <div class="vector">
                       <img src="./assets/images/plan-vector-dark.svg" alt="Vector" />
                     </div>
 
-                    <h4>Basic</h4>
+                    <h4>UI UX Design</h4>
 
-                    <p>Best for personal use.</p>
+                    <p>Website, Mobile and Web App</p>
 
                     <div class="price">
-                      <h3>$20<span>/ Per month</span></h3>
+                      <h3 class="price-amount">$190<span>/ per month</span></h3>
+                      <p class="extra-info" style="display:none;">Design & Development</p>
                     </div>
 
                     <a href="#" class="start-btn">Get Started</a>
 
                     <div class="features">
                       <h5>Features</h5>
-
                       <ul>
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>IT Support & Maintenance</span>
+                          <span>Figma Mockups</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>Basic Network Setup</span>
+                          <span>1 task at a time</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>Software Installation</span>
+                          <span>10-days delivery time</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>4/7 Remote Assistance</span>
+                          <span>Upto 6 pages/screens</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>Communication tools</span>
+                          <span>4 Revisions</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
-
-                          <span>Reporting and analytics</span>
+                          <span>Daily design updates</span>
+                        </li>
+                        <li>
+                          <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+                          <span>Private Slack Channel</span>
+                        </li>
+                        <li>
+                          <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+                          <span>Interactive Prototype</span>
                         </li>
                       </ul>
                     </div>
+
+                    <div class="add-ons">
+                      <label class="switch">
+                        <input type="checkbox" class="toggle-ux" />
+                        <span class="slider round"></span>
+                      </label>
+                      <h5>Include development</h5>
+                      <span class="tag">+$240</span>
+                    </div>
+
                   </div>
                 </div>
 
@@ -1364,58 +1429,66 @@
                   <div class="card-frame highlight-frame">
                     <div class="vector">
                       <img src="./assets/images/plan-vector-light.svg" alt="Vector" />
+                      <div class="tag">50% Off</div>
                     </div>
 
-                    <h4>Professional Plan</h4>
+                    <h4>Web Development</h4>
 
                     <p>For large teams & corporations.</p>
 
                     <div class="price">
-                      <h3>$120<span>/ Per month</span></h3>
+                      <h3 class="price-amount">$490<span>/ per month</span></h3>
+                      <p class="extra-info highlighted-text" style="display:none;">Design, Development & API
+                        Integration.</p>
                     </div>
 
                     <a href="#" class="start-btn">Get Started</a>
 
                     <div class="features">
                       <h5>Features</h5>
-
                       <ul>
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>All Basic Plan features</span>
+                          <span>Design Included</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>Advanced Network Management</span>
+                          <span>1 task at a time</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>Cloud Storage Solutions</span>
+                          <span>15-days delivery time</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>Data Backup & Recovery</span>
+                          <span>Upto 15 pages</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>Communication tools</span>
+                          <span>Unlimited Revisions</span>
                         </li>
-
                         <li>
                           <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
-
-                          <span>On-Site Support Visits</span>
+                          <span>Hosting Set-up</span>
+                        </li>
+                        <li>
+                          <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
+                          <span>Private Slack Channel</span>
+                        </li>
+                        <li>
+                          <img src="./assets/images/icons/tick-light.svg" alt="Icon" />
+                          <span>Daily Updates</span>
                         </li>
                       </ul>
+                    </div>
+
+                    <div class="add-ons">
+                      <label class="switch">
+                        <input type="checkbox" class="toggle-web" />
+                        <span class="slider round"></span>
+                      </label>
+                      <h5>API Integration</h5>
+                      <span class="tag">+$500</span>
                     </div>
                   </div>
                 </div>
@@ -1426,12 +1499,12 @@
                       <img src="./assets/images/plan-vector-dark.svg" alt="Vector" />
                     </div>
 
-                    <h4>Enterprise Plan</h4>
+                    <h4>Shopify Customization</h4>
 
-                    <p>Large enterprises comprehensive IT needs</p>
+                    <p>E-commerce Solutions</p>
 
                     <div class="price">
-                      <h3>$240<span>/ Per month</span></h3>
+                      <h3>$450<span>/ per month</span></h3>
                     </div>
 
                     <a href="#" class="start-btn">Get Started</a>
@@ -1443,45 +1516,103 @@
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>All Professional Plan features</span>
+                          <span>Theme Customization</span>
                         </li>
 
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>Custom IT Solutions</span>
+                          <span>1 task at a time</span>
                         </li>
 
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>Security & Compliance Management</span>
+                          <span>15- days delivery time</span>
                         </li>
 
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>Dedicated IT Consultant</span>
+                          <span>20 products</span>
                         </li>
 
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>Priority Support</span>
+                          <span>Unlimited revisions</span>
                         </li>
 
                         <li>
                           <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
 
-                          <span>Reporting and analytics</span>
+                          <span>Payment gateway set-up</span>
+                        </li>
+
+                        <li>
+                          <img src="./assets/images/icons/tick-dark.svg" alt="Icon" />
+
+                          <span>Private Slack Channel</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
+
+            <div id="mobilePricePopup" class="popup-overlay" style="display: none;">
+              <div class="popup-content">
+                <div class="popup-head">
+                  <div class="popup-desc">
+                    <div class="title">Subscription Form</div>
+                    <p>We plan to hold a short call to discuss the project's scope and objectives.</p>
+                  </div>
+                  <button id="closeMobilePopup" class="close-btn">
+                    <img src="./assets/images/icons/close-x.svg" alt="">
+                  </button>
+                </div>
+            
+                <!-- Dynamic Image -->
+                <div class="dynamic-content">
+                  <p class="price"><span id="mobilePopupPrice"></span>/per month</p>
+                  <h3 id="mobilePopupPlanTitle"></h3>
+                  <p id="mobilePopupPlanDescription"></p>
+                  <img id="mobilePopupPlanImage" src="" alt="Plan Image" />
+                </div>
+            
+                <hr>
+            
+                <form>
+                  <div class="form">
+                    <div class="field">
+                      <div class="label">First Name</div>
+                      <input type="text" placeholder="eg. John">
+                    </div>
+            
+                    <div class="field">
+                      <div class="label">Last Name</div>
+                      <input type="text" placeholder="eg. Doe">
+                    </div>
+            
+                    <div class="field">
+                      <div class="label">Email Address</div>
+                      <input type="email" placeholder="eg.Johndoe@gmail.com">
+                    </div>
+                  </div>
+            
+                  <button>SUBMIT NOW
+                    <div class="icon">
+                      <img src="./assets/images/visit-website-arrow.png" alt="">
+                    </div>
+                  </button>
+            
+                </form>
+              </div>
+            </div>
+            
           </div>
 
           <div class="queries masker">
@@ -1528,10 +1659,13 @@
               <ul>
                 <div class="profile">
                   <img src="./assets/images/abubakkar-sherazi.png" alt="">
-                  <li>ABUBAKAR SHERAZI</li>
+                  <div>
+                    <li>ABUBAKAR SHERAZI</li>
+                    <li class="des-hide">CEO & Founder of Frototype</li>
+                  </div>
                 </div>
 
-                <li>CEO & Founder of Frototype</li>
+                <li class="mob-hide">CEO & Founder of Frototype</li>
               </ul>
             </div>
 
@@ -1547,12 +1681,13 @@
 
                 <div class="profile">
                   <img src="./assets/images/shayan.png" alt="">
-                  <li>
-                    SHAYAN KHAN
-                  </li>
+                  <div>
+                    <li>SHAYAN KHAN</li>
+                    <li class="des-hide">CEO & Founder of Frototype</li>
+                  </div>
                 </div>
 
-                <li>CEO & Founder of Frototype</li>
+                <li class="mob-hide">CEO & Founder of Frototype</li>
               </ul>
             </div>
           </div>
