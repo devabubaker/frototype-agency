@@ -185,7 +185,7 @@
   }
 
   .project-sec .project-container .project-frame .image img {
-    height: 50vw;
+    height: 60vw;
   }
 
   .project-sec .project-container .project-frame .button .btn-div {
@@ -193,7 +193,7 @@
   }
 
   .project-sec .project-container .project-frame .button {
-    height: 78%;
+    height: 80%;
     border-radius: 3vw;
   }
 
@@ -294,13 +294,17 @@
 
   .plan-sec .card-container .highlight-frame {
     height: 100%;
-    border: 0.17vw solid var(--main-pink);
+    border: 0.4vw solid var(--main-pink);
     border-radius: 8vw;
     background-color: var(--primary-black);
 
   }
 
-  .plan-sec .queries,
+  .plan-sec .queries {
+    width: 87%;
+    margin-top: 5vw;
+  }
+
   .plan-sec .queries .query-text {
     width: 100%;
   }
@@ -363,44 +367,224 @@
     gap: 40px;
   }
 
-  #pricePopup .popup-content {
-    width: 90%;
-    max-width: 320px;
+  /* plan-sec */
+
+  .plan-sec .container {
+    max-width: 100% !important;
   }
 
-  #pricePopup .popup-content .dynamic-content img {
-    width: 80px;
+  .swiper-container {
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
+    overflow: hidden;
   }
 
-  #pricePopup .popup-content p.price {
-    font-size: 1.2em;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  #pricePopup .popup-content h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
+  .card-frame {
+    width: 80%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
   }
 
-  #pricePopup .popup-content p {
-    font-size: 0.9em;
+  .highlight-frame {
+    border: 2px solid blue;
+    /* Highlight frame border */
   }
-}
 
-/* Close button styling */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+  /* Transition for the active slide */
+  .swiper-slide {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-.close-btn img {
-  width: 20px;
-  height: 20px;
+  .swiper-slide-active .card-frame {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .swiper-slide-next .card-frame,
+  .swiper-slide-prev .card-frame {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+
+  .plan-sec .card-frame .add-ons .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--pure-white);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: 0.1vw solid var(--main-pink);
+    border-radius: 3vw;
+  }
+
+  .popup-overlay-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+  .popup-content-mobile {
+    background-color: var(--pure-white);
+    padding: 8vw 4vw 6vw;
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    border-radius: 4vw;
+    text-align: center;
+  }
+
+  .popup-head-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popup-desc-mobile .title-mobile {
+    font-size: 6vw;
+    font-weight: 600;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+    margin-bottom: 1vw;
+  }
+
+  .popup-desc-mobile p {
+    font-size: 4vw;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+  }
+
+  .close-btn-mobile img {
+    width: 20px;
+    cursor: pointer;
+  }
+
+  .dynamic-content-mobile {
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+
+  .dynamic-content-mobile .price-mobile {
+    margin-top: 2vw;
+  }
+
+  .dynamic-content-mobile .price-mobile .special-price {
+    font-size: 6.5vw;
+    font-weight: 700;
+    font-family: var(--clash-display);
+    color: var(--main-pink);
+  }
+
+  .dynamic-content-mobile .price-mobile .special-price span {
+    font-size: 3.5vw;
+    font-weight: 400;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+  }
+
+  .dynamic-content-mobile h3 {
+    font-size: 4.5vw;
+    font-family: var(--clash-display);
+    font-weight: 700;
+    margin: 0.2vw 0;
+  }
+
+  .dynamic-content-mobile .desc {
+    font-size: 4vw;
+    font-family: var(--clash-display);
+    color: var(--primary-black);
+  }
+
+  .dynamic-content-mobile img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-mobile {
+    margin-top: 3vw;
+    text-align: left;
+  }
+
+  .form-mobile .field-mobile {
+    margin-bottom: 4vw;
+  }
+
+  .form-mobile .label-mobile {
+    font-size: 3.5vw;
+    font-family: var(--poppins);
+    font-weight: 500;
+    color: var(--primary-black);
+    margin-bottom: 2vw;
+  }
+
+  .form-mobile input {
+    width: 100%;
+    padding: 3vw;
+    border-radius: 1vw;
+    border: 0.1vw solid #ddd;
+  }
+
+  .icon-mobile {
+    background-color: var(--primary-black);
+    padding: 2vw;
+    border-radius: 50%;
+    width: 10vw;
+    height: 9vw;
+
+    img {
+      width: 3.5vw;
+      margin-left: 1.1vw;
+      margin-top: 0.5vw;
+    }
+  }
+
+  .close-btn-mobile {
+    position: absolute;
+    right: 3vw;
+    top: 2vw;
+    border-radius: 50%;
+    border: 0;
+    background-color: var(--primary-black);
+    padding: 2vw;
+  }
+
+  .close-btn-mobile img {
+    width: 5vw;
+    cursor: pointer;
+  }
+
+  .popup-content-mobile form button {
+    font-size: 4.5vw;
+    padding: 1.5vw 1.5vw 1.5vw 5vw;
+    border-radius: 7vw;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-left: 22%;
+    margin-top: 2vw;
+  }
+
 }
 
 
@@ -737,6 +921,7 @@
 
   .plan-sec .card-frame .add-ons .slider:before {
     bottom: 0.35vw;
+    border-radius: 50%;
   }
 
   .plan-sec .highlight-frame .add-ons .tag {

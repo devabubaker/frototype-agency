@@ -11,28 +11,28 @@ const projectsData = () => {
     projectContainer.innerHTML = limitedProjects
         .map(
             (item) => `
-       <div class="project-frame">
-  <a href="${item.linkUrl}">
-    <div class="image">
-      <img src="${item.imgUrl}" alt="Project Image" />
-    </div>
-    <div class="content">
-      <h3>${item.title}</h3>
-      <h5>${item.subTitle}</h5>
-    </div>
-  </a>
-  <div class="button">
-    <div class="btn-div">
-      ${item.caseStudyUrl
+                     <div class="project-frame">
+                <a href="${item.linkUrl}">
+                  <div class="image">
+                    <img src="${item.imgUrl}" alt="Project Image" />
+                  </div>
+                  <div class="content">
+                    <h3>${item.title}</h3>
+                    <h5>${item.subTitle}</h5>
+                  </div>
+                </a>
+                <div class="button">
+                  <div class="btn-div">
+                                  ${item.caseStudyUrl
                     ? `<a href="${item.caseStudyUrl}" class="btn case-study">Case Study</a>`
                     : `<span class="coming-soon">Coming Soon</span>`}
-      <a href="${item.linkUrl}" class="btn visit-website">
-        <img src="./assets/images/visit-website-arrow.png" />
-        <div class="tooltip">Visit Website</div>
-      </a>
-    </div>
-  </div>
-</div>
+                    <a href="${item.linkUrl}" class="btn visit-website">
+                      <img src="./assets/images/visit-website-arrow.png" />
+                     <div class="tooltip">Visit Website</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
 
         `
         )
@@ -140,7 +140,7 @@ const stickyNav = () => {
 
 stickyNav();
 
-// Prcing toggle functionality for Desktop
+// Pricing toggle functionality for Desktop
 
 const uxToggle = document.querySelector('.toggle-ux');
 const uxPriceElement = document.querySelector('.card-frame:first-of-type .price-amount');
@@ -170,36 +170,7 @@ webToggle.addEventListener('change', function () {
     }
 });
 
-// Mobile Toggle functionality using Swiper
-const mobileUxToggle = document.querySelector('.swiper-slide:first-of-type .toggle-ux');
-const mobileUxPriceElement = document.querySelector('.swiper-slide:first-of-type .price-amount');
-const mobileUxExtraInfo = document.querySelector('.swiper-slide:first-of-type .extra-info');
-
-mobileUxToggle.addEventListener('change', function () {
-    if (this.checked) {
-        mobileUxPriceElement.innerHTML = '$430<span>/ per month</span>'; // Updated price
-        mobileUxExtraInfo.style.display = 'block'; // Show additional info
-    } else {
-        mobileUxPriceElement.innerHTML = '$190<span>/ per month</span>'; // Original price
-        mobileUxExtraInfo.style.display = 'none'; // Hide additional info
-    }
-});
-
-const mobileWebToggle = document.querySelector('.swiper-slide:nth-of-type(2) .toggle-web');
-const mobileWebPriceElement = document.querySelector('.swiper-slide:nth-of-type(2) .price-amount');
-const mobileWebExtraInfo = document.querySelector('.swiper-slide:nth-of-type(2) .extra-info');
-
-mobileWebToggle.addEventListener('change', function () {
-    if (this.checked) {
-        mobileWebPriceElement.innerHTML = '$990<span>/ per month</span>'; // Updated price
-        mobileWebExtraInfo.style.display = 'block'; // Show additional info
-    } else {
-        mobileWebPriceElement.innerHTML = '$490<span>/ per month</span>'; // Original price
-        mobileWebExtraInfo.style.display = 'none'; // Hide additional info
-    }
-});
-
-// Plan sec popup for both Desktop and Mobile
+// Plan section popup for Desktop
 
 const popupPlanImage = document.getElementById('popupPlanImage'); // Image element
 const popupPlanTitle = document.getElementById('popupPlanTitle');
@@ -225,29 +196,114 @@ closePopup.addEventListener('click', () => {
 // Attach event listeners to "Get Started" buttons
 const getStartedButtons = document.querySelectorAll('.start-btn');
 
-// Functionality for UI/UX Design card (desktop and mobile)
+// Functionality for UI/UX Design card (desktop only)
 getStartedButtons[0].addEventListener('click', () => {
     const imageSrc = './assets/images/plan-vector-dark.svg'; // UI UX Design image
     const title = 'UI UX Design';
     const description = 'Website, Mobile and Web App';
-    const price = uxToggle.checked || mobileUxToggle.checked ? '$430' : '$190';
+    const price = uxToggle.checked ? '$430' : '$190';
     openPopup(imageSrc, title, description, price);
 });
 
-// Functionality for Web Development card (desktop and mobile)
+// Functionality for Web Development card (desktop only)
 getStartedButtons[1].addEventListener('click', () => {
     const imageSrc = './assets/images/plan-vector-light.svg'; // Web Development image
     const title = 'Web Development';
     const description = 'For large teams & corporations.';
-    const price = webToggle.checked || mobileWebToggle.checked ? '$990' : '$490';
+    const price = webToggle.checked ? '$990' : '$490';
     openPopup(imageSrc, title, description, price);
 });
 
-// Functionality for Shopify Customization card (desktop and mobile)
+// Functionality for Shopify Customization card (desktop only)
 getStartedButtons[2].addEventListener('click', () => {
     const imageSrc = './assets/images/plan-vector-dark.svg'; // Shopify Customization image
     const title = 'Shopify Customization';
     const description = 'E-commerce Solutions';
     const price = '$450'; // No toggle, fixed price
     openPopup(imageSrc, title, description, price);
+});
+
+
+// Plan sec cards on mobile
+
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        spaceBetween: 20,
+        speed: 600,
+        initialSlide: 1,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+
+
+// Mobile UX Toggle Functionality (First Card)
+const uxToggleMobile = document.querySelector('.toggle-ux-mobile');
+const uxPriceElementMobile = document.querySelector('.card-frame-mobile .price-amount-mobile');
+const uxExtraInfoMobile = document.querySelector('.card-frame-mobile .extra-info-mobile');
+
+uxToggleMobile.addEventListener('change', function () {
+    if (this.checked) {
+        uxPriceElementMobile.innerHTML = '$430<span class="price-light-text">/ per month</span>'; // Updated price
+        uxExtraInfoMobile.style.display = 'block'; // Show additional info
+    } else {
+        uxPriceElementMobile.innerHTML = '$190<span class="price-light-text">/ per month</span>'; // Original price
+        uxExtraInfoMobile.style.display = 'none'; // Hide additional info
+    }
+});
+
+// Mobile Web Toggle Functionality (Second Card)
+const webToggleMobile = document.querySelector('.toggle-web-mobile');
+const webPriceElementMobile = document.querySelector('.highlight-frame .price-amount-mobile');
+const webExtraInfoMobile = document.querySelector('.highlight-frame .extra-info-mobile');
+
+webToggleMobile.addEventListener('change', function () {
+    if (this.checked) {
+        webPriceElementMobile.innerHTML = '$990<span class="price-light-text">/ per month</span>'; // Updated price
+        webExtraInfoMobile.style.display = 'block'; // Show additional info
+    } else {
+        webPriceElementMobile.innerHTML = '$490<span class="price-light-text">/ per month</span>'; // Original price
+        webExtraInfoMobile.style.display = 'none'; // Hide additional info
+    }
+});
+
+// Mobile Popup Logic
+const getStartedButtonsMobile = document.querySelectorAll('.start-btn');
+const pricePopupMobile = document.getElementById('pricePopupMobile');
+const popupPriceMobile = document.getElementById('popupPriceMobile');
+const popupPlanTitleMobile = document.getElementById('popupPlanTitleMobile');
+const popupPlanDescriptionMobile = document.getElementById('popupPlanDescriptionMobile');
+const popupPlanImageMobile = document.getElementById('popupPlanImageMobile');
+const closePopupMobile = document.getElementById('closePopupMobile');
+
+// Open the popup with specific card content
+getStartedButtonsMobile.forEach((button, index) => {
+    button.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Get the card content dynamically
+        const card = button.closest('.swiper-slide');
+        const planTitle = card.querySelector('h4').innerText;
+        const planDescription = card.querySelector('p').innerText;
+        const price = card.querySelector('.price-amount-mobile').innerHTML;
+        const imageSrc = card.querySelector('.vector img').getAttribute('src');
+
+        // Populate the popup with the dynamic content
+        popupPlanTitleMobile.innerText = planTitle;
+        popupPlanDescriptionMobile.innerText = planDescription;
+        popupPriceMobile.innerHTML = price;
+        // popupPlanImageMobile.src = imageSrc;
+
+        // Show the popup
+        pricePopupMobile.style.display = 'block';
+    });
+});
+
+// Close the popup
+closePopupMobile.addEventListener('click', function () {
+    pricePopupMobile.style.display = 'none';
 });
