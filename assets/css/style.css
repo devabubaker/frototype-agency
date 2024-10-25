@@ -747,6 +747,7 @@ html.lenis body {
 
 .project-sec .project-container .project-frame .content {
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
 }
 

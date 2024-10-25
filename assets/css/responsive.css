@@ -356,11 +356,11 @@
   }
 
   .project-sec .project-container {
-    gap: 30px;
+    gap: 50px;
   }
 
   .project-sec .project-container .project-left {
-    gap: 30px;
+    gap: 50px;
   }
 
   .project-sec .project-container .project-frame {
@@ -376,7 +376,7 @@
   }
 
   .project-sec .project-container .project-right {
-    gap: 30px;
+    gap: 50px;
     margin: 0;
     padding-bottom: 30px;
   }
