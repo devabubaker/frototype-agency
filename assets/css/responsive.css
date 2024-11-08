@@ -38,6 +38,44 @@
     padding-inline: 20px;
   }
 
+  .team-sec .common-title {
+    padding-inline: 20px;
+  }
+
+  .post-box {
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .post-title h3 {
+    font-size: 22px;
+  }
+
+  .tm-required h4 {
+    font-size: 12px;
+  }
+
+  .post-box .pl-box span {
+    font-size: 12px;
+  }
+
+  .team-sec .common-title .para p {
+    max-width: 300px;
+  }
+
+  .submit-popup {
+    max-width: 580px;
+    padding: 30px 31px;
+    border-radius: 15px;
+  }
+
+  .sumb-top .head h1 {
+    font-size: 30px;
+  }
+
   .footer .container {
     padding-inline: 20px;
   }
@@ -54,6 +92,7 @@
     font-size: 120px;
     line-height: 110px;
   }
+
   .hero-sec .main-heading .title-1 .inner-title span p::before {
     width: 23px;
     height: 15px;
@@ -199,6 +238,88 @@
 }
 
 @media (max-width: 768px) {
+  .team-sec .common-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .post-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .common-cta button,
+  .common-cta a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .post-box .pl-box span {
+    padding: 4px 8px;
+    gap: 3px;
+    font-size: 11px;
+  }
+
+  .tm-required h4 {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .team-sec .common-title .inner-title h2 {
+    line-height: 37px;
+  }
+
+  .team-sec .common-title .inner-title {
+    max-width: 100%;
+  }
+
+  .team-sec .common-title .inner-title h1 {
+    font-size: 70px;
+  }
+
+  .team-sec .common-title .para {
+    max-width: 650px;
+  }
+
+  .team-sec .common-title .para p {
+    max-width: 650px;
+  }
+
+  .main-submit-box .smb-left .tm-required {
+    flex-wrap: wrap;
+  }
+
+  .main-submit-box .pl-box {
+    flex-wrap: wrap;
+  }
+
+  .submit-popup {
+    max-width: 370px;
+  }
+
+  .sumb-top .close-icon {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+  }
+
+  .main-submit-box .right-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .submit-popup form {
+    padding-top: 20px;
+  }
+
+  .submit-popup form .field-column {
+    flex-wrap: wrap;
+  }
+  .submit-popup form .field-column .field-row input, .submit-popup form .field-column .field-row select{
+    padding: 13px;
+  }
   .header-left {
     display: none;
   }
@@ -407,9 +528,9 @@
 
   .hero-sec .main-heading .title-1 .inner-title span p::before {
     width: 18px;
-        height: 11px;
-        top: 20px;
-        left: 2px;
+    height: 11px;
+    top: 20px;
+    left: 2px;
   }
 
 
@@ -432,13 +553,100 @@
     right: -77px;
     bottom: 126px;
   }
+
   .custom-sec .custom-inner::before {
     left: -138px;
     bottom: -70px;
-}
+  }
 }
 
 @media (max-width: 435px) {
+  .submit-popup {
+    max-width: 290px;
+    padding: 20px;
+  }
+
+  .sumb-top .head h1 {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  .main-submit-box {
+    padding: 20px;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+
+  .sumb-top .head p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .team-sec .common-title .inner-title h2 {
+    font-size: 32px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .post-box {
+    margin-top: 25px;
+  }
+
+  .team-sec .common-title {
+    align-items: center;
+  }
+
+  .team-sec .common-title .para p {
+    text-align: center;
+  }
+
+  .post-box {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .post-title h3 {
+    font-size: 19px;
+  }
+
+  .tm-required h4 {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .post-box .pl-box {
+    flex-wrap: wrap;
+  }
+
+  .post-box .pl-box span {
+    font-size: 12px;
+    padding: 6px 10px;
+    gap: 6px;
+  }
+
+  .post-title {
+    gap: 6px;
+  }
+
+  .tm-required {
+    flex-wrap: wrap;
+  }
+
+  .post-title img:nth-child(1) {
+    display: none;
+  }
+
+  .post-title img:nth-child(2) {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
   .header-right .hamburger {
     width: 43px;
   }
@@ -917,15 +1125,17 @@
     top: 11px;
     left: 1px;
   }
-  
+
   .project-sec .project-container .project-frame .hover-content .study-btn {
     padding: 12px 31px;
     font-size: 13px;
     line-height: 14px;
   }
+
   .project-frame .hover-content .study-btn span:nth-child(2) {
     left: 16%;
   }
+
   .project-frame .hover-content .study-btn:hover span:nth-child(2) {
     top: 12px;
   }
