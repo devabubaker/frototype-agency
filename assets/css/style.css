@@ -1805,11 +1805,34 @@ html.lenis body {
 }
 
 .submit-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50px;
+  
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   margin: 0 auto;
   max-width: 776px;
   padding: 35px 36px;
   background: rgba(255, 255, 255, 1);
   border-radius: 30px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+  z-index: 9999999;
+}
+.submit-popup.active {
+  animation: fadeIn 0.3s ease-in-out;
+  pointer-events: all;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .sumb-top {

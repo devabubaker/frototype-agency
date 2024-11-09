@@ -1968,7 +1968,7 @@
           </div>
 
           <div class="contact-btn common-cta common-cta-mobile">
-            <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="magnetic-btn masker reveal"
+            <a href="#" class="magnetic-btn masker reveal"
               style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
               <span>apply now</span>
 
@@ -2068,9 +2068,84 @@
               <input type="text" placeholder="tell us about yourselft...." required>
             </div>
             <div class="field-row">
-              <label for="">Upload CV</label>
-              <input class="select-btn" type="file" placeholder="Choose a file" required>
+              <label for="cv-upload">Upload CV</label>
+              <div class="file-upload-wrapper">
+                <input class="file-upload-input" type="file" id="cv-upload" accept=".pdf,.doc,.docx" required>
+                <div class="file-upload-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                  </svg>
+                  <span>Drag & drop your CV or</span>
+                  <button type="button" class="browse-btn">Browse files</button>
+                  <small>Supported formats: PDF, DOC, DOCX (Max 5MB)</small>
+                </div>
+              </div>
             </div>
+            <style>
+              .file-upload-wrapper {
+                position: relative;
+                width: 100%;
+                min-height: 120px;
+                border: 2px dashed #e0e0e0;
+                border-radius: 8px;
+                background: #fafafa;
+                transition: all 0.3s ease;
+              }
+
+              .file-upload-wrapper:hover {
+                border-color: #2196f3;
+                background: #f5f5f5;
+              }
+
+              .file-upload-input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                cursor: pointer;
+              }
+
+              .file-upload-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: 20px;
+                text-align: center;
+                gap: 8px;
+              }
+
+              .file-upload-text svg {
+                color: #757575;
+                margin-bottom: 8px;
+              }
+
+              .file-upload-text span {
+                color: #424242;
+                font-size: 14px;
+              }
+
+              .browse-btn {
+                color: #2196f3;
+                background: none;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                text-decoration: underline;
+              }
+
+              .file-upload-text small {
+                color: #757575;
+                font-size: 12px;
+              }
+            </style>
           </div>
 
           <div class="common-cta">
@@ -2182,6 +2257,56 @@
 
   <!--~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // Get the necessary elements
+    // Get all apply now buttons
+    const applyNowBtns = document.querySelectorAll('.contact-btn.common-cta.common-cta-mobile a');
+    const submitPopup = document.querySelector('.submit-popup');
+    const closeBtn = document.querySelector('.close-icon');
+
+    // Function to open popup
+    function openPopup() {
+      if (submitPopup) {
+        submitPopup.style.display = 'block';
+        submitPopup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    // Function to close popup 
+    function closePopup() {
+      if (submitPopup) {
+        submitPopup.style.display = 'none';
+        submitPopup.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Add click event listeners to all apply now buttons
+    if (applyNowBtns) {
+      applyNowBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openPopup();
+        });
+      });
+    }
+
+    // Add close button listener
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePopup);
+    }
+
+    // Close popup when clicking outside
+    if (submitPopup) {
+      window.addEventListener('click', function (e) {
+        if (e.target === submitPopup) {
+          closePopup();
+        }
+      });
+    }
+  </script>
 
   <script>
     var swiper = new Swiper(".client-sec .marquee-1", {
