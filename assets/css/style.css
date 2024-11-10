@@ -2427,6 +2427,11 @@ body:has(.modal-holder.active) {
   border-radius: 50%;
 }
 
+.submit-popup form .field-column .field-row input,
+.submit-popup form .field-column .field-row select {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .thank-you-content h1 {
     font-size: 36px;
