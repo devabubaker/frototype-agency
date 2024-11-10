@@ -197,6 +197,62 @@
     display: none;
   }
 
+  .common-title {
+    flex-direction: column;
+    align-items: inherit;
+    padding: 0 15px;
+  }
+
+  .main-submit-box .right-icon img {
+    width: 20px;
+    height: 20px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .submit-popup form {
+    padding-top: 20px;
+
+    gap: 0px;
+  }
+
+  .submit-popup form .field-column .field-row input,
+  .submit-popup form .field-column .field-row select {
+    width: 100%;
+  }
+
+  .submit-popup form .field-column {
+
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .post-box {
+    width: calc(100% - 30px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .post-top {
+    flex-direction: column;
+  }
+
+  .tm-required {
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .post-box .pl-box {
+    flex-wrap: wrap;
+  }
+
+  .main-submit-box .pl-box {
+    flex-wrap: wrap;
+  }
+
+  .team-sec .common-title .inner-title h2 {
+    line-height: 1.3em;
+  }
+
   .full-nav .middle-content .nav-list .nav-item a {
     font-size: 30px;
     line-height: 38px;

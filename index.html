@@ -88,6 +88,168 @@
   </div>
   <!--  -->
 
+
+
+
+
+
+  <div class="modal-holder">
+    <div class="submit-popup">
+      <div class="sumb-top">
+        <div class="head">
+          <h1>Submit your Application</h1>
+          <p>
+            If you're interested in this job, go ahead and send in your application. We can't wait to see what you've
+            got!
+          </p>
+        </div>
+        <div class="close-icon">
+          <img src="./assets/images/icons/close-btn.svg" alt="">
+        </div>
+      </div>
+      <div class="main-submit-box">
+        <div class="smb-left">
+          <h3>UI UX Design</h3>
+          <div class="tm-required">
+            <h4>Fulltime</h4>
+            <h4>On-Site</h4>
+            <h4>1-2 Years of expereince</h4>
+          </div>
+          <div class="pl-box">
+            <span>
+              <img src="./assets/images/icons/figma.svg" alt="">
+              Figma
+            </span>
+            <span>
+              <img src="./assets/images/icons/abode il.svg" alt="">
+              Adobe Illustrator
+            </span>
+            <span>
+              <img src="./assets/images/icons/Abode ph.svg" alt="">
+              Adobe Photoshop
+            </span>
+          </div>
+        </div>
+        <div class="right-icon">
+          <img src="./assets/images/popup-icon.svg" alt="">
+        </div>
+      </div>
+      <form id="applicationForm" novalidate>
+        <div class="field-column">
+          <div class="field-row">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="e.g.. Ali" required>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="e.g.. Raza" required>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="e.g. ali@gmail.com" required>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="phone">Phone Number</label>
+            <div class="phone-input-container">
+
+              <input type="tel" name="phone" id="phone" placeholder="e.g +920000000000" required>
+            </div>
+            <span class="error-message"></span>
+
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="city-select">Select City</label>
+            <select name="city" id="city-select-bar" class="city-select" required>
+              <option value="">Select a city</option>
+              <option value="hyderabad">Hyderabad</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="maritalStatus">Marital Status</label>
+            <select name="maritalStatus" id="maritalStatus" class="select2-basic" required>
+              <option value="">Select status</option>
+              <option value="single">Single</option>
+              <option value="engaged">Engaged</option>
+              <option value="married">Married</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="about">Something about yourself</label>
+            <input type="text" id="about" placeholder="tell us about yourself...." required>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+
+          <div class="field-row">
+            <label for="cv-upload">Upload CV</label>
+            <div class="file-upload-wrapper" id="dropZone">
+              <input class="file-upload-input" type="file" id="cv-upload" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                required>
+              <div class="file-upload-text" id="uploadText">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+                <span>Drag & drop your CV or</span>
+                <button type="button" class="browse-btn">Browse files</button>
+                <small>Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 5MB)</small>
+              </div>
+              <div class="file-preview" id="filePreview" style="display:none;">
+                <div class="preview-content" style="position: relative;">
+                  <img id="previewImage" src="" alt="Preview" style="max-width:100%; max-height:200px; display:none;">
+                  <embed id="previewPdf" src="" type="application/pdf" style="width:100%; height:200px; display:none;">
+                  <p id="fileName"></p>
+                  <button type="button" class="remove-file"
+                    style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; z-index: 99;"
+                    id="removeFile">Remove File</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="common-cta">
+          <button type="submit" class="magnetic-btn masker reveal" id="submitBtn">
+            <span>submit now</span>
+            <div class="arrow-icon">
+              <img src="./assets/images/icons/popup-arrow.svg" alt="Icon">
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+
+
+
+
   <!-- Full Nav  -->
   <div class="full-nav" data-lenis-prevent="true">
     <div class="top-content">
@@ -2077,179 +2239,7 @@
     </div>
   </footer>
 
-  <div class="submit-popup">
-    <div class="sumb-top">
-      <div class="head">
-        <h1>Submit your Application</h1>
-        <p>
-          If you're interested in this job, go ahead and send in your application. We can't wait to see what you've
-          got!
-        </p>
-      </div>
-      <div class="close-icon">
-        <img src="./assets/images/icons/close-btn.svg" alt="">
-      </div>
-    </div>
-    <div class="main-submit-box">
-      <div class="smb-left">
-        <h3>UI UX Design</h3>
-        <div class="tm-required">
-          <h4>Fulltime</h4>
-          <h4>On-Site</h4>
-          <h4>1-2 Years of expereince</h4>
-        </div>
-        <div class="pl-box">
-          <span>
-            <img src="./assets/images/icons/figma.svg" alt="">
-            Figma
-          </span>
-          <span>
-            <img src="./assets/images/icons/abode il.svg" alt="">
-            Adobe Illustrator
-          </span>
-          <span>
-            <img src="./assets/images/icons/Abode ph.svg" alt="">
-            Adobe Photoshop
-          </span>
-        </div>
-      </div>
-      <div class="right-icon">
-        <img src="./assets/images/popup-icon.svg" alt="">
-      </div>
-    </div>
-    <form id="applicationForm" action="" novalidate>
-      <div class="field-column">
-        <div class="field-row">
-          <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" placeholder="e.g.. Ali" required>
-          <span class="error-message"></span>
-        </div>
 
-        <div class="field-row">
-          <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" placeholder="e.g.. Raza" required>
-          <span class="error-message"></span>
-        </div>
-      </div>
-
-      <div class="field-column">
-        <div class="field-row">
-          <label for="email">Email Address</label>
-          <input type="email" name="email" id="email" placeholder="e.g. ali@gmail.com" required>
-          <span class="error-message"></span>
-        </div>
-
-        <div class="field-row">
-          <label for="phone">Phone Number</label>
-          <div class="phone-input-container">
-            <select name="countryCode" id="countryCode" class="country-code-select">
-              <option value="+92">+92 (PK)</option>
-              <option value="+1">+1 (US)</option>
-              <option value="+44">+44 (UK)</option>
-              <option value="+91">+91 (IN)</option>
-              <option value="+971">+971 (UAE)</option>
-              <option value="+966">+966 (SA)</option>
-              <option value="+86">+86 (CN)</option>
-              <option value="+81">+81 (JP)</option>
-            </select>
-            <input type="tel" name="phone" id="phone" placeholder="e.g 3333333333" required>
-          </div>
-          <span class="error-message"></span>
-          <style>
-            .phone-input-container {
-              display: flex;
-              gap: 8px;
-            }
-
-            .country-code-select {
-              width: 120px;
-              padding: 8px;
-              border: 1px solid #ddd;
-              border-radius: 4px;
-            }
-
-            #phone {
-              flex: 1;
-            }
-          </style>
-        </div>
-      </div>
-
-      <div class="field-column">
-        <div class="field-row">
-          <label for="city-select">Select City</label>
-          <select name="city" id="city-select-bar" class="city-select" required>
-            <option value="">Select a city</option>
-            <option value="hyderabad">Hyderabad</option>
-          </select>
-          <span class="error-message"></span>
-        </div>
-
-        <div class="field-row">
-          <label for="maritalStatus">Marital Status</label>
-          <select name="maritalStatus" id="maritalStatus" class="select2-basic" required>
-            <option value="">Select status</option>
-            <option value="single">Single</option>
-            <option value="engaged">Engaged</option>
-            <option value="married">Married</option>
-          </select>
-          <span class="error-message"></span>
-        </div>
-      </div>
-
-      <div class="field-column">
-        <div class="field-row">
-          <label for="about">Something about yourself</label>
-          <input type="text" id="about" placeholder="tell us about yourself...." required>
-          <span class="error-message"></span>
-        </div>
-      </div>
-
-      <div class="field-column">
-
-        <div class="field-row">
-          <label for="cv-upload">Upload CV</label>
-          <div class="file-upload-wrapper" id="dropZone">
-            <input class="file-upload-input" type="file" id="cv-upload" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
-              required>
-            <div class="file-upload-text" id="uploadText">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" y1="3" x2="12" y2="15" />
-              </svg>
-              <span>Drag & drop your CV or</span>
-              <button type="button" class="browse-btn">Browse files</button>
-              <small>Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 5MB)</small>
-            </div>
-            <div class="file-preview" id="filePreview" style="display:none;">
-              <div class="preview-content" style="position: relative;">
-                <img id="previewImage" src="" alt="Preview" style="max-width:100%; max-height:200px; display:none;">
-                <embed id="previewPdf" src="" type="application/pdf" style="width:100%; height:200px; display:none;">
-                <p id="fileName"></p>
-                <button type="button" class="remove-file"
-                  style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; z-index: 99;"
-                  id="removeFile">Remove File</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-
-      <div class="common-cta">
-        <button type="submit" class="magnetic-btn masker reveal" id="submitBtn">
-          <span>submit now</span>
-          <div class="arrow-icon">
-            <img src="./assets/images/icons/popup-arrow.svg" alt="Icon">
-          </div>
-        </button>
-      </div>
-    </form>
-  </div>
 
   <!--~~~~~~~~~~~~~~~ Lenis Js ~~~~~~~~~~~~~~~-->
   <script type="module" src="./assets/js/animation.js"></script>
@@ -2276,15 +2266,14 @@
     // Get the necessary elements
     // Get all apply now buttons
     const applyNowBtns = document.querySelectorAll('.contact-btn.common-cta.common-cta-mobile a');
-    const submitPopup = document.querySelector('.submit-popup');
+    const submitPopup = document.querySelector('.modal-holder');
     const closeBtn = document.querySelector('.close-icon');
 
     // Function to open popup
     function openPopup() {
       if (submitPopup) {
-        submitPopup.style.display = 'block';
+        submitPopup.style.display = 'flex';
         submitPopup.classList.add('active');
-        document.body.style.overflow = 'hidden';
       }
     }
 
@@ -2293,7 +2282,7 @@
       if (submitPopup) {
         submitPopup.style.display = 'none';
         submitPopup.classList.remove('active');
-        document.body.style.overflow = 'auto';
+
       }
     }
 
@@ -2512,10 +2501,8 @@
         .then(response => response.json())
         .then(data => {
           if (data.code === "200") {
-            alert('Application submitted successfully!');
-            closePopup();
-            form.reset();
-            removeUploadedFile();
+            // Redirect to thank you page on success
+            window.location.href = 'thank_you.html';
           } else {
             throw new Error(data.message || 'Submission failed');
           }
