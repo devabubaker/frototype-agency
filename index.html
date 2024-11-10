@@ -67,8 +67,13 @@
   <!--~~~~~~~~~~~~~~~ Lenis Css ~~~~~~~~~~~~~~~-->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <!-- Select2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Select2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
   <!-- Add these before closing body tag -->
 
@@ -173,7 +178,7 @@
 
               <div class="common-cta">
                 <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="magnetic-btn masker">
-                  <span>Let’s Talk</span>
+                  <span>Let's Talk</span>
 
                   <div class="arrow-icon">
                     <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
@@ -211,7 +216,7 @@
 
           <div class="common-cta mobile-cta">
             <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="magnetic-btn">
-              <span>Let’s Talk</span>
+              <span>Let's Talk</span>
 
               <div class="arrow-icon">
                 <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
@@ -827,7 +832,7 @@
 
           <div class="para masker">
             <p>
-              Our clients’ feedback highlights the quality and impact of our
+              Our clients' feedback highlights the quality and impact of our
               services. We take pride in building lasting relationships
               founded on trust and results.
             </p>
@@ -956,7 +961,7 @@
             </div>
             <div class="bottom-content">
               <p>
-                Don’t delay. Get your projects done by Frototype today!
+                Don't delay. Get your projects done by Frototype today!
               </p>
             </div>
           </div>
@@ -995,7 +1000,7 @@
             </div>
             <div class="bottom-content">
               <p>
-                I’m incredibly impressed with the creativity and dedication of the Frototype team. From concept to
+                I'm incredibly impressed with the creativity and dedication of the Frototype team. From concept to
                 delivery, they were hands-on, ensuring every aspect of our mobile .........
               </p>
             </div>
@@ -1015,7 +1020,7 @@
             </div>
             <div class="bottom-content">
               <p>
-                Frototype’s Shopify customization services helped take my store to the next level. The new features they
+                Frototype's Shopify customization services helped take my store to the next level. The new features they
                 integrated have made managing my products so much ........
               </p>
             </div>
@@ -1238,7 +1243,7 @@
             </div>
             <div class="bottom-content">
               <p>
-                I couldn’t be happier with Frototype's web development service. Their team was responsive and provided
+                I couldn't be happier with Frototype's web development service. Their team was responsive and provided
                 excellent recommendations that boosted our........
               </p>
             </div>
@@ -2027,35 +2032,69 @@
             <img src="./assets/images/popup-icon.svg" alt="">
           </div>
         </div>
-        <form action="">
+        <form id="applicationForm" action="" novalidate>
           <div class="field-column">
             <div class="field-row">
-              <label for="">First Name</label>
-              <input type="text" name="" id="" placeholder="e.g.. john" required>
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" placeholder="e.g.. Ali" required>
+              <span class="error-message"></span>
             </div>
 
             <div class="field-row">
-              <label for="">Last Name</label>
-              <input type="text" name="" id="" placeholder="e.g.. doe" required>
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" placeholder="e.g.. Raza" required>
+              <span class="error-message"></span>
             </div>
           </div>
 
           <div class="field-column">
             <div class="field-row">
-              <label for="">Email Address</label>
-              <input type="email" name="" id="" placeholder="e.g. johndoe@gmail.com" required>
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="e.g. ali@gmail.com" required>
+              <span class="error-message"></span>
             </div>
 
             <div class="field-row">
-              <label for="">Phone Number</label>
-              <input type="text" name="" id="" placeholder="e.g +923333333333" required>
+              <label for="phone">Phone Number</label>
+              <div class="phone-input-container">
+                <select name="countryCode" id="countryCode" class="country-code-select">
+                  <option value="+92">+92 (PK)</option>
+                  <option value="+1">+1 (US)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+91">+91 (IN)</option>
+                  <option value="+971">+971 (UAE)</option>
+                  <option value="+966">+966 (SA)</option>
+                  <option value="+86">+86 (CN)</option>
+                  <option value="+81">+81 (JP)</option>
+                </select>
+                <input type="tel" name="phone" id="phone" placeholder="e.g 3333333333" required>
+              </div>
+              <span class="error-message"></span>
+              <style>
+                .phone-input-container {
+                  display: flex;
+                  gap: 8px;
+                }
+
+                .country-code-select {
+                  width: 120px;
+                  padding: 8px;
+                  border: 1px solid #ddd;
+                  border-radius: 4px;
+                }
+
+                #phone {
+                  flex: 1;
+                }
+              </style>
             </div>
           </div>
 
           <div class="field-column">
             <div class="field-row">
               <label for="city-select">Select City</label>
-              <select name="city" id="city-select-bar" class="city-select" style="width: 100%">
+              <select name="city" id="city-select-bar" class="city-select" required>
+                <option value="">Select a city</option>
                 <option value="islamabad">Islamabad</option>
                 <option value="karachi">Karachi</option>
                 <option value="lahore">Lahore</option>
@@ -2077,27 +2116,26 @@
                 <option value="jhang">Jhang</option>
                 <option value="rahim-yar-khan">Rahim Yar Khan</option>
               </select>
+              <span class="error-message"></span>
             </div>
 
-            <!-- Add these in head section -->
-
-
             <div class="field-row">
-              <label for="">Marital Status</label>
-              <select name="" id="">
-                <option value="city">Single</option>
-                <option value="city">Engaged</option>
-                <option value="city">Married</option>
+              <label for="maritalStatus">Marital Status</label>
+              <select name="maritalStatus" id="maritalStatus" class="select2-basic" required>
+                <option value="">Select status</option>
+                <option value="single">Single</option>
+                <option value="engaged">Engaged</option>
+                <option value="married">Married</option>
               </select>
+              <span class="error-message"></span>
             </div>
           </div>
 
-
-
           <div class="field-column">
             <div class="field-row">
-              <label for="">Something about yourself</label>
-              <input type="text" placeholder="tell us about yourselft...." required>
+              <label for="about">Something about yourself</label>
+              <input type="text" id="about" placeholder="tell us about yourself...." required>
+              <span class="error-message"></span>
             </div>
           </div>
 
@@ -2133,79 +2171,12 @@
               </div>
             </div>
 
-            <script>
-              const dropZone = document.getElementById('dropZone');
-              const fileInput = document.getElementById('cv-upload');
-              const uploadText = document.getElementById('uploadText');
-              const filePreview = document.getElementById('filePreview');
-              const previewImage = document.getElementById('previewImage');
-              const previewPdf = document.getElementById('previewPdf');
-              const fileName = document.getElementById('fileName');
-              const removeFile = document.getElementById('removeFile');
 
-              ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-                dropZone.addEventListener(eventName, preventDefaults, false);
-              });
-
-              function preventDefaults(e) {
-                e.preventDefault();
-                e.stopPropagation();
-              }
-
-              dropZone.addEventListener('drop', handleDrop, false);
-              fileInput.addEventListener('change', handleFileSelect, false);
-              removeFile.addEventListener('click', removeUploadedFile, false);
-
-              function handleDrop(e) {
-                const dt = e.dataTransfer;
-                const file = dt.files[0];
-                handleFile(file);
-              }
-
-              function handleFileSelect(e) {
-                const file = e.target.files[0];
-                handleFile(file);
-              }
-
-              function handleFile(file) {
-                if (file) {
-                  fileName.textContent = file.name;
-                  uploadText.style.display = 'none';
-                  filePreview.style.display = 'block';
-
-                  if (file.type.startsWith('image/')) {
-                    previewImage.style.display = 'block';
-                    previewPdf.style.display = 'none';
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                      previewImage.src = e.target.result;
-                    }
-                    reader.readAsDataURL(file);
-                  } else if (file.type === 'application/pdf') {
-                    previewImage.style.display = 'none';
-                    previewPdf.style.display = 'block';
-                    previewPdf.src = URL.createObjectURL(file);
-                  } else {
-                    previewImage.style.display = 'none';
-                    previewPdf.style.display = 'none';
-                  }
-                }
-              }
-
-              function removeUploadedFile() {
-                fileInput.value = '';
-                uploadText.style.display = 'flex';
-                filePreview.style.display = 'none';
-                previewImage.src = '';
-                previewPdf.src = '';
-                fileName.textContent = '';
-              }
-            </script>
 
           </div>
 
           <div class="common-cta">
-            <button class="magnetic-btn masker reveal">
+            <button type="submit" class="magnetic-btn masker reveal" id="submitBtn">
               <span>submit now</span>
               <div class="arrow-icon">
                 <img src="./assets/images/icons/popup-arrow.svg" alt="Icon">
@@ -2222,7 +2193,7 @@
     <div class="container">
       <div class="top-footer">
         <div class="left-content masker">
-          <h3>Let<span>’</span>s chat<span>.</span></h3>
+          <h3>Let<span>'</span>s chat<span>.</span></h3>
 
           <p>
             Unleashing brand potential through creative design and innovation.
@@ -2232,7 +2203,7 @@
         <div class="right-content">
           <div class="common-cta">
             <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="masker magnetic-btn">
-              <span>Let’s Talk</span>
+              <span>Let's Talk</span>
 
               <div class="arrow-icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2299,6 +2270,8 @@
   </footer>
 
   <!--~~~~~~~~~~~~~~~ Lenis Js ~~~~~~~~~~~~~~~-->
+  <script type="module" src="./assets/js/animation.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 
   <!--~~~~~~~~~~~~~~~ Gsap Scrolltrigger Js ~~~~~~~~~~~~~~~-->
@@ -2314,17 +2287,6 @@
   <!--~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#city-select-bar').select2({
-        placeholder: 'Select a city',
-        allowClear: true
-      });
-    });
-  </script>
 
 
 
@@ -2449,8 +2411,212 @@
 
   </script>
   <!--~~~~~~~~~~~~~~~ Custom Js ~~~~~~~~~~~~~~~-->
-  <script type="module" src="./assets/js/animation.js"></script>
-  <script type="module" src="./assets/js/main.js"></script>
+
+
+
+
+  <script>
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('cv-upload');
+    const uploadText = document.getElementById('uploadText');
+    const filePreview = document.getElementById('filePreview');
+    const previewImage = document.getElementById('previewImage');
+    const previewPdf = document.getElementById('previewPdf');
+    const fileName = document.getElementById('fileName');
+    const removeFile = document.getElementById('removeFile');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    dropZone.addEventListener('drop', handleDrop, false);
+    fileInput.addEventListener('change', handleFileSelect, false);
+    removeFile.addEventListener('click', removeUploadedFile, false);
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const file = dt.files[0];
+      handleFile(file);
+    }
+
+    function handleFileSelect(e) {
+      const file = e.target.files[0];
+      handleFile(file);
+    }
+
+    function handleFile(file) {
+      if (file) {
+        fileName.textContent = file.name;
+        uploadText.style.display = 'none';
+        filePreview.style.display = 'block';
+
+        if (file.type.startsWith('image/')) {
+          previewImage.style.display = 'block';
+          previewPdf.style.display = 'none';
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            previewImage.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+          previewImage.style.display = 'none';
+          previewPdf.style.display = 'block';
+          previewPdf.src = URL.createObjectURL(file);
+        } else {
+          previewImage.style.display = 'none';
+          previewPdf.style.display = 'none';
+        }
+      }
+    }
+
+    function removeUploadedFile() {
+      fileInput.value = '';
+      uploadText.style.display = 'flex';
+      filePreview.style.display = 'none';
+      previewImage.src = '';
+      previewPdf.src = '';
+      fileName.textContent = '';
+    }
+  </script>
+
+  <!-- Add this script after jQuery and Select2 are loaded -->
+  <script>
+    $(document).ready(function () {
+      // Initialize Select2 for all select elements
+
+
+      // Form validation
+      const form = document.getElementById('applicationForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const inputs = form.querySelectorAll('input[required], select[required]');
+
+      // Function to show error message
+      function showError(input, message) {
+        const errorElement = input.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('error-message')) {
+          errorElement.textContent = message;
+          input.classList.add('error');
+        }
+      }
+
+      // Function to clear error message
+      function clearError(input) {
+        const errorElement = input.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('error-message')) {
+          errorElement.textContent = '';
+          input.classList.remove('error');
+        }
+      }
+
+      // Function to validate email
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      // Function to validate phone number
+      function isValidPhone(phone) {
+        return /^\+?[\d\s-]{10,}$/.test(phone);
+      }
+
+      // Function to check if all fields are valid
+      function checkFormValidity() {
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!input.value.trim()) {
+            isValid = false;
+          }
+          if (input.type === 'email' && !isValidEmail(input.value)) {
+            isValid = false;
+          }
+          if (input.type === 'tel' && !isValidPhone(input.value)) {
+            isValid = false;
+          }
+        });
+        submitBtn.disabled = !isValid;
+      }
+
+      // Add validation listeners to all inputs
+      inputs.forEach(input => {
+        input.addEventListener('input', function () {
+          clearError(this);
+
+          if (!this.value.trim()) {
+            showError(this, 'This field is required');
+          } else if (this.type === 'email' && !isValidEmail(this.value)) {
+            showError(this, 'Please enter a valid email address');
+          } else if (this.type === 'tel' && !isValidPhone(this.value)) {
+            showError(this, 'Please enter a valid phone number');
+          }
+
+          checkFormValidity();
+        });
+      });
+
+      // Listen for Select2 changes
+      $('.select2-basic, .city-select').on('change', function () {
+        const input = this;
+        if (!input.value) {
+          showError(input, 'This field is required');
+        } else {
+          clearError(input);
+        }
+        checkFormValidity();
+      });
+
+      // Form submission
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Final validation check
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!input.value.trim()) {
+            showError(input, 'This field is required');
+            isValid = false;
+          } else if (input.type === 'email' && !isValidEmail(input.value)) {
+            showError(input, 'Please enter a valid email address');
+            isValid = false;
+          } else if (input.type === 'tel' && !isValidPhone(input.value)) {
+            showError(input, 'Please enter a valid phone number');
+            isValid = false;
+          }
+        });
+
+        if (isValid) {
+          // Add your form submission logic here
+          console.log('Form submitted successfully');
+          // You can use FormData or serialize the form data as needed
+          const formData = new FormData(form);
+          // Send the data to your server
+        }
+      });
+    });
+  </script>
+
+  <!-- Add this CSS -->
+  <style>
+    .error-message {
+      color: #ff4444;
+      font-size: 12px;
+      margin-top: 4px;
+      display: block;
+    }
+
+    input.error,
+    select.error {
+      border-color: #ff4444 !important;
+    }
+
+    button[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
 </body>
 
 </html>
