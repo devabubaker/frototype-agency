@@ -1456,6 +1456,8 @@
 
             <div class="price">
               <h3>$190<span>/ per month</span></h3>
+              <p class="addon-price" style="display: none; font-size: 14px; color: #666; margin-top: 5px;">
+                +$<span style="margin: 0;">0</span> for addons</p>
             </div>
 
             <a href="#" class="start-btn">Get Started</a>
@@ -1717,6 +1719,8 @@
 
                   <div class="price">
                     <h3>$190<span>/ per month</span></h3>
+                    <p class="addon-price" style="display: none; font-size: 14px; color: #666; margin-top: 5px;">
+                      +$<span style="margin: 0;">0</span> for addons</p>
                   </div>
 
                   <a href="#" class="start-btn">Get Started</a>
@@ -2553,6 +2557,51 @@
 
       return isValid;
     }
+  </script>
+
+  <script>
+    // Function to update price when addon is toggled
+    function initializePriceUpdates() {
+      const cards = document.querySelectorAll('.card-frame');
+
+      cards.forEach(card => {
+        // Add addon price element if it doesn't exist
+        const priceDiv = card.querySelector('.price');
+        if (!priceDiv.querySelector('.addon-price')) {
+          const addonPriceElement = document.createElement('p');
+          addonPriceElement.className = 'addon-price';
+          addonPriceElement.style.cssText = 'display: none; font-size: 14px; color: #666; margin-top: 5px;';
+          addonPriceElement.innerHTML = '+$<span style="margin: 0;">0</span> for addons';
+          priceDiv.appendChild(addonPriceElement);
+        }
+
+        const basePrice = parseInt(card.querySelector('.price h3').textContent.match(/\d+/)[0]);
+        const addonCheckbox = card.querySelector('.add-ons input[type="checkbox"]');
+        const addonPrice = parseInt(card.querySelector('.add-ons .tag').textContent.match(/\d+/)[0]);
+        const priceElement = card.querySelector('.price h3');
+        const addonPriceElement = card.querySelector('.addon-price');
+
+        addonCheckbox.addEventListener('change', function () {
+          if (this.checked) {
+            // Calculate total price
+            const totalPrice = basePrice + addonPrice;
+            // Update main price display
+            priceElement.innerHTML = `$${totalPrice}<span>/ per month</span>`;
+            // Show addon price note
+            addonPriceElement.style.display = 'block';
+            addonPriceElement.querySelector('span').textContent = addonPrice;
+          } else {
+            // Restore original price
+            priceElement.innerHTML = `$${basePrice}<span>/ per month</span>`;
+            // Hide addon price note
+            addonPriceElement.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Initialize price updates when document is loaded
+    document.addEventListener('DOMContentLoaded', initializePriceUpdates);
   </script>
 </body>
 
