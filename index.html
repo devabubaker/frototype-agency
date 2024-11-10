@@ -2473,8 +2473,13 @@
 
       const formData = new FormData();
 
+      // Get full name to use in both formData and redirect URL
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const fullName = `${firstName} ${lastName}`;
+
       // Add form fields with proper field names matching the server expectations
-      formData.append('name', `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`);
+      formData.append('name', fullName);
       formData.append('email', document.getElementById('email').value);
       formData.append('phone', document.getElementById('phone').value);
       formData.append('city', document.getElementById('city-select-bar').value);
@@ -2501,8 +2506,8 @@
         .then(response => response.json())
         .then(data => {
           if (data.code === "200") {
-            // Redirect to thank you page on success
-            window.location.href = 'thank_you.html';
+            // Redirect to thank you page with name parameter
+            window.location.href = `thank_you.html?name=${encodeURIComponent(fullName)}`;
           } else {
             throw new Error(data.message || 'Submission failed');
           }

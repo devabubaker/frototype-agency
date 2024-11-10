@@ -179,7 +179,7 @@
                                 stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h1>Thank You!</h1>
+                    <h1 id="thankYouTitle" style="text-transform: capitalize;">Thank You!</h1>
                     <p>Your application has been successfully submitted. We appreciate your interest in joining our
                         team.</p>
                     <div class="next-steps">
@@ -598,6 +598,25 @@
             }
 
             return isValid;
+        }
+    </script>
+
+    <script>
+        // Add this at the start of your body or in the head section
+        window.onload = function () {
+            // Get the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+
+            if (!name) {
+                // Redirect to home page if no name parameter
+                window.location.href = 'index.html';
+            } else {
+                // Decode the name parameter to handle special characters
+                const decodedName = decodeURIComponent(name);
+                // Update the thank you message
+                document.getElementById('thankYouTitle').innerHTML = `Thank You,<br/>${decodedName}!`;
+            }
         }
     </script>
 </body>

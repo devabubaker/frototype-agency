@@ -197,6 +197,14 @@
     display: none;
   }
 
+  .thank-you-sec {
+    min-height: 80vh;
+
+    padding: 150px 15px 80px 15px;
+  }
+
+
+
   .common-title {
     flex-direction: column;
     align-items: inherit;
