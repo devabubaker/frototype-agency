@@ -190,6 +190,10 @@
     text-align: left;
     color: var(--pure-black);
   }
+
+  .popup-container .popup-box {
+    max-width: 590px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -488,6 +492,36 @@
   .custom-sec .custom-inner::after {
     right: -77px;
     bottom: 126px;
+  }
+
+  .popup-container .popup-box {
+    padding: 30px 31px;
+    border-radius: 28px;
+  }
+
+  .popup-box .head h3 {
+    font-size: 30px;
+  }
+
+  .popup-box .plan {
+    margin: 22px 0;
+    padding: 20px;
+  }
+
+  .popup-box form {
+    padding-top: 22px;
+  }
+
+  .popup-box .field-column {
+    flex-wrap: wrap;
+  }
+
+  .popup-box .plan .price h3 {
+    font-size: 37px;
+  }
+
+  .popup-box .plan h4 {
+    font-size: 18px;
   }
 }
 
@@ -970,4 +1004,42 @@
     top: 11px;
     left: 1px;
   }
+
+  .popup-container .popup-box {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .popup-box .head h3 {
+    font-size: 27px;
+  }
+
+  .popup-box .plan {
+    margin: 12px 0;
+  }
+
+  .popup-box .plan .price h3 {
+    font-size: 30px;
+  }
+
+  .popup-box .plan .price h3 span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .popup-box .plan h4 {
+    font-size: 16px;
+}
+.popup-box .plan p{
+  font-size: 12px;
+}
+.popup-box .icon img{
+  width: 30px;
+  height: 30px;
+}
+.popup-box form {
+  padding-top: 20px;
+}
+.popup-box form .common-cta button{
+  margin-top: 15px;
+}
 }

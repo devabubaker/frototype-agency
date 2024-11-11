@@ -1510,6 +1510,146 @@ html.lenis body {
   border-radius: 50%;
 }
 
+/* Popup-code */
+.popup-container .popup-box {
+  max-width: 776px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  padding: 35px 36px;
+}
+.popup-box .subscription-top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.subscription-top .close-img {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+}
+.popup-box .head h3 {
+  font-family: var(--clash-display);
+  letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 400;
+  color: #191A19;
+  line-height: 39px;
+  margin-bottom: 4px;
+}
+
+.popup-box .head p {
+  color: #191A19;
+  font-family: var(--poppins);
+  font-size: 16px;
+  opacity: 80%;
+}
+
+.popup-box .plan {
+  margin: 25px 0;
+  padding: 24px;
+  border-radius: 10px;
+  background: #F1F1F1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.popup-box .plan .price {
+  margin-bottom: 10px;
+}
+
+.popup-box .plan .price h3 {
+  font-family: var(--clash-display);
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 49px;
+  color: var(--main-pink);
+}
+
+.popup-box .plan .price h3 span {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #191a19cc;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.popup-box .plan h4 {
+  font-family: var(--clash-display);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24.6px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(25, 26, 25, 1);
+}
+
+.popup-box .plan p {
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.popup-box form {
+  padding-top: 25px;
+  border-top: 1px solid #191A19;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-box .field-column {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.popup-box .field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.popup-box .field-row input {
+  border: 1px solid #CCCCCC;
+  outline: none;
+  padding: 18px;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: var(--poppins);
+  color: #7B7B7B;
+  text-align: left;
+}
+
+.popup-box .field-row label {
+  font-size: 16px;
+  font-family: var(--poppins);
+  font-weight: 400;
+  line-height: 22px;
+  color: #191A19;
+}
+
+.popup-box form .common-cta button {
+  cursor: pointer;
+  padding: 15px 4px 15px 32px;
+  background-color: #DFDFDF;
+  margin-top: 23px;
+}
+
+.popup-box form .common-cta button span {
+  color: var(--pure-black);
+}
+
+.popup-box form .common-cta button .arrow-icon {
+  background-color: var(--pure-black);
+}
+
 /* === Custom Sec === */
 
 .custom-sec {
