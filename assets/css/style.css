@@ -1954,20 +1954,21 @@ html.lenis body {
   /* Hidden by default */
 
 
-  margin: 0 auto;
-  margin: 0 auto;
+  margin: auto;
   max-width: 776px;
   padding: 35px 36px;
   background: rgba(255, 255, 255, 1);
   border-radius: 30px;
 
-  height: calc(100vh - 100px);
+  height: fit-content;
   overflow: auto;
   z-index: 999999999999;
   position: relative;
 }
 
-
+.submit-popup form .field-column .field-row input:is(:focus), .submit-popup form .field-column .field-row select:is(:focus) {
+  border-color: #ff3464;
+}
 .modal-holder {
   display: none;
   position: fixed;
@@ -2249,6 +2250,7 @@ body:has(.modal-holder.active) {
   text-decoration-skip-ink: none;
   padding: 18px;
   border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 8px;
 }
 
 .submit-popup form .field-column .field-row input:focus {
