@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Title -->
+  <title>Frototype - UI/UX Design and Web Development Agency | Parking Maniac</title>
+
+  <!-- Meta Tags -->
+  <meta name="description"
+    content="Frototype offers top-notch UI/UX design, web and app development, Shopify, and WordPress services. We deliver tailored digital solutions for businesses worldwide.">
+  <meta name="keywords"
+    content="UI/UX design, web development, app development, Shopify development, WordPress customization, custom web solutions, responsive design, e-commerce development, mobile app design">
+  <meta name="author" content="Frototype Agency">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Google Search Icon -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <meta name="google-site-verification" content="2sukwNz7u-KTjUQHfXtYw4gU3-TVKD9WfSJn6stLmmc" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Frototype - UI/UX Design and Web Development Agency">
+  <meta property="og:description"
+    content="Frototype offers top-notch UI/UX design, web and app development, Shopify, and WordPress services.">
+  <meta property="og:image" content="assets/images/og.png"> <!-- replace with your image -->
+  <meta property="og:url" content="https://frototype.agency/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frototype - UI/UX Design and Web Development Agency">
+  <meta name="twitter:description"
+    content="Frototype offers top-notch UI/UX design, web and app development, Shopify, and WordPress services.">
+  <meta name="twitter:image" content="assets/images/og.png"> <!-- replace with your image -->
+
+  <!-- Additional Social Media Tags -->
+  <meta name="pinterest" content="nopin" />
+  <!--~~~~~~~~~~~~~~~ Fonts ~~~~~~~~~~~~~~~-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preload" as="font" href="./assets/fonts/ClashDisplay-Variable.woff2" type="font/woff2"
+    crossorigin="anonymous" />
+
+  <link rel="preload" as="font" href="./assets/fonts/circular-std-medium-500.woff2" type="font/woff2"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="./assets/css/fonts.css" />
+
+  <!--~~~~~~~~~~~~~~~ Title ~~~~~~~~~~~~~~~-->
+  <title>Frototype Agency</title>
+
+  <!--~~~~~~~~~~~~~~~ Css ~~~~~~~~~~~~~~~-->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <!--~~~~~~~~~~~~~~~ Swiper Css ~~~~~~~~~~~~~~~-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--~~~~~~~~~~~~~~~ Lenis Css ~~~~~~~~~~~~~~~-->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Select2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Select2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <!-- Add these before closing body tag -->
+
+
+
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <!--  -->
+
+
+
+
+
+
+  <div class="modal-holder" data-lenis-prevent="true">
+    <div class="submit-popup">
+      <div class="sumb-top">
+        <div class="head">
+          <h1>Submit your Application</h1>
+          <p>
+            If you're interested in this job, go ahead and send in your application. We can't wait to see what you've
+            got!
+          </p>
+        </div>
+        <div class="close-icon">
+          <img src="./assets/images/icons/close-btn.svg" alt="">
+        </div>
+      </div>
+      <div class="main-submit-box">
+        <div class="smb-left">
+          <h3>UI UX Design</h3>
+          <div class="tm-required">
+            <h4>Fulltime</h4>
+            <h4>On-Site</h4>
+            <h4>1-2 Years of expereince</h4>
+          </div>
+          <div class="pl-box">
+            <span>
+              <img src="./assets/images/icons/figma.svg" alt="">
+              Figma
+            </span>
+            <span>
+              <img src="./assets/images/icons/abode il.svg" alt="">
+              Adobe Illustrator
+            </span>
+            <span>
+              <img src="./assets/images/icons/Abode ph.svg" alt="">
+              Adobe Photoshop
+            </span>
+          </div>
+        </div>
+        <div class="right-icon">
+          <img src="./assets/images/popup-icon.svg" alt="">
+        </div>
+      </div>
+      <form id="applicationForm" novalidate>
+        <div class="field-column">
+          <div class="field-row">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="e.g.. Ali" required>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="e.g.. Raza" required>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="e.g. ali@gmail.com" required>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="phone">Phone Number</label>
+            <div class="phone-input-container">
+
+              <input type="tel" name="phone" id="phone" placeholder="e.g +920000000000" required>
+            </div>
+            <span class="error-message"></span>
+
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="city-select">Select City</label>
+            <select name="city" id="city-select-bar" class="city-select" required>
+              <option value="">Select a city</option>
+              <option value="hyderabad">Hyderabad</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+
+          <div class="field-row">
+            <label for="maritalStatus">Marital Status</label>
+            <select name="maritalStatus" id="maritalStatus" class="select2-basic" required>
+              <option value="">Select status</option>
+              <option value="single">Single</option>
+              <option value="engaged">Engaged</option>
+              <option value="married">Married</option>
+            </select>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+          <div class="field-row">
+            <label for="about">Something about yourself</label>
+            <input type="text" id="about" placeholder="tell us about yourself...." required>
+            <span class="error-message"></span>
+          </div>
+        </div>
+
+        <div class="field-column">
+
+          <div class="field-row">
+            <label for="cv-upload">Upload CV</label>
+            <div class="file-upload-wrapper" id="dropZone">
+              <input class="file-upload-input" type="file" id="cv-upload" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg"
+                required>
+              <div class="file-upload-text" id="uploadText">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="17 8 12 3 7 8" />
+                  <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+                <span>Drag & drop your CV or</span>
+                <button type="button" class="browse-btn">Browse files</button>
+                <small>Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 5MB)</small>
+              </div>
+              <div class="file-preview" id="filePreview" style="display:none;">
+                <div class="preview-content" style="position: relative;">
+                  <img id="previewImage" src="" alt="Preview" style="max-width:100%; max-height:200px; display:none;">
+                  <embed id="previewPdf" src="" type="application/pdf" style="width:100%; height:200px; display:none;">
+                  <p id="fileName"></p>
+                  <button type="button" class="remove-file"
+                    style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; z-index: 99;"
+                    id="removeFile">Remove File</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="common-cta">
+          <button type="submit" class="magnetic-btn masker reveal" id="submitBtn">
+            <span>submit now</span>
+            <div class="arrow-icon">
+              <img src="./assets/images/icons/popup-arrow.svg" alt="Icon">
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <!-- Full Nav  -->
+  <div class="full-nav" data-lenis-prevent="true">
+    <div class="top-content">
+      <h5>Menu</h5>
+
+      <div class="close-btn">
+        <h6>Close</h6>
+
+        <button>
+          <img src="./assets/images/icons/close-x.svg" alt="Icon" />
+        </button>
+      </div>
+    </div>
+
+    <div class="middle-content">
+      <ul class="nav-list">
+
+        <li class="nav-item"><a href="#projects">Projects</a></li>
+
+        <li class="nav-item"><a href="#services">Services</a></li>
+
+        <li class="nav-item"><a href="#testimonials">Testimonials</a></li>
+
+        <li class="nav-item"><a href="#pricing">Pricing Plans</a></li>
+      </ul>
+    </div>
+
+    <div class="bottom-content">
+      <div class="left-content">
+        <a href="mailto:info@frototype.agency" class="contact-link email-link">info@frototype.agency</a>
+
+        <a href="https://wa.me/923243725872" class="contact-link phone-link">+92 324 372 5872</a>
+      </div>
+
+      <div class="right-content">
+        <ul class="social-list">
+          <li class="social-item"><a href="https://www.behance.net/frototype_a">Behance</a></li>
+
+          <li class="social-item"><a href="https://dribbble.com/abubakarsherazi">Dribbble</a></li>
+
+          <li class="social-item"><a href="https://pk.linkedin.com/company/frototype">LinkedIn</a></li>
+
+          <li class="social-item"><a href="https://www.instagram.com/frototype_a/">Instagram</a></li>
+
+          <li class="social-item"><a href="https://www.facebook.com/profile.php?id=61560044225338">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--~~~~~~~~~~~~~~~ Navbar ~~~~~~~~~~~~~~~-->
+  <header class="header">
+    <div class="header-left">
+      <span>© 2024.</span>
+    </div>
+
+    <div class="header-center">
+      <a href="index.html" class="logo">
+        <img src="./assets/images/brand-logo.png" alt="Brand Logo" />
+      </a>
+    </div>
+
+    <div class="header-right">
+      <div class="hamburger">
+        <span></span>
+
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!--~~~~~~~~~~~~~~~ Hero Sec ~~~~~~~~~~~~~~~-->
+    <section class="hero-sec">
+      <div class="main-heading">
+        <div class="container">
+          <div class="sub-title masker">
+            <h5>2023 - CURRENT</h5>
+          </div>
+
+          <h1>
+            <div class="title-1">
+              <div class="inner-title masker">
+                <span>
+                  PARKING MANIAC
+                </span>
+              </div>
+
+              <div class="common-cta">
+                <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="magnetic-btn masker">
+                  <span>View live website</span>
+
+                  <div class="arrow-icon">
+                    <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </h1>
+
+          <div class="common-cta mobile-cta">
+            <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="magnetic-btn">
+              <span>Let's Talk</span>
+
+              <div class="arrow-icon">
+                <img src="./assets/images/icons/tilt-arrow.svg" alt="Icon" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~~ About Sec ~~~~~~~~~~~~~~~-->
+    <section class="about_PM-sec">
+      <div class="container">
+        <div class="about-web">
+          <div class="about-cntn">
+            <h3>About the Website</h3>
+            <p class="disc">
+              <span>Parking Maniac</span> is an innovative parking reservation platform designed to help users find,
+              reserve, and
+              pay for parking spaces in busy urban locations. With a focus on convenience and ease of use, Parking
+              Maniac allows drivers to secure parking spots in advance, reducing the stress of searching for parking and
+              saving valuable time. Whether it’s a one-time reservation or a frequent parking need, the platform offers
+              a streamlined experience for both drivers and parking lot owners.
+            </p>
+          </div>
+
+          <div class="about-main-img">
+            <img src="./assets/images/parking-maniac.png" alt="">
+            <div class="image-cntn">
+              <h4>Project Overview:</h4>
+              <p>
+                The aim of this project was to build a responsive, intuitive, and user-friendly interface that would
+                enhance the parking reservation experience for users. From seamless parking spot search functionality to
+                secure payments and reservation management, every aspect of the platform was designed to provide a
+                smooth interaction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~~ Feature Sec ~~~~~~~~~~~~~~~-->
+    <section class="feature-sec">
+      <div class="container">
+        <div class="feature-cntn">
+          <div class="feature-detail">
+            <h3 class="ft-heading">
+              Key Features:
+            </h3>
+            <ul>
+              <li>
+                <span>Easy Search and Booking:</span> Users can search for parking based on their preferred location,
+                check availability, and reserve a spot within minutes.
+              </li>
+              <li>
+                <span>Reservation Management:</span>
+                Modifications or cancellations are made easy, allowing users to
+                adjust their bookings as needed.
+              </li>
+              <li>
+                <span>Secure Online Payments:</span>
+                Modifications or cancellations are made easy, allowing users to
+                adjust their bookings as needed.The platform integrates secure payment gateways to facilitate a quick
+                and hassle-free checkout process.
+              </li>
+              <li>
+                <span>Navigation and Directions:</span> Once a spot is reserved, users can access directions to the
+                parking lot, ensuring they reach the destination without complications.
+              </li>
+            </ul>
+          </div>
+          <div class="feature-img">
+            <img src="./assets/images/feature-img.png" alt="">
+            <div class="absolute-img">
+              <img src="./assets/images/feature-img-2.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--~~~~~~~~~~~~~~~ impact sec ~~~~~~~~~~~~~~~-->
+
+    <section class="impact-sec">
+      <div class="container">
+        <div class="sol-cntn">
+          <div class="impact-cntn">
+            <h3 class="ft-heading">
+              Solution and Impact:
+            </h3>
+            <p class="disc">
+              <span>Parking Maniac</span> addresses a common urban problem: finding parking space. By
+              implementing features that prioritize user experience and efficiency, the website reduces parking-related
+              stress and enhances customer satisfaction. The clean UI and intuitive flow have resulted in increased user
+              engagement and higher conversion rates for parking reservations.
+            </p>
+          </div>
+
+          <div class="imp-image">
+            <img src="./assets/images/impact-img.png" alt="" class="imp-back-img">
+            <div class="imp-logo-img">
+              <img src="./assets/images/feature-img-2.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="theme-cntn">
+          <div class="left-th-img">
+            <img src="./assets/images/th-img.png" alt="">
+          </div>
+          <div class="right-th-cl">
+            <ul>
+              <li>
+                <span>#2EABE3</span>
+              </li>
+              <li style="background-color: #214555;">
+                <span>#2EABE3</span>
+              </li>
+              <li style="background-color: #1C1C1C;">
+                <span>#2EABE3</span>
+              </li>
+              <li style="background-color: #ED1A75;">
+                <span>#2EABE3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="dashboard-img">
+          <img src="./assets/images/dashboard-img-1.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~~ experience sec ~~~~~~~~~~~~~~~-->
+
+    <section class="experience-sec">
+      <div class="container">
+        <div class="highlight-content">
+          <div class="high-left-detail">
+            <h3 class="ft-heading">
+              User Experience Highlights:
+            </h3>
+            <ul>
+              <li>A clear and straightforward booking process that guides users step-by-step.</li>
+              <li>
+                Efficient information architecture that ensures users can find the necessary details with minimal
+                clicks.
+              </li>
+              <li>Mobile responsiveness to cater to users who are on the go.</li>
+            </ul>
+            <img src="./assets/images/highlight-img-1.png" alt="">
+          </div>
+
+          <div class="high-right-img">
+            <img src="./assets/images/highlight-img-2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+  <footer class="footer">
+    <div class="container">
+      <div class="top-footer">
+        <div class="left-content masker">
+          <h3>Let<span>'</span>s chat<span>.</span></h3>
+
+          <p>
+            Unleashing brand potential through creative design and innovation.
+          </p>
+        </div>
+
+        <div class="right-content">
+          <div class="common-cta">
+            <a href="https://cal.com/abubakarsh/free-discovery-strategy-session" class="masker magnetic-btn">
+              <span>Let's Talk</span>
+
+              <div class="arrow-icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.2416 1.75841C13.2416 1.20613 12.7939 0.758412 12.2416 0.758411L3.24159 0.758412C2.6893 0.758411 2.24159 1.20613 2.24159 1.75841C2.24159 2.3107 2.6893 2.75841 3.24159 2.75841L11.2416 2.75841L11.2416 10.7584C11.2416 11.3107 11.6893 11.7584 12.2416 11.7584C12.7939 11.7584 13.2416 11.3107 13.2416 10.7584L13.2416 1.75841ZM2.0616 13.3526L12.9487 2.46552L11.5345 1.0513L0.647385 11.9384L2.0616 13.3526Z"
+                    fill="white" />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="bottom-footer masker">
+        <div class="left-content">
+          <ul class="footer-list">
+
+            <li class="footer-item"><a href="#projects">Projects</a></li>
+
+            <li class="footer-item"><a href="#services">Services</a></li>
+          </ul>
+
+          <ul class="footer-list">
+
+            <li class="footer-item"><a href="#pricing">Pricing</a></li>
+
+            <li class="footer-item"><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div class="right-content">
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://www.behance.net/frototype_a">Behance</a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://dribbble.com/abubakarsherazi">Dribbble</a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://pk.linkedin.com/company/frototype">LinkedIn</a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://www.instagram.com/frototype_a/">Instagram</a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://www.facebook.com/profile.php?id=61560044225338">Facebook</a>
+            </li>
+          </ul>
+
+          <div class="contact-list">
+            <a href="mailto:info@frototype.agency" class="contact-link email-link">info@frototype.agency</a>
+
+            <a href="https://wa.me/923243725872" class="contact-link phone-link">+92 324 372 5872</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!--~~~~~~~~~~~~~~~ Lenis Js ~~~~~~~~~~~~~~~-->
+  <script type="module" src="./assets/js/animation.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+  <!--~~~~~~~~~~~~~~~ Gsap Scrolltrigger Js ~~~~~~~~~~~~~~~-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!--~~~~~~~~~~~~~~~ Gsap Js ~~~~~~~~~~~~~~~-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!--~~~~~~~~~~~~~~~ Swiper Js ~~~~~~~~~~~~~~~-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+  <script>
+    // Get the necessary elements
+    // Get all apply now buttons
+    const applyNowBtns = document.querySelectorAll('.contact-btn.common-cta.common-cta-mobile a');
+    const submitPopup = document.querySelector('.modal-holder');
+    const closeBtn = document.querySelector('.close-icon');
+
+    // Function to open popup
+    function openPopup() {
+      if (submitPopup) {
+        submitPopup.style.display = 'flex';
+        submitPopup.classList.add('active');
+      }
+    }
+
+    // Function to close popup 
+    function closePopup() {
+      if (submitPopup) {
+        submitPopup.style.display = 'none';
+        submitPopup.classList.remove('active');
+
+      }
+    }
+
+    // Add click event listeners to all apply now buttons
+    if (applyNowBtns) {
+      applyNowBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          openPopup();
+        });
+      });
+    }
+
+    // Add close button listener
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePopup);
+    }
+
+    // Close popup when clicking outside
+    if (submitPopup) {
+      window.addEventListener('click', function (e) {
+        if (e.target === submitPopup) {
+          closePopup();
+        }
+      });
+    }
+  </script>
+
+  <script>
+    var swiper = new Swiper(".client-sec .marquee-1", {
+      spaceBetween: 30,
+      loop: true,
+      speed: 6500,
+      slidesPerView: "auto",
+      freeMode: true,
+      autoplay: {
+        delay: 0,
+      },
+    });
+
+    var swiper = new Swiper(".client-sec .marquee-2", {
+      spaceBetween: 30,
+      loop: true,
+      speed: 6500,
+      slidesPerView: "auto",
+      freeMode: true,
+      autoplay: {
+        delay: 0,
+        reverseDirection: true,
+      },
+    });
+
+    var swiper = new Swiper(".project-scroller-sec .swiper", {
+      spaceBetween: 30,
+      loop: true,
+      speed: 6500,
+      slidesPerView: "auto",
+      freeMode: true,
+      autoplay: {
+        delay: 0,
+      },
+    });
+
+    var swiper = new Swiper(".plan-sec .swiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      initialSlide: 1,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 12,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".services-sec .swiper", {
+      allowTouchMove: false, // Disable touch/swipe interactions
+      noSwiping: true, // Disable swiping
+      noSwipingClass: "swiper-no-swiping", // Class to disable swiping
+    });
+  </script>
+  <!-- Loader -->
+  <script>
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function () {
+      loader.style.display = 'none'
+    })
+
+  </script>
+  <!--~~~~~~~~~~~~~~~ Custom Js ~~~~~~~~~~~~~~~-->
+
+
+
+
+  <script>
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('cv-upload');
+    const uploadText = document.getElementById('uploadText');
+    const filePreview = document.getElementById('filePreview');
+    const previewImage = document.getElementById('previewImage');
+    const previewPdf = document.getElementById('previewPdf');
+    const fileName = document.getElementById('fileName');
+    const removeFile = document.getElementById('removeFile');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    dropZone.addEventListener('drop', handleDrop, false);
+    fileInput.addEventListener('change', handleFileSelect, false);
+    removeFile.addEventListener('click', removeUploadedFile, false);
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const file = dt.files[0];
+      handleFile(file);
+    }
+
+    function handleFileSelect(e) {
+      const file = e.target.files[0];
+      handleFile(file);
+    }
+
+    function handleFile(file) {
+      if (file) {
+        fileName.textContent = file.name;
+        uploadText.style.display = 'none';
+        filePreview.style.display = 'block';
+
+        if (file.type.startsWith('image/')) {
+          previewImage.style.display = 'block';
+          previewPdf.style.display = 'none';
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            previewImage.src = e.target.result;
+          }
+          reader.readAsDataURL(file);
+        } else if (file.type === 'application/pdf') {
+          previewImage.style.display = 'none';
+          previewPdf.style.display = 'block';
+          previewPdf.src = URL.createObjectURL(file);
+        } else {
+          previewImage.style.display = 'none';
+          previewPdf.style.display = 'none';
+        }
+      }
+    }
+
+    function removeUploadedFile() {
+      fileInput.value = '';
+      uploadText.style.display = 'flex';
+      filePreview.style.display = 'none';
+      previewImage.src = '';
+      previewPdf.src = '';
+      fileName.textContent = '';
+    }
+  </script>
+
+  <!-- Add this script after jQuery and Select2 are loaded -->
+
+
+
+  <!-- Add this code after your form validation script -->
+  <script>
+    const form = document.getElementById('applicationForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Validate form fields before submission
+      if (!validateForm()) {
+        return;
+      }
+
+      const formData = new FormData();
+
+      // Get full name to use in both formData and redirect URL
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const fullName = `${firstName} ${lastName}`;
+
+      // Add form fields with proper field names matching the server expectations
+      formData.append('name', fullName);
+      formData.append('email', document.getElementById('email').value);
+      formData.append('phone', document.getElementById('phone').value);
+      formData.append('city', document.getElementById('city-select-bar').value);
+      formData.append('marital_status', document.getElementById('maritalStatus').value);
+      formData.append('about', document.getElementById('about').value);
+      formData.append('subject', 'Job Application - UI UX Designer'); // Add subject field
+      formData.append('message', 'New job application submission'); // Add message field
+
+      // Add file if one is selected
+      const fileInput = document.getElementById('cv-upload');
+      if (fileInput.files[0]) {
+        formData.append('attachment', fileInput.files[0]);
+      }
+
+      // Disable submit button while processing
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+
+      // Send the form data
+      fetch('https://frototype.agency/rest/contact-form.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.code === "200") {
+            // Redirect to thank you page with name parameter
+            window.location.href = `thank_you.html?name=${encodeURIComponent(fullName)}`;
+          } else {
+            throw new Error(data.message || 'Submission failed');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('There was an error submitting your application. Please try again.');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
+    });
+
+    // Add form validation function
+    function validateForm() {
+      let isValid = true;
+      const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'city-select-bar', 'maritalStatus', 'about'];
+
+      requiredFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (!field.value.trim()) {
+          isValid = false;
+          field.classList.add('error');
+        } else {
+          field.classList.remove('error');
+        }
+      });
+
+      // Validate email format
+      const email = document.getElementById('email');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value)) {
+        isValid = false;
+        email.classList.add('error');
+      }
+
+      // Validate file upload
+      const fileInput = document.getElementById('cv-upload');
+      if (!fileInput.files[0]) {
+        isValid = false;
+        document.querySelector('.file-upload-wrapper').classList.add('error');
+      }
+
+      return isValid;
+    }
+  </script>
+
+  <script>
+    // Function to update price when addon is toggled
+    function initializePriceUpdates() {
+      const cards = document.querySelectorAll('.card-frame');
+
+      cards.forEach(card => {
+        // Add addon price element if it doesn't exist
+        const priceDiv = card.querySelector('.price');
+        if (!priceDiv.querySelector('.addon-price')) {
+          const addonPriceElement = document.createElement('p');
+          addonPriceElement.className = 'addon-price';
+          addonPriceElement.style.cssText = 'display: none; font-size: 14px; color: #666; margin-top: 5px;';
+          addonPriceElement.innerHTML = '+$<span style="margin: 0;">0</span> for addons';
+          priceDiv.appendChild(addonPriceElement);
+        }
+
+        const basePrice = parseInt(card.querySelector('.price h3').textContent.match(/\d+/)[0]);
+        const addonCheckbox = card.querySelector('.add-ons input[type="checkbox"]');
+        const addonPrice = parseInt(card.querySelector('.add-ons .tag').textContent.match(/\d+/)[0]);
+        const priceElement = card.querySelector('.price h3');
+        const addonPriceElement = card.querySelector('.addon-price');
+
+        addonCheckbox.addEventListener('change', function () {
+          if (this.checked) {
+            // Calculate total price
+            const totalPrice = basePrice + addonPrice;
+            // Update main price display
+            priceElement.innerHTML = `$${totalPrice}<span>/ per month</span>`;
+            // Show addon price note
+            addonPriceElement.style.display = 'block';
+            addonPriceElement.querySelector('span').textContent = addonPrice;
+          } else {
+            // Restore original price
+            priceElement.innerHTML = `$${basePrice}<span>/ per month</span>`;
+            // Hide addon price note
+            addonPriceElement.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Initialize price updates when document is loaded
+    document.addEventListener('DOMContentLoaded', initializePriceUpdates);
+  </script>
+</body>
+
+</html>
