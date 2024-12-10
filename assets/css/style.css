@@ -2900,7 +2900,10 @@ p.disc span {
 
 .high-left-detail ul li {
   list-style: disc;
-  list-style-position: inside;
+  color: #191A1999;
+}
+
+.high-left-detail ul li p {
   font-family: var(--poppins);
   font-size: 16px;
   font-weight: 400;
@@ -2918,13 +2921,15 @@ p.disc span {
   border-radius: 80px;
   margin-top: 30px;
 }
-.high-right-img{
+
+.high-right-img {
   width: 100%;
   max-width: 614px;
   height: max-content;
   overflow: hidden;
 }
-.high-right-img img{
+
+.high-right-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
