@@ -2679,7 +2679,6 @@ body:has(.modal-holder.active) {
   height: 20px;
 }
 .hero-sec .main-content .main-lf-cntn .tech-holder span:nth-child(3) img{
-  width: 20px;
   height: 17px;
 }
 
@@ -2801,7 +2800,9 @@ body:has(.modal-holder.active) {
     color: #191A19;
     margin-bottom: 15px;
   }
-
+.feature-detail{
+  width: 50%;
+}
   .feature-detail ul {
     display: flex;
     flex-direction: column;
@@ -2838,7 +2839,8 @@ body:has(.modal-holder.active) {
   }
 
   .feature-img {
-    min-width: 624px;
+    width: 100%;
+    max-width: 624px;
     height: 383px;
     border-radius: 20px;
     overflow: hidden;
@@ -2965,6 +2967,7 @@ body:has(.modal-holder.active) {
   .dashboard-img {
     width: 100%;
     height: 689px;
+    border-radius: 20px;
     overflow: hidden;
   }
 
@@ -2973,7 +2976,6 @@ body:has(.modal-holder.active) {
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
-    border-radius: 20px;
   }
 
   .experience-sec {
@@ -3036,6 +3038,7 @@ body:has(.modal-holder.active) {
     max-width: 614px;
     height: 812px;
     overflow: hidden;
+    border-radius: 80px;
   }
 
   .high-right-img img {
@@ -3043,7 +3046,6 @@ body:has(.modal-holder.active) {
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
-    border-radius: 80px;
   }
 
   .result-sec {
@@ -3064,6 +3066,7 @@ body:has(.modal-holder.active) {
     max-width: 612px;
     height: 688px;
     overflow: hidden;
+    border-radius: 20px;
   }
 
   .re-bt-img .bt-left-img img {
@@ -3098,11 +3101,11 @@ body:has(.modal-holder.active) {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
     gap: 20px;
   }
 
   .tech-box-holder .tech-box {
-    margin-top: 30px;
     padding: 15px 23px;
     background-color: var(--pure-white);
     border-radius: 10px;

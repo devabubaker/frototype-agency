@@ -30,6 +30,34 @@
     padding-inline: 20px;
   }
 
+  .about_PM-sec .container {
+    padding-inline: 20px;
+  }
+
+  .feature-sec .container {
+    padding-inline: 20px;
+  }
+
+  .impact-sec .container {
+    padding-inline: 20px;
+  }
+
+  .experience-sec .container {
+    padding-inline: 20px;
+  }
+
+  .result-sec .container {
+    padding-inline: 20px;
+  }
+
+  .tech-sec .container {
+    padding-inline: 20px;
+  }
+
+  .consult-sec .container {
+    padding-inline: 20px;
+  }
+
   .plan-sec .card-container:nth-child(2) {
     padding-inline: 20px;
   }
@@ -193,6 +221,30 @@
 
   .popup-container .popup-box {
     max-width: 590px;
+  }
+
+  .in-title span {
+    font-size: 102px !important;
+    line-height: 78px !important;
+  }
+
+  h3.sec-heading {
+    font-size: 40px;
+    line-height: 50.12px;
+  }
+
+  .feature-img {
+    width: 50%;
+    height: 330px;
+  }
+
+  .ft-heading {
+    font-size: 22px;
+    line-height: 24.52px;
+  }
+
+  .high-right-img {
+    height: 826px;
   }
 }
 
@@ -523,7 +575,152 @@
   .popup-box .plan h4 {
     font-size: 18px;
   }
+
+  .in-title span {
+    font-size: 70px !important;
+  }
+
+  .about-main-img {
+    height: 402px;
+  }
+
+  .about-main-img .image-cntn {
+    padding: 0 18px 18px 18px;
+    gap: 10px;
+  }
+
+  .about-main-img .image-cntn p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .about-main-img .image-cntn h4 {
+    font-size: 22px;
+    line-height: 26.52px;
+  }
+
+  .about-cntn {
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  h3.sec-heading {
+    font-size: 35px;
+    line-height: 45.12px;
+  }
+
+  .feature-cntn {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .feature-detail,
+  .feature-img {
+    width: 100%;
+  }
+
+  .feature-img {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .ft-heading {
+    margin-bottom: 10px;
+  }
+
+  .sol-cntn .imp-image {
+    height: 474px;
+    margin-top: 35px;
+  }
+
+  .theme-cntn {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .left-th-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .right-th-cl {
+    width: 100%;
+  }
+
+  .right-th-cl ul li {
+    max-width: 100% !important;
+  }
+
+  .right-th-cl ul li span {
+    font-size: 37px;
+    line-height: 40px;
+  }
+
+  .dashboard-img {
+    height: 420px;
+  }
+
+  .highlight-content {
+    flex-direction: column;
+  }
+
+  .high-left-detail {
+    width: 100%;
+  }
+
+  .high-left-detail img {
+    max-width: 100%;
+    border-radius: 50px;
+  }
+
+  .high-right-img {
+    width: 100%;
+    max-width: 100%;
+    height: 597px;
+    border-radius: 50px;
+  }
+
+  .re-bt-img {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+
+  .re-bt-img .bt-left-img {
+    width: 100%;
+    max-width: 100%;
+    height: 818px;
+  }
+
+  .re-bt-img .bt-right-img {
+    width: 100%;
+  }
+
+  .re-bt-img .bt-right-img img {
+    height: 400px;
+  }
+
+  .consult-cntn {
+    padding: 40px 65px 40px 64px;
+    gap: 10px;
+  }
+
+  .consult-cntn h4 {
+    font-size: 25px;
+    line-height: 30.82px;
+  }
+
+  .consult-cntn h1 {
+    font-size: 46px;
+    line-height: 67.72px;
+  }
+
+  .consult-cntn p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
 }
+
 
 @media (max-width: 435px) {
   .header-right .hamburger {
@@ -1026,20 +1223,301 @@
     font-size: 16px;
     font-weight: 400;
   }
+
   .popup-box .plan h4 {
     font-size: 16px;
-}
-.popup-box .plan p{
-  font-size: 12px;
-}
-.popup-box .icon img{
-  width: 30px;
-  height: 30px;
-}
-.popup-box form {
-  padding-top: 20px;
-}
-.popup-box form .common-cta button{
-  margin-top: 15px;
-}
+  }
+
+  .popup-box .plan p {
+    font-size: 12px;
+  }
+
+  .popup-box .icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .popup-box form {
+    padding-top: 20px;
+  }
+
+  .popup-box form .common-cta button {
+    margin-top: 15px;
+  }
+
+  .hero-sec .main-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .in-title span {
+    font-size: 48px !important;
+    line-height: 53px !important;
+  }
+
+
+  .hero-sec .main-content .main-lf-cntn h5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .des-holder {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .des-holder span {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .tech-holder {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .tech-holder span {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .tech-holder span img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .hero-sec .main-content .main-lf-cntn .tech-holder span:nth-child(3) img {
+    height: 13px;
+  }
+
+  h3.sec-heading {
+    font-size: 24px;
+    line-height: 28.12px;
+  }
+
+  p.disc {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-main-img .image-cntn {
+    background: linear-gradient(180deg, rgb(255 255 255 / 0%) 10.32%, rgb(0 0 0 / 79%) 79.36%);
+    padding: 0 10px 10px 10px;
+    gap: 7px;
+  }
+
+  .about-main-img .image-cntn p {
+    font-size: 8px;
+    line-height: 9px;
+  }
+
+  .about-main-img .image-cntn h4 {
+    font-size: 13px;
+    line-height: 11px;
+  }
+
+  .about-main-img {
+    height: auto;
+    border-radius: 10px;
+  }
+  .about-main-img img{
+    aspect-ratio: 0/0;
+  }
+  .ft-heading {
+    font-size: 18px;
+    line-height: 18.52px;
+  }
+
+  .feature-detail ul {
+    gap: 7px;
+  }
+
+  .feature-detail ul li {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .feature-detail ul li::before {
+    top: 6px;
+    left: 2px;
+  }
+
+  .feature-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .feature-img img{
+    aspect-ratio: 0/0;
+  }
+  .feature-img .absolute-img img {
+    max-width: 100px;
+    height: 33px;
+  }
+
+  .sol-cntn .imp-image {
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+  }
+  .sol-cntn .imp-image img{
+    aspect-ratio: 0/0;
+  }
+  .imp-logo-img img {
+    max-width: 84px;
+    height: 28px;
+  }
+
+  .left-th-img {
+    height: auto;
+  }
+
+  .left-th-img img {
+    aspect-ratio: 0/0;
+    border-radius: 20px;
+  }
+
+  .right-th-cl ul li {
+    height: auto;
+    padding: 50px 10px;
+    border-radius: 20px;
+  }
+
+  .right-th-cl ul li span {
+    font-size: 15px;
+    line-height: 31px;
+  }
+
+  .dashboard-img {
+    height: auto;
+    border-radius: 10px;
+  }
+  .dashboard-img img{
+    aspect-ratio: 0/0;
+  }
+  .high-left-detail ul li {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .high-left-detail ul li::before {
+    top: 7px;
+    left: 2px;
+  }
+
+  .high-left-detail ul {
+    gap: 7px;
+  }
+
+  .high-left-detail img {
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .high-right-img {
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .re-bt-img .bt-left-img {
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .re-bt-img .bt-right-img img {
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .tech-box-holder {
+    gap: 10px;
+  }
+
+  .tech-box-holder .tech-box {
+    padding: 12px 18px;
+    border-radius: 6px;
+  }
+
+  .tech-box-holder .tech-box img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .tech-box-holder .tech-box:nth-child(3) img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .tech-box-holder .tech-box:nth-child(4) img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .consult-cntn {
+    padding: 30px 15px;
+    border-radius: 20px;
+  }
+
+  .consult-cntn h4 {
+    font-size: 15px;
+    line-height: 20.82px;
+  }
+
+  .consult-cntn h1 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .consult-cntn p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .about-web{
+    padding-top: 70px;
+  }
+  .feature-cntn{
+    padding: 25px 0 35px 0;
+  }
+  .impact-sec{
+    padding: 35px 0;
+  }
+  .theme-cntn{
+    padding: 35px 0;
+    gap: 25px;
+  }
+  .experience-sec{
+    padding: 40px 0 35px 0;
+  }
+  .result-sec{
+    padding: 35px 0;
+  }
+  .re-bt-img{
+    margin-top: 30px;
+  }
+  .tech-sec{
+    padding: 35px 0;
+  }
+  .consult-sec{
+    padding: 35px 0 70px 0;
+  }
+  .right-th-cl ul{
+    gap: 15px 10px;
+  }
+  .high-right-img img{
+    aspect-ratio: 0/0;
+  }
+  .re-bt-img .bt-left-img img{
+    aspect-ratio: 0/0;
+  }
+ .consult-cntn .common-cta button, .common-cta a{
+    font-size: 12px;
+  }
+  .about-cntn{
+    margin-bottom: 30px;
+  }
+  .ex-title h5{
+    font-size: 14px !important;
+    line-height: 21px !important;
+  }
 }
