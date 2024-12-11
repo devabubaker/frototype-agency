@@ -654,7 +654,20 @@ html.lenis body {
 .project-sec .project-container .project-frame:hover .hover-content {
   opacity: 1;
 }
-
+.project-sec .project-container .project-frame .hover-content .hover-btn{
+  padding: 11px 32px;
+  border: 0.5px solid rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0.3);
+  font-family: var(--poppins);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 30px;
+  color: var(--pure-white);
+  backdrop-filter: blur(16px);
+  text-transform: uppercase;
+}
 .project-sec .project-container .project-frame .hover-content .study-btn {
   padding: 11px 32px;
   border: 0.5px solid rgba(255, 255, 255, 1);
