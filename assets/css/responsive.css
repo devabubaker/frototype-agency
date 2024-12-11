@@ -1245,6 +1245,16 @@
     margin-top: 15px;
   }
 
+  .submit-popup {
+    padding: 50px 20px 80px;
+  }
+
+  .sumb-top .close-icon {
+    cursor: pointer;
+    width: 100px;
+    height: 26px;
+  }
+
   .hero-sec .main-content {
     flex-direction: column;
     gap: 30px;
@@ -1321,9 +1331,11 @@
     height: auto;
     border-radius: 10px;
   }
-  .about-main-img img{
+
+  .about-main-img img {
     aspect-ratio: 0/0;
   }
+
   .ft-heading {
     font-size: 18px;
     line-height: 18.52px;
@@ -1348,9 +1360,11 @@
     height: auto;
     border-radius: 10px;
   }
-  .feature-img img{
+
+  .feature-img img {
     aspect-ratio: 0/0;
   }
+
   .feature-img .absolute-img img {
     max-width: 100px;
     height: 33px;
@@ -1361,9 +1375,11 @@
     margin-top: 30px;
     border-radius: 10px;
   }
-  .sol-cntn .imp-image img{
+
+  .sol-cntn .imp-image img {
     aspect-ratio: 0/0;
   }
+
   .imp-logo-img img {
     max-width: 84px;
     height: 28px;
@@ -1393,9 +1409,11 @@
     height: auto;
     border-radius: 10px;
   }
-  .dashboard-img img{
+
+  .dashboard-img img {
     aspect-ratio: 0/0;
   }
+
   .high-left-detail ul li {
     font-size: 12px;
     line-height: 18px;
@@ -1473,50 +1491,66 @@
     font-size: 12px;
     line-height: 18px;
   }
-  .about-web{
+
+  .about-web {
     padding-top: 70px;
   }
-  .feature-cntn{
+
+  .feature-cntn {
     padding: 25px 0 35px 0;
   }
-  .impact-sec{
+
+  .impact-sec {
     padding: 35px 0;
   }
-  .theme-cntn{
+
+  .theme-cntn {
     padding: 35px 0;
     gap: 25px;
   }
-  .experience-sec{
+
+  .experience-sec {
     padding: 40px 0 35px 0;
   }
-  .result-sec{
+
+  .result-sec {
     padding: 35px 0;
   }
-  .re-bt-img{
+
+  .re-bt-img {
     margin-top: 30px;
   }
-  .tech-sec{
+
+  .tech-sec {
     padding: 35px 0;
   }
-  .consult-sec{
+
+  .consult-sec {
     padding: 35px 0 70px 0;
   }
-  .right-th-cl ul{
+
+  .right-th-cl ul {
     gap: 15px 10px;
   }
-  .high-right-img img{
+
+  .high-right-img img {
     aspect-ratio: 0/0;
   }
-  .re-bt-img .bt-left-img img{
+
+  .re-bt-img .bt-left-img img {
     aspect-ratio: 0/0;
   }
- .consult-cntn .common-cta button, .common-cta a{
+
+  .consult-cntn .common-cta button,
+  .common-cta a {
     font-size: 12px;
   }
-  .about-cntn{
+
+  .about-cntn {
     margin-bottom: 30px;
   }
-  .ex-title h5{
+
+  .ex-title h5 {
     font-size: 14px !important;
     line-height: 21px !important;
   }
